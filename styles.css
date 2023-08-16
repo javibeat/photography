@@ -45,7 +45,7 @@
     columns: 5 200px;
     column-gap: 1.5rem;
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
 }
 
 .grid-container div {
