@@ -74,19 +74,13 @@
 
 /* Dentro de la media query para dispositivos móviles */
 @media only screen and (max-width: 600px) {
-    body {
-        overflow-y: hidden; Oculta la barra de desplazamiento vertical
-    }
 
-    .centered-container {
-        min-height: 100vh; /* Establece el alto mínimo del contenedor para cubrir la pantalla */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow-y: auto; /* Habilita la barra de desplazamiento solo dentro del contenedor */
+    .header {
+        margin: 0 0 0 1.5rem;
     }
-    
+   
     .grid-container {
+        margin: 0 0 0 2rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
