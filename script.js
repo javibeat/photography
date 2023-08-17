@@ -71,6 +71,9 @@ shuffledItems.forEach(item => {
     gridContainer.appendChild(item);
 });
 
+let touchStartX = 0;
+let touchEndX = 0;
+
 overlayImage.addEventListener('touchstart', (event) => {
     touchStartX = event.touches[0].clientX;
 });
@@ -94,11 +97,11 @@ overlayImage.addEventListener('touchend', (event) => {
     // Verificar la orientación del dispositivo
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
-    if (!isPortrait) {
+    if (isPortrait) {
         if (touchDiff > 50) {
-            navigate(-1); // Deslizar hacia la izquierda
+            navigate(-1); // Deslizar hacia arriba (cambia a la imagen anterior)
         } else if (touchDiff < -50) {
-            navigate(1); // Deslizar hacia la derecha
+            navigate(1); // Deslizar hacia abajo (cambia a la siguiente imagen)
         }
     }
 });
