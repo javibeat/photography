@@ -9,6 +9,8 @@ const closeBtn = document.querySelector('.close-btn');
 const gridContainer = document.querySelector('.grid-container');
 
 let currentIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
 function openOverlay(index) {
     overlay.style.display = 'flex';
@@ -71,9 +73,6 @@ shuffledItems.forEach(item => {
     gridContainer.appendChild(item);
 });
 
-let touchStartX = 0;
-let touchEndX = 0;
-
 overlayImage.addEventListener('touchstart', (event) => {
     touchStartX = event.touches[0].clientX;
 });
@@ -102,6 +101,12 @@ overlayImage.addEventListener('touchend', (event) => {
             navigate(-1); // Deslizar hacia arriba (cambia a la imagen anterior)
         } else if (touchDiff < -50) {
             navigate(1); // Deslizar hacia abajo (cambia a la siguiente imagen)
+        }
+    } else {
+        if (touchDiff > 50) {
+            navigate(-1); // Deslizar hacia la izquierda (cambia a la imagen anterior)
+        } else if (touchDiff < -50) {
+            navigate(1); // Deslizar hacia la derecha (cambia a la siguiente imagen)
         }
     }
 });
