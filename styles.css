@@ -72,6 +72,7 @@
     border-color: rgb(0, 0, 0);
 }
 
+/* Dentro de la media query para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     .grid-container {
         display: flex;
@@ -84,24 +85,25 @@
         width: 100%;
         display: inline-block;
         border: solid 1px #aaaaaa;
-        padding: 5px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-        transition: all 0.25s ease-in-out;
-        transform: scale(0.8);
-    }
-
-    .grid-container div:hover img {
-        filter: grayscale(0);
-    }
-
-    .grid-container div:hover {
-        border-color: rgb(0, 0, 0);
+        padding: 0; /* Elimina el espacio entre las imágenes */
+        box-shadow: none; /* Elimina la sombra */
     }
 
     .grid-container div img {
         width: 100%;
+        height: auto; /* Asegura que la imagen conserve su proporción */
         filter: grayscale(100%);
         transition: all 0.25s ease-in-out;
+    }
+
+    .overlay-image {
+        max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+        max-height: 100vh; /* Ocupa todo el alto de la pantalla */
+        object-fit: contain; /* Asegura que la imagen se ajuste al área disponible */
+    }
+
+    .nav-btns {
+        display: none; /* Oculta los botones de navegación */
     }
 }
 
@@ -127,8 +129,7 @@
 
 .overlay-image {
     max-width: 90%;
-    max-height: 95vh; /* Usa una altura relativa al viewport */
-    /* border-radius: 5px; */
+    max-height: 95vh;
 }
 
 .close-btn {
@@ -145,7 +146,17 @@
     margin-top: 10px;
 }
 
-.prev-btn,
+.prev-btn {
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 10px;
+    transform: scaleX(-1);
+}
+
 .next-btn {
     font-size: 20px;
     color: white;
@@ -154,10 +165,7 @@
     cursor: pointer;
     padding: 5px 10px;
     margin: 0 10px;
-}
-
-.prev-btn {
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* Invierte horizontalmente el icono */
 }
 
 .image-description {

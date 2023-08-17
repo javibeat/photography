@@ -70,3 +70,24 @@ const shuffledItems = Array.from(gridItems).sort(() => Math.random() - 0.5);
 shuffledItems.forEach(item => {
     gridContainer.appendChild(item);
 });
+
+// ... (código anterior)
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+overlayImage.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+overlayImage.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    const touchDiff = touchEndX - touchStartX;
+    if (touchDiff > 50) {
+        navigate(-1);
+    } else if (touchDiff < -50) {
+        navigate(1);
+    }
+});
+
+// ...
