@@ -71,3 +71,34 @@ shuffledItems.forEach(item => {
     gridContainer.appendChild(item);
 });
 
+overlayImage.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+overlayImage.addEventListener('touchmove', (event) => {
+    const touchCurrentX = event.touches[0].clientX;
+    const touchDiff = touchCurrentX - touchStartX;
+
+    // Verificar la orientación del dispositivo
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+    if (Math.abs(touchDiff) > 10 && (!isPortrait || Math.abs(touchDiff) > 50)) {
+        event.preventDefault(); // Evitar el desplazamiento predeterminado
+    }
+});
+
+overlayImage.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    const touchDiff = touchEndX - touchStartX;
+
+    // Verificar la orientación del dispositivo
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+    if (!isPortrait) {
+        if (touchDiff > 50) {
+            navigate(-1); // Deslizar hacia la izquierda
+        } else if (touchDiff < -50) {
+            navigate(1); // Deslizar hacia la derecha
+        }
+    }
+});
