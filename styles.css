@@ -76,11 +76,11 @@
 @media only screen and (max-width: 600px) {
 
     .header {
-        margin: 0 0 0 0.5rem;
+        margin: 0 0 0 0.3rem;
     }
    
     .grid-container {
-        margin: 0 0 0 1.79rem;
+        margin: 0 0 0 1.76rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
