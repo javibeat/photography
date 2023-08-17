@@ -76,11 +76,11 @@
 @media only screen and (max-width: 600px) {
 
     .header {
-        margin: 0 0 0 1.7rem;
+        margin: 0 0 0 1.6rem;
     }
    
     .grid-container {
-        margin: 0 0 0 1.85rem;
+        margin: 0 0 0 1.8rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -88,7 +88,7 @@
     }
 
     .grid-container div {
-        width: 100%;
+        width: 95%;
         display: inline-block;
         border: solid 1px #aaaaaa;
         padding: 0; /* Elimina el espacio entre las imágenes */
@@ -136,6 +136,7 @@
 .overlay-image {
     max-width: 90%;
     max-height: 95vh;
+    object-fit: contain;
 }
 
 .close-btn {
