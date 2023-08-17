@@ -80,6 +80,10 @@ overlayImage.addEventListener('touchstart', (event) => {
     touchStartX = event.touches[0].clientX;
 });
 
+overlayImage.addEventListener('touchmove', (event) => {
+    event.preventDefault(); // Evita el desplazamiento predeterminado
+});
+
 overlayImage.addEventListener('touchend', (event) => {
     touchEndX = event.changedTouches[0].clientX;
     const touchDiff = touchEndX - touchStartX;
