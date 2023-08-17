@@ -75,12 +75,12 @@
 /* Dentro de la media query para dispositivos móviles */
 @media only screen and (max-width: 600px) {
 
-    .header {
+    /* .header {
         margin: 0 0 0 0.3rem;
-    }
+    } */
    
     .grid-container {
-        margin: 0 0 0 1.76rem;
+        margin: 0 0 0 1.7rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
