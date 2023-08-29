@@ -19,6 +19,8 @@ body {
     text-align: center;
     margin: 10px auto 50px;
     font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
   }
 
   nav a {
@@ -171,8 +173,8 @@ footer {
   @media screen and (max-width: 768px) {
     .description {
         text-align: justify;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-bottom: 50px;
       }
 
