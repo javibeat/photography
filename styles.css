@@ -1,47 +1,50 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  header {
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .logo {
-    max-width: 150px;
-    margin: auto;
-  }
+header {
+  text-align: center;
+  padding: 50px;
+}
 
-  nav {
-    text-align: center;
-    margin: 10px auto 50px;
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
+.logo {
+  max-width: 150px;
+  margin: auto;
+}
+
+nav {
+  text-align: center;
+  margin: 10px auto 50px;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
-  }
+}
 
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 
-  .submenu {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .submenu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
+.sub-menu {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sub-menu i {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.sub-menu a {
+  margin: 10px;
+}
   
   /* Estilo para la galería masonry */
 .gallery {
@@ -129,6 +132,10 @@ footer {
     color: black;
     text-decoration: none;
   }
+
+  h1 {
+    text-align: center;
+  }
   
   .about-me-container {
     display: flex;
@@ -136,7 +143,7 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     max-width: 700px; /* Ancho máximo de 600px */
-    margin: 0 auto;  /* Centrado horizontalmente */
+    margin: 50px auto;  /* Centrado horizontalmente */
   }
   
   .description {
@@ -184,4 +191,13 @@ footer {
     }
   }
   
+  body.flex-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
   
+  /* Hace que el contenido principal ocupe todo el espacio disponible, empujando el footer hacia abajo */
+  .main-content {
+    flex: 1;
+  }
