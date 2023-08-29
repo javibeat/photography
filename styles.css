@@ -57,6 +57,24 @@ nav a {
     width: 100%;
     margin-bottom: 16px;
   }
+
+  @media (max-width: 1200px) {
+    .gallery {
+      column-count: 3;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .gallery {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery {
+      column-count: 1;
+    }
+  }
   
   /* Estilo para lightbox */
   .lightbox {
@@ -114,12 +132,11 @@ nav a {
   }
   /* ... */
 
-footer {
+  footer {
     background-color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
-    bottom: 0;
     width: 100%;
   }
   
@@ -191,13 +208,32 @@ footer {
     }
   }
   
-  body.flex-footer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Estilo para el botón */
+  #scrollToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ead308;
+    color: rgb(246, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
   }
   
-  /* Hace que el contenido principal ocupe todo el espacio disponible, empujando el footer hacia abajo */
-  .main-content {
-    flex: 1;
+  #scrollToTopButton:hover {
+    background-color: #ffffff;
   }

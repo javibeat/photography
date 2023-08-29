@@ -60,6 +60,29 @@
     </p>
   </footer>
 
+  <button id="scrollToTopButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Obtener el botón
+    const mybutton = document.getElementById("scrollToTopButton");
+
+    // Cuando el usuario se desplaza hacia abajo 20px desde la parte superior del documento, muestra el botón
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // Cuando el usuario hace clic en el botón, desplazarse hasta la parte superior del documento
+    mybutton.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
