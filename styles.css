@@ -1,181 +1,185 @@
-
-* {
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+  }
 
-.centered-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.header {
+  header {
     text-align: center;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo {
+    padding: 50px;
+  }
+  
+  .logo {
     max-width: 150px;
-    margin-bottom: 50px;
-}
+    margin: auto;
+  }
 
-.menu {
-    text-transform: uppercase;
-    font-weight: 300;
+  nav {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
+    margin: 10px auto 50px;
+    font-size: 22px;
+  }
 
-.menu-item {
-    display: inline-block;
-    margin: 0 10px;
-    color: #000000;
+  nav a {
+    margin: 0 15px;
     text-decoration: none;
-}
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 
-.grid-container {
-    columns: 5 200px;
-    column-gap: 1.5rem;
-    width: 95%;
-    margin: 0 auto 100px;
-}
-
-.grid-container div {
+  .submenu {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .submenu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Estilo para la galería masonry */
+.gallery {
+    column-count: 4;
+    column-gap: 16px;
+    margin: 20px;
+  }
+  
+  .gallery-item {
     width: 100%;
-    margin: 0 1.5rem 1.5rem 0;
-    border: solid 1px #aaaaaa;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-.grid-container div img {
-    width: 100%;
-    padding: 5px 5px 1px 5px;
-    transition: all 0.25s ease-in-out;
-    filter: grayscale(100%);
-}
-
-.grid-container div:hover img {
-    filter: grayscale(0);
-    transform: scale(1.2);
-}
-
-.grid-container div:hover {
-    border-color: rgb(0, 0, 0);
-}
-
-/* Dentro de la media query para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-
-    .header {
-        margin: 0 0 0 0.33rem;
-    }
-   
-    .grid-container {
-        margin: 0 0 0 1.71rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .grid-container div {
-        width: 95%;
-        display: inline-block;
-        border: solid 1px #aaaaaa;
-        padding: 0; /* Elimina el espacio entre las imágenes */
-        box-shadow: none; /* Elimina la sombra */
-    }
-
-    .grid-container div img {
-        width: 100%;
-        height: auto; /* Asegura que la imagen conserve su proporción */
-        filter: grayscale(100%);
-        transition: all 0.25s ease-in-out;
-    }
-
-    .overlay-image {
-        max-width: 100%; /* Ocupa todo el ancho de la pantalla */
-        max-height: 100vh; /* Ocupa todo el alto de la pantalla */
-        object-fit: contain; /* Asegura que la imagen se ajuste al área disponible */
-    }
-
-    .nav-btns {
-        display: none; /* Oculta los botones de navegación */
-    }
-}
-
-/* Tu estilo de overlay aquí */
-.overlay {
+    margin-bottom: 16px;
+  }
+  
+  /* Estilo para lightbox */
+  .lightbox {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.overlay-content {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-
-.overlay-image {
-    max-width: 90%;
-    max-height: 95vh;
-    object-fit: contain;
-}
-
-.close-btn {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+  
+  .lightbox-content {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    max-width: 90%;
+    max-height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+/* botones lightbox */
+.prev, .next {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
     color: white;
     cursor: pointer;
+    transform: translateY(-50%);
     z-index: 1000;
-}
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:focus, .next:focus {
+    outline: none;
+  }
+  /* ... */
 
-.nav-btns {
-    margin-top: 10px;
-}
-
-.prev-btn {
-    font-size: 20px;
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .about-me-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 700px; /* Ancho máximo de 600px */
+    margin: 0 auto;  /* Centrado horizontalmente */
+  }
+  
+  .description {
+    flex: 1;
+    text-align: justify;
+    margin: 0;
+  }
+  
+  .contact-info {
+    flex: 1;
+    text-align: center; /* Centrado del contenido dentro de esta sección */
+    margin: 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Centrado horizontal de los iconos */
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
     color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 0 10px;
-    transform: scaleX(-1);
-}
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .description {
+        text-align: justify;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+      }
 
-.next-btn {
-    font-size: 20px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 0 10px;
-    transform: scaleX(-1); /* Invierte horizontalmente el icono */
-}
-
-.image-description {
-    margin-top: 20px;
-    color: white;
-}
+    .contact-info {
+      text-align: center;
+      flex: 100%;
+    }
+  }
+  
+  

@@ -1,112 +1,96 @@
-const gridItems = document.querySelectorAll('.grid-item');
-const overlay = document.querySelector('.overlay');
-const overlayContent = document.querySelector('.overlay-content');
-const overlayImage = document.querySelector('.overlay-image');
-const overlayDescription = document.querySelector('.image-description'); // Agregamos esta línea
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const closeBtn = document.querySelector('.close-btn');
-const gridContainer = document.querySelector('.grid-container');
-
-let currentIndex = 0;
-let touchStartX = 0;
-let touchEndX = 0;
-
-function openOverlay(index) {
-    overlay.style.display = 'flex';
-    overlayContent.style.display = 'flex';
-    overlayImage.src = gridItems[index].querySelector('img').src;
-    overlayDescription.textContent = gridItems[index].querySelector('img').alt; // Agregamos la descripción
-    currentIndex = index;
-}
-
-function closeOverlay() {
-    overlay.style.display = 'none';
-    overlayContent.style.display = 'none';
-}
-
-function navigate(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) {
-        currentIndex = gridItems.length - 1;
-    } else if (currentIndex >= gridItems.length) {
-        currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    // Reordenar las imágenes aleatoriamente
+    const gallery = document.querySelector('.gallery');
+    for (let i = gallery.children.length; i >= 0; i--) {
+      gallery.appendChild(gallery.children[Math.random() * i | 0]);
     }
-    overlayImage.src = gridItems[currentIndex].querySelector('img').src;
-    overlayDescription.textContent = gridItems[currentIndex].querySelector('img').alt; // Agregamos la descripción
-}
-
-gridItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        openOverlay(index);
+  
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const lightbox = document.querySelector(".lightbox");
+    const lightboxContent = document.querySelector(".lightbox-content");
+    const close = document.querySelector(".close");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const filters = document.querySelectorAll(".filter");
+    
+    let currentImageIndex = -1; // para llevar el control de la imagen actual
+    let currentTag = "all"; // para llevar el control de la categoría actual
+    
+    const updateLightboxImages = () => {
+      return [...galleryItems].filter(item => item.style.display !== "none");
+    };
+    
+    // Abrir lightbox
+    galleryItems.forEach((item, index) => {
+      item.addEventListener("click", (e) => {
+        const filteredItems = updateLightboxImages();
+        currentImageIndex = filteredItems.indexOf(item);
+        lightboxContent.src = e.target.src;
+        lightbox.style.display = "block";
+      });
     });
-});
-
-closeBtn.addEventListener('click', () => {
-    closeOverlay();
-});
-
-prevBtn.addEventListener('click', () => {
-    navigate(-1);
-});
-
-nextBtn.addEventListener('click', () => {
-    navigate(1);
-});
-
-document.addEventListener('keydown', (event) => {
-    if (overlay.style.display === 'flex') {
-        if (event.key === 'ArrowLeft') {
-            navigate(-1);
-        } else if (event.key === 'ArrowRight') {
-            navigate(1);
-        } else if (event.key === 'Escape') {
-            closeOverlay();
+    
+    // Cerrar lightbox
+    close.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+    
+    // Cerrar con tecla Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        lightbox.style.display = "none";
+      }
+    });
+    
+    // Navegar entre fotos con botones
+    prev.addEventListener("click", () => {
+      const filteredItems = updateLightboxImages();
+      if (currentImageIndex > 0) {
+        currentImageIndex--;
+        lightboxContent.src = filteredItems[currentImageIndex].src;
+      }
+    });
+    
+    next.addEventListener("click", () => {
+      const filteredItems = updateLightboxImages();
+      if (currentImageIndex < filteredItems.length - 1) {
+        currentImageIndex++;
+        lightboxContent.src = filteredItems[currentImageIndex].src;
+      }
+    });
+    
+    // Navegar con teclas de dirección
+    document.addEventListener("keydown", (e) => {
+      const filteredItems = updateLightboxImages();
+      if (lightbox.style.display === "block") {
+        if (e.key === "ArrowLeft" && currentImageIndex > 0) {
+          currentImageIndex--;
+          lightboxContent.src = filteredItems[currentImageIndex].src;
+        } else if (e.key === "ArrowRight" && currentImageIndex < filteredItems.length - 1) {
+          currentImageIndex++;
+          lightboxContent.src = filteredItems[currentImageIndex].src;
         }
-    }
-});
-
-// Mezclar el orden de los elementos al cargar la página
-const shuffledItems = Array.from(gridItems).sort(() => Math.random() - 0.5);
-
-shuffledItems.forEach(item => {
-    gridContainer.appendChild(item);
-});
-
-overlayImage.addEventListener('touchstart', (event) => {
-    touchStartX = event.touches[0].clientX;
-});
-
-overlayImage.addEventListener('touchmove', (event) => {
-    const touchCurrentX = event.touches[0].clientX;
-    const touchDiff = touchCurrentX - touchStartX;
-
-    // Verificar la orientación del dispositivo
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-
-    if (Math.abs(touchDiff) > 10 && (!isPortrait || Math.abs(touchDiff) > 50)) {
-        event.preventDefault(); // Evitar el desplazamiento predeterminado
-    }
-});
-
-overlayImage.addEventListener('touchend', (event) => {
-    touchEndX = event.changedTouches[0].clientX;
-    const touchDiff = touchEndX - touchStartX;
-
-    // Verificar la orientación del dispositivo
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-
-    if (isPortrait) {
-        if (touchDiff > 50) {
-            navigate(-1); // Deslizar hacia arriba (cambia a la imagen anterior)
-        } else if (touchDiff < -50) {
-            navigate(1); // Deslizar hacia abajo (cambia a la siguiente imagen)
-        }
-    } else {
-        if (touchDiff > 50) {
-            navigate(-1); // Deslizar hacia la izquierda (cambia a la imagen anterior)
-        } else if (touchDiff < -50) {
-            navigate(1); // Deslizar hacia la derecha (cambia a la siguiente imagen)
-        }
-    }
-});
+      }
+    });
+    
+    // Filtrar imágenes según categoría seleccionada en el submenú
+    filters.forEach((filter) => {
+      filter.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentTag = e.target.getAttribute("data-filter");
+    
+        galleryItems.forEach((item) => {
+          if (currentTag === "all") {
+            item.style.display = "block";
+          } else {
+            if (item.getAttribute("data-tag") === currentTag) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          }
+        });
+      });
+    });
+  });
+  
