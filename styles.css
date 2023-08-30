@@ -20,7 +20,7 @@ nav {
   margin: 10px auto 50px;
   font-size: 22px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 nav a {
@@ -90,6 +90,10 @@ nav a {
   @media (max-width: 768px) {
     .gallery {
       column-count: 1;
+    }
+
+    .sub-menu a {
+      margin: 10px;
     }
   }
   
