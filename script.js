@@ -12,17 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
   
-  // Cambio aquí: Selección de los iconos como filtros
+  // Selección de los iconos como filtros
   const filterIcons = document.querySelectorAll(".filter-icon");
   
-  let currentImageIndex = -1; // para llevar el control de la imagen actual
-  let currentTag = "all"; // para llevar el control de la categoría actual
+  let currentImageIndex = -1;
+  let currentTag = "all";
   
   const updateLightboxImages = () => {
     return [...galleryItems].filter(item => item.style.display !== "none");
   };
   
-  // Abrir lightbox
   galleryItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
       const filteredItems = updateLightboxImages();
@@ -32,50 +31,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Cerrar lightbox
   close.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
   
-  // Cerrar con tecla Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       lightbox.style.display = "none";
     }
   });
   
-  // Navegar entre fotos con botones
   prev.addEventListener("click", () => {
     const filteredItems = updateLightboxImages();
     if (currentImageIndex > 0) {
       currentImageIndex--;
-      lightboxContent.src = filteredItems[currentImageIndex].src;
+    } else {
+      currentImageIndex = filteredItems.length - 1;
     }
+    lightboxContent.src = filteredItems[currentImageIndex].src;
   });
   
   next.addEventListener("click", () => {
     const filteredItems = updateLightboxImages();
     if (currentImageIndex < filteredItems.length - 1) {
       currentImageIndex++;
-      lightboxContent.src = filteredItems[currentImageIndex].src;
+    } else {
+      currentImageIndex = 0;
     }
+    lightboxContent.src = filteredItems[currentImageIndex].src;
   });
   
-  // Navegar con teclas de dirección
   document.addEventListener("keydown", (e) => {
     const filteredItems = updateLightboxImages();
     if (lightbox.style.display === "block") {
-      if (e.key === "ArrowLeft" && currentImageIndex > 0) {
-        currentImageIndex--;
+      if (e.key === "ArrowLeft") {
+        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : filteredItems.length - 1;
         lightboxContent.src = filteredItems[currentImageIndex].src;
-      } else if (e.key === "ArrowRight" && currentImageIndex < filteredItems.length - 1) {
-        currentImageIndex++;
+      } else if (e.key === "ArrowRight") {
+        currentImageIndex = (currentImageIndex < filteredItems.length - 1) ? currentImageIndex + 1 : 0;
         lightboxContent.src = filteredItems[currentImageIndex].src;
       }
     }
   });
   
-  // Filtrar imágenes según la categoría seleccionada en los iconos del submenú
   filterIcons.forEach((icon) => {
     icon.addEventListener("click", (e) => {
       e.preventDefault();
