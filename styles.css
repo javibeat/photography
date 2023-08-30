@@ -226,8 +226,8 @@ nav a {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #ead308;
-    color: rgb(246, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
