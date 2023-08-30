@@ -12,13 +12,13 @@ header {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 200px;
   margin: auto;
 }
 
 nav {
   text-align: center;
-  margin: 10px auto 50px;
+  margin: 5px auto 50px;
   font-size: 22px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
