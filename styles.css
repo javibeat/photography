@@ -21,7 +21,7 @@ nav {
   margin: 5px auto 50px;
   font-size: 22px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 nav a {
@@ -94,7 +94,7 @@ nav a {
     }
 
     .sub-menu a {
-      margin: 5px;
+      margin: 3px;
     }
   }
   
