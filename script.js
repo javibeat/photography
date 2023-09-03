@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Asegurarse de que el lightbox esté oculto cuando se carga la página
+  const lightbox = document.querySelector(".lightbox");
+  lightbox.style.display = "none";
+
   // Reordenar las imágenes aleatoriamente
   const gallery = document.querySelector('.gallery');
   for (let i = gallery.children.length; i >= 0; i--) {
@@ -6,25 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const galleryItems = document.querySelectorAll(".gallery-item");
-  const lightbox = document.querySelector(".lightbox");
   const lightboxContent = document.querySelector(".lightbox-content");
   const close = document.querySelector(".close");
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
-  
-  // Selección de los iconos como filtros (ya no usamos esto)
-  // const filterIcons = document.querySelectorAll(".filter-icon");
-  
+
   // Selección de los enlaces del submenú como filtros
-  const submenuLinks = document.querySelectorAll(".submenu-link"); // o ".filter-icon" si has cambiado la clase
-  
+  const submenuLinks = document.querySelectorAll(".submenu-link");
+
   let currentImageIndex = -1;
   let currentTag = "all";
-  
+
   const updateLightboxImages = () => {
     return [...galleryItems].filter(item => item.style.display !== "none");
   };
-  
+
   galleryItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
       const filteredItems = updateLightboxImages();
@@ -33,17 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = "block";
     });
   });
-  
+
   close.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
-  
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       lightbox.style.display = "none";
     }
   });
-  
+
   prev.addEventListener("click", () => {
     const filteredItems = updateLightboxImages();
     if (currentImageIndex > 0) {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lightboxContent.src = filteredItems[currentImageIndex].src;
   });
-  
+
   next.addEventListener("click", () => {
     const filteredItems = updateLightboxImages();
     if (currentImageIndex < filteredItems.length - 1) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lightboxContent.src = filteredItems[currentImageIndex].src;
   });
-  
+
   document.addEventListener("keydown", (e) => {
     const filteredItems = updateLightboxImages();
     if (lightbox.style.display === "block") {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   submenuLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      currentTag = e.currentTarget.getAttribute("data-filter"); // Cambiado de e.target a e.currentTarget
+      currentTag = e.currentTarget.getAttribute("data-filter");
 
       galleryItems.forEach((item) => {
         if (currentTag === "all") {
