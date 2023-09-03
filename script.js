@@ -12,8 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
   
-  // Selección de los iconos como filtros
-  const filterIcons = document.querySelectorAll(".filter-icon");
+  // Selección de los iconos como filtros (ya no usamos esto)
+  // const filterIcons = document.querySelectorAll(".filter-icon");
+  
+  // Selección de los enlaces del submenú como filtros
+  const submenuLinks = document.querySelectorAll(".submenu-link"); // o ".filter-icon" si has cambiado la clase
   
   let currentImageIndex = -1;
   let currentTag = "all";
@@ -73,12 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  
-  filterIcons.forEach((icon) => {
-    icon.addEventListener("click", (e) => {
+
+  // Manejar clics en los enlaces del submenú para filtrar imágenes
+  submenuLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      currentTag = icon.querySelector("img").getAttribute("data-filter");
-  
+      currentTag = e.currentTarget.getAttribute("data-filter"); // Cambiado de e.target a e.currentTarget
+
       galleryItems.forEach((item) => {
         if (currentTag === "all") {
           item.style.display = "block";
