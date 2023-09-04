@@ -109,7 +109,11 @@ nav a {
     }
 
     .sub-menu a {
-      margin: 1px;
+      margin: 0 1px; /* Reducir el margen en dispositivos más pequeños */
+    }
+    
+    .sub-menu {
+      padding: 0 5px; /* Agregar algo de relleno para evitar que los elementos se peguen a los lados */
     }
   }
   
