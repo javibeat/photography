@@ -85,6 +85,12 @@ nav a {
     margin-bottom: 16px;
   }
 
+  @media (min-width: 2560px) { /* Otra resolución que prefieras para monitores ultrawide */
+    .gallery {
+      column-count: 5;
+    }
+  }
+  
   @media (max-width: 1920px) {
     .gallery {
       column-count: 4;
