@@ -282,7 +282,7 @@ nav a {
   }
   
   #scrollToTopButton:hover {
-    background-color: #ffffff;
+    background-color: #636363;
   }
 
   @media (max-width: 768px) {
