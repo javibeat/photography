@@ -3,10 +3,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nombre = $_POST['nombre'];
   $email = $_POST['email'];
   $texto = $_POST['texto'];
+  $honeypot = $_POST['fax'];
 
   // Validar campos
   if (empty($nombre) || empty($email) || empty($texto)) {
     echo "Todos los campos son obligatorios.";
+    exit;
+  }
+
+  // Verificar el honeypot
+  if (!empty($honeypot)) {
+    // El formulario fue llenado por un bot, por lo que salimos del script
     exit;
   }
 
