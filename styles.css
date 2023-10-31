@@ -206,7 +206,7 @@ nav a {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 700px; /* Ancho máximo de 600px */
+    max-width: 700px; /* Ancho máximo de 700px */
     margin: 50px auto 100px;  /* Centrado horizontalmente */
   }
   
@@ -241,6 +241,47 @@ nav a {
     font-size: 24px;
   }
   
+/* Estilo para el contact-form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;  /* Espacio vertical arriba del formulario */
+  margin-bottom: 50px; /* Espacio vertical debajo del formulario */
+}
+
+/* Añadir border-radius de 15px a cada celda del formulario */
+.input-container input {
+  border-radius: 5px;
+  width: 400px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.input-container textarea {
+  border-radius: 5px;
+  width: 400px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+/* Haciendo que sea completamente responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-me-container {
+    margin: 0 20px 0 20px;
+  }
+
+  .contact-form {
+    margin: 25px 20px 0 20px;
+  }
+
+  .input-container input, .input-container textarea {
+    border-radius: 5px;
+  }
+}
+
   @media screen and (max-width: 768px) {
     .description {
         text-align: justify;
@@ -252,6 +293,7 @@ nav a {
     .contact-info {
       text-align: center;
       flex: 100%;
+      margin-bottom: 30PX;
     }
   }
   
