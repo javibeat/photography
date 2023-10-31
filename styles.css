@@ -251,35 +251,36 @@ nav a {
   margin-bottom: 50px; /* Espacio vertical debajo del formulario */
 }
 
-/* Añadir border-radius de 15px a cada celda del formulario */
-.input-container input {
-  border-radius: 5px;
-  width: 400px;
-  margin-top: 15px;
-  padding: 10px;
+.contact-form h2 {
+  font-size: larger;
 }
 
-.input-container textarea {
-  border-radius: 5px;
-  width: 400px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 10px;
+.input-container a {
+  text-decoration: none;  /* Elimina el subrayado */
+  color: inherit;  /* Hereda el color del texto del elemento padre */
 }
 
-/* Haciendo que sea completamente responsivo para dispositivos móviles */
-@media (max-width: 768px) {
-  .about-me-container {
-    margin: 0 20px 0 20px;
-  }
+.press {
+  background-color: #000000;
+  font-size: larger;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .contact-form {
-    margin: 25px 20px 0 20px;
-  }
+.press:active {
+  background-color: #333333;
+}
 
-  .input-container input, .input-container textarea {
-    border-radius: 5px;
-  }
+.press a {
+  color: white;
+  text-decoration: none;
 }
 
   @media screen and (max-width: 768px) {
