@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Slider logic
     const sliderContainer = document.querySelector('.slider');
     const imagePaths = [
-        'slider/lexieBand.jpg',
-        'slider/sergioTrumpet.jpg',
+        'slider/LexieBand.jpg',
+        'slider/SergioTrumpet.jpg',
         'slider/elefantsThailand.jpeg',
         // Añade más imágenes según sea necesario
     ];
