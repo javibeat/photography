@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
+  <title>Estrela Photography</title>
+  <meta name="title" content="Estrela Photography / Dubai Based Photographer" />
+  <meta name="description" content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
+  <meta name="keywords" content="Photography, Dubai, Portrait, Professional Photography, Photography Services, Dubai Photographer">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="image" content="social.jpg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://estrela.photo" />
+  <meta property="og:title" content="Estrela Photography / Dubai Based Photographer" />
+  <meta property="og:description" content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
+  <meta property="og:image" content="social.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://estrela.photo" />
+  <meta property="twitter:title" content="Estrela Photography / Dubai Based Photographer" />
+  <meta property="twitter:description" content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
+  <meta property="twitter:image" content="social.jpg" />
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="photography">
+  <header>
+    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logoLens"></a>
+  </header>
+
+  <div class="sub-menu">
+    <div class="icon-label">
+      <a href="#all" class="submenu-link" data-filter="all"><span class="label">ALL</span></a>
+    </div>
+    <div class="icon-label">
+      <a href="#artists" class="submenu-link" data-filter="artists"><span class="label">ARTISTS</span></a>
+    </div>
+    <div class="icon-label">
+      <a href="#people" class="submenu-link" data-filter="people"><span class="label">PEOPLE</span></a>
+    </div>
+    <div class="icon-label">
+      <a href="#world" class="submenu-link" data-filter="world"><span class="label">WORLD</span></a>
+    </div>
+  </div>
+  
+
+  <div class="gallery">
+
+    <img src="img/LexieBand.jpg" alt="Lexie Band" class="gallery-item" data-tag="artists">
+    <img src="img/LexieBand1.jpg" alt="Lexie Band" class="gallery-item" data-tag="artists">
+    <img src="img/SergioTrumpet.jpg" alt="Sergio Trumpet" class="gallery-item" data-tag="artists">
+    <img src="img/ManuSax.jpg" alt="Manu Sax" class="gallery-item" data-tag="artists">
+    <img src="img/elefantsThailand.jpeg" alt="Elephants in Thailand" class="gallery-item" data-tag="world">
+    <img src="img/waterfallThailand.jpeg" alt="Waterfalls in Thailand" class="gallery-item" data-tag="world">
+
+  </div>
+
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <button class="prev" aria-label="Previous">&#10094;</button>
+    <img class="lightbox-content">
+    <button class="next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <footer>
+    <p>
+      Javier Estrela Photography @ 2023 - Design by 
+      <a href="https://truelovecreative.es" target="_blank">True Love Creative</a>
+    </p>
+  </footer>
+
+  <button id="scrollToTopButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Obtener el botón
+    const mybutton = document.getElementById("scrollToTopButton");
+
+    // Cuando el usuario se desplaza hacia abajo 20px desde la parte superior del documento, muestra el botón
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // Cuando el usuario hace clic en el botón, desplazarse hasta la parte superior del documento
+    mybutton.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+<div class="menu">
+  <div class="icon"></div>
+</div>
+<div id="menu-container"></div>
+<script src="script.js"></script>
+  <script src="lightbox.js"></script>
+</body>
+</html>
