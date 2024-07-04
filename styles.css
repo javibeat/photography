@@ -23,7 +23,9 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
+
 
 header {
   text-align: center;
@@ -519,20 +521,39 @@ header {
   #scrollToTopButton:hover {
     background-color: #333;
   }
-  
 
   footer {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: auto 20px;
+    padding: 0 20px; /* Usa padding en lugar de margin para asegurar que no exceda el ancho */
+    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
     align-items: center;
     justify-content: center;
     color: var(--light);
     text-align: center;
+    overflow: hidden; /* Asegúrate de ocultar cualquier contenido que se desborde */
   }
-
+  
+  footer p {
+    margin: 0 10px; /* Ajusta los márgenes según sea necesario */
+  }
+  
   footer a {
     color: var(--color);
     text-decoration: none;
   }
+  
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      padding: 0;
+      margin: 0 0 25px;
+    }
+    
+    footer p {
+      margin: 5px 0; /* Ajusta los márgenes para la visualización en móviles */
+    }
+  }
+  
+  
