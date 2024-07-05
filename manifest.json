@@ -1,0 +1,17 @@
+{
+    "name": "Estrela Photography",
+    "short_name": "Photography",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#b3e5fc",
+    "description": "Capturing moments in time: Explore stunning photography by Javier Estrela",
+    "icons": [
+      {
+        "src": "/img/logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

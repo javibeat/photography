@@ -1,0 +1,12 @@
+/* TEAM */
+  Your title: Javi Beat
+  Site: http://truelovecreative.es
+  Twitter: @javibeat
+  Location: Dubai, UAE
+  Email: javibeat@icloud.com
+
+/* SITE */
+  Last update: 2024/07/05
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, etc.
+  Software: VS Code, Coda, Lightroom, Photoshop, etc.
