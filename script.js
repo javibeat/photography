@@ -63,3 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const page = window.location.pathname;
+  
+    let visits = JSON.parse(localStorage.getItem('visits')) || {};
+  
+    if (!visits[page]) {
+      visits[page] = 0;
+    }
+    visits[page] += 1;
+  
+    localStorage.setItem('visits', JSON.stringify(visits));
+  
+    console.log(`Page ${page} has been visited ${visits[page]} times.`);
+  });
+  
+  
