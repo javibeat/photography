@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const galleryItems = document.querySelectorAll(".gallery-item");
   const lightboxContent = document.querySelector(".lightbox-content");
+  const lightboxTitle = document.createElement('div');
+  lightboxTitle.classList.add('lightbox-title');
+  lightbox.appendChild(lightboxTitle);
   const close = document.querySelector(".close");
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
@@ -25,12 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return [...galleryItems].filter(item => item.style.display !== "none");
   };
 
+  const showImageInLightbox = (item) => {
+    lightboxContent.src = item.src;
+    lightboxTitle.textContent = item.getAttribute('data-title');
+    lightbox.style.display = "block";
+  };
+
   galleryItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
       const filteredItems = updateLightboxImages();
       currentImageIndex = filteredItems.indexOf(item);
-      lightboxContent.src = e.target.src;
-      lightbox.style.display = "block";
+      showImageInLightbox(item);
     });
   });
 
@@ -51,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       currentImageIndex = filteredItems.length - 1;
     }
-    lightboxContent.src = filteredItems[currentImageIndex].src;
+    showImageInLightbox(filteredItems[currentImageIndex]);
   });
 
   next.addEventListener("click", () => {
@@ -61,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       currentImageIndex = 0;
     }
-    lightboxContent.src = filteredItems[currentImageIndex].src;
+    showImageInLightbox(filteredItems[currentImageIndex]);
   });
 
   document.addEventListener("keydown", (e) => {
@@ -69,10 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (lightbox.style.display === "block") {
       if (e.key === "ArrowLeft") {
         currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : filteredItems.length - 1;
-        lightboxContent.src = filteredItems[currentImageIndex].src;
+        showImageInLightbox(filteredItems[currentImageIndex]);
       } else if (e.key === "ArrowRight") {
         currentImageIndex = (currentImageIndex < filteredItems.length - 1) ? currentImageIndex + 1 : 0;
-        lightboxContent.src = filteredItems[currentImageIndex].src;
+        showImageInLightbox(filteredItems[currentImageIndex]);
       }
     }
   });
