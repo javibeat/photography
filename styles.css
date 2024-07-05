@@ -201,6 +201,7 @@ header {
   width: 40%;
   margin-bottom: 50px;
 }
+
 /* Social Icons */
 .social-icons {
   display: flex;
@@ -308,9 +309,9 @@ header {
 
 @media (max-width: 768px) {
 
-.cta {
-  margin: auto 40px;
-}
+  .cta {
+    margin: auto 40px;
+  }
 }
 
 /*GALLERY*/
@@ -361,287 +362,300 @@ header {
 /* Estilo para pantallas más grandes */
 @media (min-width: 769px) {
   .label {
-    font-size: 20px; /* o cualquier otro tamaño que prefiera */
+    font-size: 20px;
+    /* o cualquier otro tamaño que prefiera */
   }
 }
 
 @media (max-width: 768px) {
   .label {
-    font-size: 18px; /* o cualquier otro tamaño que prefiera */
+    font-size: 18px;
+    /* o cualquier otro tamaño que prefiera */
   }
 
   .logo {
     width: 65%;
   }
 }
-  
-  /* Estilo para la galería masonry */
+
+/* Estilo para la galería masonry */
 .gallery {
+  column-count: 4;
+  column-gap: 16px;
+  margin: 20px;
+}
+
+.gallery-item {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 2560px) {
+
+  /* Otra resolución que prefieras para monitores ultrawide */
+  .gallery {
+    column-count: 5;
+  }
+}
+
+@media (max-width: 1920px) {
+  .gallery {
     column-count: 4;
-    column-gap: 16px;
-    margin: 20px;
   }
-  
-  .gallery-item {
-    width: 100%;
-    margin-bottom: 16px;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 1;
   }
 
-  @media (min-width: 2560px) { /* Otra resolución que prefieras para monitores ultrawide */
-    .gallery {
-      column-count: 5;
-    }
+  .sub-menu a {
+    margin: 0 1px;
+    /* Reducir el margen en dispositivos más pequeños */
   }
 
-  @media (max-width: 1920px) {
-    .gallery {
-      column-count: 4;
-    }
+  .sub-menu {
+    padding: 0 1px;
+    /* Agregar algo de relleno para evitar que los elementos se peguen a los lados */
   }
+}
 
-  @media (max-width: 1200px) {
-    .gallery {
-      column-count: 3;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .gallery {
-      column-count: 2;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .gallery {
-      column-count: 1;
-    }
+/* Estilo para lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
 
-    .sub-menu a {
-      margin: 0 1px; /* Reducir el margen en dispositivos más pequeños */
-    }
+.lightbox-content {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    .sub-menu {
-      padding: 0 1px; /* Agregar algo de relleno para evitar que los elementos se peguen a los lados */
-    }
-  }
-  
-  /* Estilo para lightbox */
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-  }
-  
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* botones lightbox */
+.prev,
+.next {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:focus,
+.next:focus {
+  outline: none;
+}
+
+/* ... */
+
+@media (max-width: 768px) {
   .lightbox-content {
-    position: absolute;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
+    object-fit: contain;
+    /* Mantener las proporciones de la imagen */
   }
 
-/* botones lightbox */
-.prev, .next {
-    background: none;
-    border: none;
-    position: absolute;
-    top: 50%;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    transform: translateY(-50%);
-    z-index: 1000;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .prev:focus, .next:focus {
-    outline: none;
-  }
-  /* ... */
-
-  @media (max-width: 768px) {
-    .lightbox-content {
-      max-width: 100%;
-      max-height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: contain; /* Mantener las proporciones de la imagen */
-    }
-  
-    .lightbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .close, .prev, .next {
-      z-index: 1001; /* Por encima de .lightbox-content */
-    }
-  }
-
-  #scrollToTopButton {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #555;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 20px;
-  }
-  
-  #scrollToTopButton:hover {
-    background-color: #333;
-  }
-
-  footer {
+  .lightbox {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0 20px; /* Usa padding en lugar de margin para asegurar que no exceda el ancho */
-    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
-    align-items: center;
     justify-content: center;
-    color: var(--light);
-    text-align: center;
-    overflow: hidden; /* Asegúrate de ocultar cualquier contenido que se desborde */
-  }
-  
-  footer p {
-    margin: 0 10px; /* Ajusta los márgenes según sea necesario */
-  }
-  
-  footer a {
-    color: var(--color);
-    text-decoration: none;
-  }
-  
-  @media (max-width: 768px) {
-    footer {
-      flex-direction: column;
-      padding: 0;
-      margin: 0 0 25px;
-    }
-    
-    footer p {
-      margin: 5px 0; /* Ajusta los márgenes para la visualización en móviles */
-    }
+    align-items: center;
   }
 
-  .cta-button-container {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    text-align: center;
+  .close,
+  .prev,
+  .next {
+    z-index: 1001;
+    /* Por encima de .lightbox-content */
+  }
+}
+
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#scrollToTopButton:hover {
+  background-color: #333;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 20px;
+  /* Usa padding en lugar de margin para asegurar que no exceda el ancho */
+  box-sizing: border-box;
+  /* Asegúrate de que el padding se incluya en el ancho total */
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  text-align: center;
+  overflow: hidden;
+  /* Asegúrate de ocultar cualquier contenido que se desborde */
+}
+
+footer p {
+  margin: 0 10px;
+  /* Ajusta los márgenes según sea necesario */
+}
+
+footer a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 25px;
+  }
+
+  footer p {
+    margin: 5px 0;
+    /* Ajusta los márgenes para la visualización en móviles */
+  }
+}
+
+.cta-button-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: transparent;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 16px;
-    border: 2px solid #e7ecee;
-    border-radius: 25px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid #e7ecee;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .cta-button:hover {
-    background-color: rgba(179, 229, 252, 0.1);
-    color: aliceblue;
+  background-color: rgba(179, 229, 252, 0.1);
+  color: aliceblue;
 }
 
 .cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border: 2px solid transparent;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-.cta-button:hover::before {
-    border-color: #b3e5fc;
+#cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
 }
 
-  
-  #cookie-consent-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    z-index: 1000;
-  }
-  
-  .cookie-consent-content {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .cookie-consent-content p {
-    margin: 0;
-  }
-  
-  .cookie-consent-content a {
-    color: #b3e5fc;
-    text-decoration: underline;
-  }
-  
-  .cookie-consent-content button {
-    background-color: #b3e5fc;
-    color: #333;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .cookie-consent-content button:hover {
-    background-color: #82c9e5;
-  }
-  
+.cookie-consent-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-consent-content p {
+  margin: 0;
+}
+
+.cookie-consent-content a {
+  color: #b3e5fc;
+  text-decoration: underline;
+}
+
+.cookie-consent-content button {
+  background-color: #b3e5fc;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookie-consent-content button:hover {
+  background-color: #82c9e5;
+}
