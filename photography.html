@@ -2,13 +2,23 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K69QKZKL8R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K69QKZKL8R');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="max-age=31536000">
   <title>Estrela Photography</title>
   <meta name="title" content="Estrela Photography / Dubai Based Photographer" />
   <meta name="description" content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
-  <meta name="keywords" content="Photography, Dubai, Portrait, Professional Photography, Photography Services, Dubai Photographer">
+  <meta name="keywords"
+    content="Photography, Dubai, Portrait, Professional Photography, Photography Services, Dubai Photographer">
   <link rel="icon" href="favicon.png" type="image/png">
   <meta name="image" content="social.jpg">
 
@@ -23,7 +33,8 @@
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://estrela.photo" />
   <meta property="twitter:title" content="Estrela Photography / Dubai Based Photographer" />
-  <meta property="twitter:description" content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
+  <meta property="twitter:description"
+    content="Capturing moments in time: Explore stunning photography by Javier Estrela" />
   <meta property="twitter:image" content="social.jpg" />
 
   <link rel="stylesheet" href="styles.css">
@@ -51,7 +62,7 @@
       <a href="#world" class="submenu-link" data-filter="world"><span class="label">WORLD</span></a>
     </div>
   </div>
-  
+
 
   <div class="gallery">
 
@@ -86,7 +97,7 @@
     const mybutton = document.getElementById("scrollToTopButton");
 
     // Cuando el usuario se desplaza hacia abajo 20px desde la parte superior del documento, muestra el botón
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -97,16 +108,17 @@
     }
 
     // Cuando el usuario hace clic en el botón, desplazarse hasta la parte superior del documento
-    mybutton.addEventListener("click", function() {
+    mybutton.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
-<div class="menu">
-  <div class="icon"></div>
-</div>
-<div id="menu-container"></div>
-<script src="script.js"></script>
+  <div class="menu">
+    <div class="icon"></div>
+  </div>
+  <div id="menu-container"></div>
+  <script src="script.js"></script>
   <script src="lightbox.js"></script>
 </body>
+
 </html>
