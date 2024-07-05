@@ -556,4 +556,45 @@ header {
     }
   }
   
+  #cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .cookie-consent-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cookie-consent-content p {
+    margin: 0;
+  }
+  
+  .cookie-consent-content a {
+    color: #b3e5fc;
+    text-decoration: underline;
+  }
+  
+  .cookie-consent-content button {
+    background-color: #b3e5fc;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cookie-consent-content button:hover {
+    background-color: #82c9e5;
+  }
   
