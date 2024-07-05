@@ -168,7 +168,7 @@ header {
   background-color: rgba(247, 242, 242, 1);
   color: var(--dark);
   text-align: center;
-  z-index: 1;
+  z-index: 100;
   transition: 0.5s;
 }
 
