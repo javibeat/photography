@@ -77,36 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const consentBanner = document.getElementById('cookie-consent-banner');
     const acceptButton = document.getElementById('accept-cookies');
     const consent = localStorage.getItem('cookieConsent');
-  
+
     if (!consent) {
-      consentBanner.style.display = 'block';
+        consentBanner.style.display = 'block';
     }
-  
+
     acceptButton.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'accepted');
-      consentBanner.style.display = 'none';
+        localStorage.setItem('cookieConsent', 'accepted');
+        consentBanner.style.display = 'none';
     });
-  
-    // Registro de visitas
-    const page = window.location.pathname;
-  
-    fetch('visits.json')
-      .then(response => response.json())
-      .then(data => {
-        if (!data[page]) {
-          data[page] = 0;
-        }
-        data[page] += 1;
-  
-        return fetch('save_visits.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-      })
-      .then(response => response.text())
-      .then(data => console.log(data))
-      .catch(error => console.error('Error:', error));
-  });
+});
