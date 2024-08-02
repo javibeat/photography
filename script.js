@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.querySelector('.menu');
     const menuContainer = document.getElementById('menu-container');
 
-    // Load the content of menu.html
+    // Cargar el contenido de menu.html
     fetch('menu.html')
         .then(response => response.text())
         .then(data => {
@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.addEventListener('click', function() {
                 menu.classList.toggle('open');
                 fullscreenMenu.classList.toggle('open');
+            });
+
+            // Cerrar el menú cuando se presiona la tecla ESC
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && fullscreenMenu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    fullscreenMenu.classList.remove('open');
+                }
             });
         })
         .catch(error => console.error('Error loading menu:', error));
@@ -102,4 +110,3 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => console.log(data))
       .catch(error => console.error('Error:', error));
   });
-  

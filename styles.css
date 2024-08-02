@@ -26,7 +26,6 @@ body {
   box-sizing: border-box;
 }
 
-
 header {
   text-align: center;
   padding: 50px;
@@ -121,6 +120,7 @@ header {
   background-color: var(--light);
   /* White icon */
   transition: 0.5s;
+  z-index: 1000;
 }
 
 .icon:before,
@@ -148,14 +148,12 @@ header {
 
 .menu.open .icon:before {
   transform: rotate(45deg) translate(7px, -7px);
-  background-color: var(--dark);
-  /* Dark icon when open */
+  background-color: var(--dark); /* Black icon when open */
 }
 
 .menu.open .icon:after {
   transform: rotate(-45deg) translate(7px, 7px);
-  background-color: var(--dark);
-  /* Dark icon when open */
+  background-color: var(--dark); /* Black icon when open */
 }
 
 .fullscreen-menu {
@@ -165,11 +163,13 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(247, 242, 242, 1);
+  background-color: rgb(255, 255, 255);
   color: var(--dark);
   text-align: center;
   z-index: 100;
-  transition: 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: hidden;
 }
 
 .fullscreen-menu.open {
@@ -177,6 +177,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
 }
 
 .fullscreen-menu img {
@@ -316,10 +318,6 @@ header {
 
 /*GALLERY*/
 
-.photography {
-  background-color: #171616;
-}
-
 .logoLens {
   max-width: 170px;
   margin: auto;
@@ -343,7 +341,7 @@ header {
 .sub-menu a {
   margin: 15px;
   text-decoration: none;
-  color: var(--light);
+  color: var(--dark);
 }
 
 .icon-label {
@@ -557,15 +555,12 @@ footer {
   flex-direction: row;
   width: 100%;
   padding: 0 20px;
-  /* Usa padding en lugar de margin para asegurar que no exceda el ancho */
   box-sizing: border-box;
-  /* Asegúrate de que el padding se incluya en el ancho total */
   align-items: center;
   justify-content: center;
   color: var(--light);
   text-align: center;
   overflow: hidden;
-  /* Asegúrate de ocultar cualquier contenido que se desborde */
 }
 
 footer p {
