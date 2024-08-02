@@ -118,7 +118,6 @@ header {
   width: 35px;
   height: 4px;
   background-color: var(--light);
-  /* White icon */
   transition: 0.5s;
 }
 
@@ -131,6 +130,7 @@ header {
   background-color: var(--light);
   /* White icon */
   transition: 0.5s;
+  z-index: 10;
 }
 
 .icon:before {
@@ -153,6 +153,18 @@ header {
 .menu.open .icon:after {
   transform: rotate(-45deg) translate(7px, 7px);
   background-color: var(--dark); /* Black icon when open */
+}
+
+/* Estilos específicos para photography.html */
+.photography-page .icon,
+.photography-page .icon:before,
+.photography-page .icon:after {
+    background-color: var(--dark); /* Negro */
+}
+
+.photography-page .menu.open .icon:before,
+.photography-page .menu.open .icon:after {
+    background-color: var(--dark); /* Blanco cuando esté abierto */
 }
 
 .fullscreen-menu {
@@ -590,7 +602,7 @@ footer a {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 0;
   text-align: center;
 }
 
