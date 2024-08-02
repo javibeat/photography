@@ -120,7 +120,6 @@ header {
   background-color: var(--light);
   /* White icon */
   transition: 0.5s;
-  z-index: 1000;
 }
 
 .icon:before,
@@ -166,7 +165,7 @@ header {
   background-color: rgb(255, 255, 255);
   color: var(--dark);
   text-align: center;
-  z-index: 100;
+  z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   visibility: hidden;
