@@ -1,107 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Asegurarse de que el lightbox esté oculto cuando se carga la página
-  const lightbox = document.querySelector(".lightbox");
-  lightbox.style.display = "none";
-
-  // Reordenar las imágenes aleatoriamente
-  const gallery = document.querySelector('.gallery');
-  for (let i = gallery.children.length; i >= 0; i--) {
-    gallery.appendChild(gallery.children[Math.random() * i | 0]);
-  }
-
-  const galleryItems = document.querySelectorAll(".gallery-item");
-  const lightboxContent = document.querySelector(".lightbox-content");
-  const lightboxTitle = document.createElement('div');
-  lightboxTitle.classList.add('lightbox-title');
-  lightbox.appendChild(lightboxTitle);
-  const close = document.querySelector(".close");
-  const prev = document.querySelector(".prev");
-  const next = document.querySelector(".next");
-
-  // Selección de los enlaces del submenú como filtros
-  const submenuLinks = document.querySelectorAll(".submenu-link");
-
-  let currentImageIndex = -1;
-  let currentTag = "all";
-
-  const updateLightboxImages = () => {
-    return [...galleryItems].filter(item => item.style.display !== "none");
-  };
-
-  const showImageInLightbox = (item) => {
-    lightboxContent.src = item.src;
-    lightboxTitle.textContent = item.getAttribute('data-title');
-    lightbox.style.display = "block";
-  };
-
-  galleryItems.forEach((item, index) => {
-    item.addEventListener("click", (e) => {
-      const filteredItems = updateLightboxImages();
-      currentImageIndex = filteredItems.indexOf(item);
-      showImageInLightbox(item);
-    });
-  });
-
-  close.addEventListener("click", () => {
+    let lightbox = document.querySelector(".lightbox");
     lightbox.style.display = "none";
-  });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      lightbox.style.display = "none";
+    let gallery = document.querySelector(".gallery");
+    for (let i = gallery.children.length; i >= 0; i--) {
+        gallery.appendChild(gallery.children[Math.random() * i | 0]);
     }
-  });
 
-  prev.addEventListener("click", () => {
-    const filteredItems = updateLightboxImages();
-    if (currentImageIndex > 0) {
-      currentImageIndex--;
-    } else {
-      currentImageIndex = filteredItems.length - 1;
-    }
-    showImageInLightbox(filteredItems[currentImageIndex]);
-  });
+    let galleryItems = document.querySelectorAll(".gallery-item"),
+        lightboxContent = document.querySelector(".lightbox-content"),
+        lightboxTitle = document.createElement("div");
 
-  next.addEventListener("click", () => {
-    const filteredItems = updateLightboxImages();
-    if (currentImageIndex < filteredItems.length - 1) {
-      currentImageIndex++;
-    } else {
-      currentImageIndex = 0;
-    }
-    showImageInLightbox(filteredItems[currentImageIndex]);
-  });
+    lightboxTitle.classList.add("lightbox-title");
+    lightbox.appendChild(lightboxTitle);
 
-  document.addEventListener("keydown", (e) => {
-    const filteredItems = updateLightboxImages();
-    if (lightbox.style.display === "block") {
-      if (e.key === "ArrowLeft") {
-        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : filteredItems.length - 1;
-        showImageInLightbox(filteredItems[currentImageIndex]);
-      } else if (e.key === "ArrowRight") {
-        currentImageIndex = (currentImageIndex < filteredItems.length - 1) ? currentImageIndex + 1 : 0;
-        showImageInLightbox(filteredItems[currentImageIndex]);
-      }
-    }
-  });
+    let close = document.querySelector(".close"),
+        prev = document.querySelector(".prev"),
+        next = document.querySelector(".next"),
+        submenuLinks = document.querySelectorAll(".submenu-link");
 
-  // Manejar clics en los enlaces del submenú para filtrar imágenes
-  submenuLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      currentTag = e.currentTarget.getAttribute("data-filter");
+    let currentIndex = -1,
+        currentTag = "all";
 
-      galleryItems.forEach((item) => {
-        if (currentTag === "all") {
-          item.style.display = "block";
-        } else {
-          if (item.getAttribute("data-tag") === currentTag) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        }
-      });
+    const updateLightboxImages = () => [...galleryItems].filter(item => item.style.display !== "none");
+
+    const showImageInLightbox = (item) => {
+        lightboxContent.src = item.src;
+        lightboxTitle.textContent = item.getAttribute("data-title");
+        lightbox.style.display = "block";
+    };
+
+    galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            let filteredItems = updateLightboxImages();
+            currentIndex = filteredItems.indexOf(item);
+            showImageInLightbox(item);
+        });
     });
-  });
+
+    close.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+    });
+
+    prev.addEventListener("click", () => {
+        let filteredItems = updateLightboxImages();
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : filteredItems.length - 1;
+        showImageInLightbox(filteredItems[currentIndex]);
+    });
+
+    next.addEventListener("click", () => {
+        let filteredItems = updateLightboxImages();
+        currentIndex = currentIndex < filteredItems.length - 1 ? currentIndex + 1 : 0;
+        showImageInLightbox(filteredItems[currentIndex]);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        let filteredItems = updateLightboxImages();
+        if (lightbox.style.display === "block") {
+            if (e.key === "ArrowLeft") {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : filteredItems.length - 1;
+                showImageInLightbox(filteredItems[currentIndex]);
+            } else if (e.key === "ArrowRight") {
+                currentIndex = currentIndex < filteredItems.length - 1 ? currentIndex + 1 : 0;
+                showImageInLightbox(filteredItems[currentIndex]);
+            }
+        }
+    });
+
+    submenuLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentTag = e.currentTarget.getAttribute("data-filter");
+            galleryItems.forEach(item => {
+                if (currentTag === "all") {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = item.getAttribute("data-tag") === currentTag ? "block" : "none";
+                }
+            });
+        });
+    });
 });

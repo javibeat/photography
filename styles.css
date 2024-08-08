@@ -88,7 +88,6 @@ header {
 .welcome-text {
   position: absolute;
   top: -2em;
-  /* Adjust this value to position the text above the logo */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -128,7 +127,6 @@ header {
   width: 35px;
   height: 4px;
   background-color: var(--light);
-  /* White icon */
   transition: 0.5s;
   z-index: 10;
 }
@@ -147,24 +145,24 @@ header {
 
 .menu.open .icon:before {
   transform: rotate(45deg) translate(7px, -7px);
-  background-color: var(--dark); /* Black icon when open */
+  background-color: var(--dark);
 }
 
 .menu.open .icon:after {
   transform: rotate(-45deg) translate(7px, 7px);
-  background-color: var(--dark); /* Black icon when open */
+  background-color: var(--dark);
 }
 
 /* Estilos específicos para photography.html */
 .photography-page .icon,
 .photography-page .icon:before,
 .photography-page .icon:after {
-    background-color: var(--dark); /* Negro */
+  background-color: var(--dark);
 }
 
 .photography-page .menu.open .icon:before,
 .photography-page .menu.open .icon:after {
-    background-color: var(--dark); /* Blanco cuando esté abierto */
+  background-color: var(--dark);
 }
 
 .fullscreen-menu {
@@ -173,7 +171,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: var(--dark);
   text-align: center;
   z-index: 1;
@@ -208,7 +206,6 @@ header {
   text-decoration: none;
   color: var(--dark);
   display: block;
-  /* Vertical menu */
 }
 
 .logo {
@@ -251,7 +248,6 @@ header {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-
   .logo-desktop,
   .welcome-text {
     display: none;
@@ -265,7 +261,6 @@ header {
 }
 
 @media (min-width: 769px) {
-
   .logo-desktop,
   .welcome-text {
     display: inline;
@@ -321,8 +316,12 @@ header {
   color: var(--dark);
 }
 
-@media (max-width: 768px) {
+.cta-link {
+  text-decoration: none;
+  color: var(--color);
+}
 
+@media (max-width: 768px) {
   .cta {
     margin: auto 40px;
   }
@@ -369,18 +368,15 @@ header {
   font-size: 12px;
 }
 
-/* Estilo para pantallas más grandes */
 @media (min-width: 769px) {
   .label {
     font-size: 20px;
-    /* o cualquier otro tamaño que prefiera */
   }
 }
 
 @media (max-width: 768px) {
   .label {
     font-size: 18px;
-    /* o cualquier otro tamaño que prefiera */
   }
 
   .logo {
@@ -401,8 +397,6 @@ header {
 }
 
 @media (min-width: 2560px) {
-
-  /* Otra resolución que prefieras para monitores ultrawide */
   .gallery {
     column-count: 5;
   }
@@ -433,12 +427,10 @@ header {
 
   .sub-menu a {
     margin: 0 1px;
-    /* Reducir el margen en dispositivos más pequeños */
   }
 
   .sub-menu {
     padding: 0 1px;
-    /* Agregar algo de relleno para evitar que los elementos se peguen a los lados */
   }
 }
 
@@ -478,7 +470,6 @@ header {
   max-width: 90%;
 }
 
-
 .close {
   position: absolute;
   top: 20px;
@@ -515,8 +506,6 @@ header {
   outline: none;
 }
 
-/* ... */
-
 @media (max-width: 768px) {
   .lightbox-content {
     max-width: 100%;
@@ -525,7 +514,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: contain;
-    /* Mantener las proporciones de la imagen */
   }
 
   .lightbox {
@@ -538,7 +526,6 @@ header {
   .prev,
   .next {
     z-index: 1001;
-    /* Por encima de .lightbox-content */
   }
 }
 
@@ -577,7 +564,6 @@ footer {
 
 footer p {
   margin: 0 10px;
-  /* Ajusta los márgenes según sea necesario */
 }
 
 footer a {
@@ -594,7 +580,6 @@ footer a {
 
   footer p {
     margin: 5px 0;
-    /* Ajusta los márgenes para la visualización en móviles */
   }
 }
 
