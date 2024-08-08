@@ -667,3 +667,21 @@ footer a {
 .cookie-consent-content button:hover {
   background-color: #82c9e5;
 }
+
+@media (max-width: 768px) {
+  .container {
+    overflow-y: auto; /* Permitir scroll vertical */
+  }
+  
+  .content {
+    padding: 20px; /* Añadir algo de espacio alrededor del contenido */
+    height: auto; /* Ajustar la altura para que no dependa del viewport */
+    width: 100%; /* Asegurar que el contenido ocupe el 100% del ancho */
+  }
+  
+  .about-text,
+  .contact-info {
+    width: 100%; /* Asegurar que los bloques de texto ocupen el 100% del ancho */
+  }
+}
+
