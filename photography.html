@@ -8,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-K69QKZKL8R');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,8 @@
   <meta http-equiv="Cache-Control" content="max-age=31536000">
   <title>Estrela Photography - Photographer for Artists in Dubai</title>
   <meta name="title" content="Estrela Photography / Dubai Based Photographer" />
-  <meta name="description" content="Capturing special moments in Dubai. Professional photography for musicians, DJs, and artists." />
+  <meta name="description"
+    content="Capturing special moments in Dubai. Professional photography for musicians, DJs, and artists." />
   <meta name="keywords"
     content="Photography, Dubai, Photographer for Artists, Musician Photography, Professional Photography, Dubai Photographer">
   <link rel="icon" href="favicon.png" type="image/png">
@@ -26,7 +26,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://estrela.photo" />
   <meta property="og:title" content="Estrela Photography - Photographer for Artists in Dubai" />
-  <meta property="og:description" content="Capturing special moments in Dubai. Professional photography for musicians, DJs, and artists." />
+  <meta property="og:description"
+    content="Capturing special moments in Dubai. Professional photography for musicians, DJs, and artists." />
   <meta property="og:image" content="img/social.jpg" />
 
   <!-- Twitter -->
@@ -37,96 +38,75 @@
     content="Capturing special moments in Dubai. Professional photography for musicians, DJs, and artists." />
   <meta property="twitter:image" content="img/social.jpg" />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <script src="https://kit.fontawesome.com/5210dbf26f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="photography-page">
-  <header>
-    <a href="index.html"><img src="img/logoB.png" alt="Logo" class="logoLens"></a>
-  </header>
+<body>
+  <!-- Menú se cargará aquí -->
+  <div id="menu-container"></div>
 
-  <div class="sub-menu">
-    <div class="icon-label">
-      <a href="#all" class="submenu-link" data-filter="all"><span class="label">ALL</span></a>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="img/LexieBand.jpg" alt="Lexie Band">
     </div>
-    <div class="icon-label">
-      <a href="#artists" class="submenu-link" data-filter="artists"><span class="label">ARTISTS</span></a>
+    <div class="gallery-item">
+      <img src="img/LexieBandV.jpg" alt="Lexie Band V">
     </div>
-    <div class="icon-label">
-      <a href="#people" class="submenu-link" data-filter="people"><span class="label">PEOPLE</span></a>
+    <div class="gallery-item">
+      <img src="img/SergioTrumpet.jpg" alt="Sergio Trumpet">
     </div>
-    <div class="icon-label">
-      <a href="#world" class="submenu-link" data-filter="world"><span class="label">WORLD</span></a>
+    <div class="gallery-item">
+      <img src="img/camino palmeras.jpg" alt="Camino Palmeras">
     </div>
+    <div class="gallery-item">
+      <img src="img/elefantsThailand.jpg" alt="Elefants Thailand">
+    </div>
+    <div class="gallery-item">
+      <img src="img/flower.jpg" alt="Flower">
+    </div>
+    <div class="gallery-item">
+      <img src="img/fire.jpg" alt="Fire">
+    </div>
+    <div class="gallery-item">
+      <img src="img/katrin.jpg" alt="Katrin">
+    </div>
+    <div class="gallery-item">
+      <img src="img/ManuSax.jpg" alt="Manu Sax">
+    </div>
+    <div class="gallery-item">
+      <img src="img/mila.jpg" alt="Mila">
+    </div>
+    <div class="gallery-item">
+      <img src="img/maria.jpg" alt="Maria">
+    </div>
+
   </div>
 
-  <div class="gallery">
-    <img src="img/LexieBandV.jpg" alt="Lexie with the Band (Dubai)" class="gallery-item" data-tag="artists"
-      data-title="Lexie with the Band (Dubai)">
-    <img src="img/mila.jpg" alt="Mila (Dubai)" class="gallery-item" data-tag="people"
-      data-title="Mila (Dubai)">
-    <img src="img/LexieBand.jpg" alt="Lexie with the Band (Dubai)" class="gallery-item" data-tag="artists"
-      data-title="Lexie with the Band (Dubai)">
-    <img src="img/SergioTrumpet.jpg" alt="Sergio Playing Trumpet (Dubai)" class="gallery-item" data-tag="artists"
-      data-title="Sergio Playing Trumpet (Dubai)">
-    <img src="img/ManuSax.jpg" alt="Manu Playing Saxophone (Dubai)" class="gallery-item" data-tag="artists"
-      data-title="Manu Playing Saxophone (Dubai)">
-    <img src="img/elefantsThailand.jpeg" alt="Elephants in Thailand" class="gallery-item" data-tag="world"
-      data-title="Elephants in Thailand">
-    <img src="img/katrin.jpg" alt="Katrin Sax" class="gallery-item" data-tag="artists"
-      data-title="Katrin Sax">
-    <img src="img/maria.jpg" alt="Maria (Dubai)" class="gallery-item" data-tag="people"
-      data-title="Maria (Dubai)">
-    <img src="img/fire.jpg" alt="Fire Performer (Sri Lanka)" class="gallery-item" data-tag="world" data-title="Fire Performer (Sri Lanka)">
-    <img src="img/flower.jpg" alt="White Lotus Flower (Sri Lanka)" class="gallery-item" data-tag="world"
-      data-title="White Lotus Flower (Sri Lanka)">
-    <img src="img/camino palmeras.jpg" alt="Palm Path (Sri Lanka)" class="gallery-item" data-tag="world" data-title="Palm Path (Sri Lanka)">
-  </div>
-
-  <div class="lightbox">
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
-    <button class="prev" aria-label="Previous">&#10094;</button>
-    <img class="lightbox-content">
-    <div class="lightbox-caption"></div>
-    <button class="next" aria-label="Next">&#10095;</button>
+    <img class="lightbox-content" id="lightbox-img">
   </div>
 
-  <footer>
-    <p>Javier Estrela Photography @ 2023</p>
-    <p>Design by <a href="https://truelovecreative.es" target="_blank"> True Love Creative</a></p>
-  </footer>
-
-  <button id="scrollToTopButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  <div id="footer-container"></div>
 
   <script>
-    // Get the button
-    const mybutton = document.getElementById("scrollToTopButton");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Cargar el footer de manera dinámica
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
     });
   </script>
 
-  <div class="menu">
-    <div class="icon"></div>
-  </div>
-  <div id="menu-container"></div>
-  <script src="script.js"></script>
-  <script src="lightbox.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/menu.js"></script>
+
 </body>
 
 </html>

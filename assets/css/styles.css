@@ -1,0 +1,306 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda la pantalla */
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transición suave de la opacidad */
+    z-index: 0;
+}
+
+.slider-image.active {
+    opacity: 1; /* Solo la imagen activa será visible */
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Capa de opacidad */
+    z-index: 1;
+}
+
+.slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+.slider-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.slider-content h2 {
+    margin: 10px 0;
+    font-weight: 200;
+}
+
+/* Custom Button */
+.custom-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid #fefefe;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 200px;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.custom-button:hover {
+    background-color: #ffffff56;
+}
+
+.button-text {
+    flex-grow: 1;
+    text-align: left;
+    padding: 0 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f3f3;
+    color: #080808;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-circle .arrow {
+    font-size: 20px;
+}
+
+.custom-button:hover .icon-circle {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slider-content h1 {
+        font-size: 4rem;
+    }
+
+    .slider-content h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/*GALLERY*/
+
+/* Configuración para el grid estilo Masonry */
+.gallery-container {
+    column-count: 3;
+    column-gap: 15px;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .gallery-container {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        column-count: 1;
+    }
+}
+
+
+
+/*CONTACT*/
+
+/* Bio Section */
+.bio-section {
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1200px;
+  }
+  
+  .bio-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .bio-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .bio-content a {
+    color: #0068ad;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 10px 15PX 30PX;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(31, 31, 31);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .contact-box h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-box p {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 15px;
+  }
+
+  .contact-box a {
+    color: #1898ed;
+  }
+  
+  .contact-icons {
+    margin: 20px 0;
+  }
+  
+  .contact-icons a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .contact-icons a:hover {
+    color: #1898ed;
+  }
+  
+  .quotation-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .quotation-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .bio-content p {
+        text-align: justify;
+    }
+  }
