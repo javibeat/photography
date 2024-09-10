@@ -71,7 +71,7 @@ a {
 /* Custom Button */
 .custom-button {
     position: absolute;
-    bottom: 30px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -125,12 +125,22 @@ a {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .custom-button {
+        bottom: 15%;  /* Ajustamos la posición en la versión móvil */
+    }
+
     .slider-content h1 {
         font-size: 4rem;
     }
 
     .slider-content h2 {
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-button {
+        bottom: 20%;  /* Ajustamos aún más para pantallas más pequeñas */
     }
 }
 
