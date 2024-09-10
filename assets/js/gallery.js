@@ -26,6 +26,16 @@ function randomizeGallery() {
   shuffledItems.forEach((item) => galleryContainer.appendChild(item));
 }
 
+// Función para deshabilitar el scroll del body
+function disableScroll() {
+  document.body.style.overflow = "hidden";
+}
+
+// Función para habilitar el scroll del body
+function enableScroll() {
+  document.body.style.overflow = "";
+}
+
 // Inicializar lightbox y orden aleatorio al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   // Ordenar las imágenes aleatoriamente al cargar la página
@@ -37,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = "flex";
       lightboxImg.src = e.target.src;
       currentIndex = index;
+      disableScroll();  // Deshabilitar el scroll al abrir el lightbox
     });
   });
 
@@ -65,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showPrevImage();
       } else if (e.key === "Escape") {
         lightbox.style.display = "none";
+        enableScroll();  // Habilitar el scroll al cerrar el lightbox
       }
     }
   });
@@ -72,12 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cerrar el lightbox al hacer clic en el botón de cerrar
   closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
+    enableScroll();  // Habilitar el scroll al cerrar el lightbox
   });
 
   // Cerrar el lightbox al hacer clic fuera de la imagen
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       lightbox.style.display = "none";
+      enableScroll();  // Habilitar el scroll al cerrar el lightbox
     }
   });
 });
