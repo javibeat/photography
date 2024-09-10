@@ -2,6 +2,8 @@ const galleryItems = document.querySelectorAll(".gallery-item img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.querySelector(".close");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 let currentIndex = 0;
 
 // Función para mezclar un array usando el algoritmo de Fisher-Yates
@@ -38,16 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Función para mostrar la imagen anterior
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].src;
+  }
+
+  // Función para mostrar la imagen siguiente
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].src;
+  }
+
+  // Añadir eventos a los botones de navegación
+  prevBtn.addEventListener("click", showPrevImage);
+  nextBtn.addEventListener("click", showNextImage);
+
   // Navegar por las imágenes con las teclas de flecha
   document.addEventListener("keydown", (e) => {
     if (lightbox.style.display === "flex") {
       if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % galleryItems.length;
-        lightboxImg.src = galleryItems[currentIndex].src;
+        showNextImage();
       } else if (e.key === "ArrowLeft") {
-        currentIndex =
-          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-        lightboxImg.src = galleryItems[currentIndex].src;
+        showPrevImage();
       } else if (e.key === "Escape") {
         lightbox.style.display = "none";
       }
