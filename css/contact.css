@@ -1,0 +1,79 @@
+/* Icon Container Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ajusta el espacio entre los iconos */
+    padding-top: 20px;
+}
+
+.icon-circle {
+    width: 40px; /* Tamaño más pequeño */
+    height: 40px; /* Tamaño más pequeño */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Fondo más claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.icon-circle i {
+    color: #333; /* Cambia el color del icono para hacerlo más visible */
+    font-size: 18px; /* Tamaño del icono */
+    line-height: 40px; /* Coincide con la altura del círculo */
+    height: 40px; /* Asegura que todos los iconos tengan la misma altura */
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover Effect */
+.icon-circle:hover {
+    background-color: #d8d8d8; /* Un color un poco más oscuro al hacer hover */
+}
+
+/* Texto adicional en el header */
+.child p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: "Oswald", Arial, sans-serif;
+}
+
+.large-icon {
+    font-size: 30px; /* Ajusta el tamaño del icono */
+    color: #2b2b2b; /* Asegúrate de que el color coincida con el estilo de la web */
+  }
+  
+  .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajusta el tamaño del círculo */
+    height: 50px; /* Ajusta el tamaño del círculo */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Color de fondo del círculo */
+    transition: background-color 0.3s ease;
+  }
+  
+/* Estilo para la etiqueta estilo "badge" */
+.tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d; /* Rojo claro */
+    color: #fff; /* Texto blanco */
+    padding: 5px 10px;
+    font-size: 10px; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 10;
+  }
+  
+  /* Contenedor principal con position: relative */
+.box-parent {
+    position: relative;
+  }
+  
