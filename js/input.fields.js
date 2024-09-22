@@ -1,21 +1,16 @@
 jQuery.fn.inputHints = function() {
-    this.each(function() {
-        const $this = jQuery(this);
-        const titleText = $this.attr('title');
-        $this.val(titleText);
-
-        $this.focus(function() {
-            if ($this.val() === titleText) {
-                $this.val('');
-            }
-        }).blur(function() {
-            if ($this.val() === '') {
-                $this.val(titleText);
-            }
-        });
+    jQuery(this).each(function(i) {
+        jQuery(this).val(jQuery(this).attr('title'));
     });
-    return this;
+    jQuery(this).focus(function() {
+        if (jQuery(this).val() == jQuery(this).attr('title'))
+            jQuery(this).val('');
+    }).blur(function() {
+        if (jQuery(this).val() == '')
+            jQuery(this).val(jQuery(this).attr('title'));
+    });
 };
+
 
 jQuery(document).ready(function() {
     "use strict";
