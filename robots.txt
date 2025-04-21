@@ -5,4 +5,7 @@ Disallow: /cgi-bin/
 Disallow: /admin/
 Allow: /
 
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 10
+
 Sitemap: https://estrela.photo/sitemap.xml

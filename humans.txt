@@ -8,5 +8,8 @@
 /* SITE */
   Last update: 2024/07/05
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery, etc.
-  Software: VS Code, Coda, Lightroom, Photoshop, etc.
+  Components: Modernizr, jQuery, Bootstrap
+  Software: VS Code, Lightroom, Photoshop
+  Language: English
+  Doctype: HTML5
+  IDE: Visual Studio Code

@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://estrela.photo/</loc>
     <lastmod>2024-09-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://estrela.photo/images/LexieBand.jpg</image:loc>
+      <image:title>Lexie with The Band - Professional Photography Dubai</image:title>
+      <image:caption>Live music photography in Dubai</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://estrela.photo/images/SergioTrumpet.jpg</image:loc>
+      <image:title>Sergio Trumpet - Professional Music Photography</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://estrela.photo/images/katrin.jpg</image:loc>
+      <image:title>Katrin Sax - Artist Photography Dubai</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://estrela.photo/portfolio</loc>

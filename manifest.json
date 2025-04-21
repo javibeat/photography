@@ -1,16 +1,22 @@
 {
-  "name": "Estrela Photography",
-  "short_name": "Photography",
-  "start_url": "/index.html",
+  "name": "Estrela Photography - Professional Photographer Dubai",
+  "short_name": "Estrela Photo",
+  "start_url": "https://estrela.photo/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#b3e5fc",
-  "description": "Capturing moments in time: Explore stunning photography by Javier Estrela",
+  "theme_color": "#000000",
+  "description": "Professional photography services in Dubai specializing in artist, musician and event photography",
   "icons": [
     {
-      "src": "https://estrela.photo/images/favicon2.png",
+      "src": "images/favicon2.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/favicon2.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ]
 }

@@ -7,13 +7,18 @@ jQuery(window).load(function($) {
             $options = $optionContainer.find('a[href^="#"]').not('a[href="#"]'),
             isOptionLinkClicked = false;
 
-
         $container.isotope({
             itemSelector: '.element',
             resizable: false,
             filter: '*',
             transitionDuration: '0.6s',
-            layoutMode: 'packery'
+            layoutMode: 'packery',
+            hiddenStyle: {
+                opacity: 0
+            },
+            visibleStyle: {
+                opacity: 1
+            }
         });
 
 

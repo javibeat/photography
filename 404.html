@@ -6,24 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page Not Found - Estrela Photography</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <meta name="description" content="404 error page - Estrela Photography">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon2.png" type="image/png">
+    
+    <!-- CSS Files -->
+    <link href="css/reset.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #fff;
+        }
+        .error-content {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+        }
+        .error-logo {
+            width: 150px;
+            margin: 0 auto 30px;
+        }
+        .error-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .error-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #888;
+        }
+        .error-btn {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            background-color: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .error-btn:hover {
+            background-color: #888;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container text-center" style="padding: 100px 20px;">
-        <img src="images/favicon2.png" alt="Estrela Photography" style="width: 150px; display: flex;  align-items: center; margin: auto;">
-        <h1 class="display-4" style="font-family: 'Oswald', sans-serif;">404 - Page Not Found</h1>
-        <p style="font-family: 'Montserrat', sans-serif; font-size: 18px;">
-            Oops! It seems the page you're looking for doesn't exist.
-        </p>
-        <a href="index.html" class="btn btn-primary" style="background-color: #000; border: none; font-family: 'Oswald', sans-serif; padding: 10px 20px; text-transform: uppercase; text-decoration: none; color: #fff;">
-            Go Back Home
-        </a>
+    <div class="error-page">
+        <div class="error-content">
+            <img src="images/favicon2.png" alt="Estrela Photography" class="error-logo">
+            <h1 class="error-title">404 - Page Not Found</h1>
+            <p class="error-text">
+                The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            </p>
+            <a href="/" class="error-btn">
+                Return to Homepage
+            </a>
+        </div>
     </div>
 </body>
 
