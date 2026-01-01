@@ -721,14 +721,20 @@
  }
 
  .col1-1.rectangle,
- .col1-2.rectangle,
+ .col1-2.rectangle {
+    width: 290px;
+    aspect-ratio: 5 / 7;
+ }
+
  .col-half.rectangle {
     width: 290px;
+    aspect-ratio: 10 / 7;
  }
 
  .col2-2.rectangle,
  .col2-1.rectangle {
     width: 580px;
+    aspect-ratio: 10 / 7;
  }
 
  .col3.rectangle {
