@@ -992,17 +992,18 @@
     <script src="js/jquery.isotope.load.js?v=2" type="text/javascript"></script>
     <script src="js/main2.js?v=2" type="text/javascript"></script>
     <script>
-      /* FORCE REMOVE ARTISTS CLASS FROM TESTIMONIALS */
+      /* FORCE REMOVE ARTISTS CLASS FROM CLIENTS-SAY */
       jQuery(document).ready(function ($) {
-        $('.testimonials').removeClass('artists');
+        $('.clients-say').removeClass('artists');
         // Also run on window load to be sure
         $(window).load(function () {
-          $('.testimonials').removeClass('artists');
+          $('.clients-say').removeClass('artists');
           if (typeof jQuery.fn.isotope !== 'undefined') {
             $('#container').isotope('reloadItems').isotope();
           }
         });
       });
+    </script>
     </script>
     <script src="js/preloader.js" type="text/javascript"></script>
     <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
