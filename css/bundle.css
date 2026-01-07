@@ -2399,6 +2399,14 @@ p.price span.recurrance {
    }
 
 
+   /* Fix for excessive height on mobile */
+   .about.rectangle,
+   .clients-say.rectangle,
+   .contact.rectangle {
+      height: auto !important;
+      margin-bottom: 10px !important;
+   }
+
 }
 
 @media only screen and (max-width: 580px) {
