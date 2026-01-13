@@ -1286,6 +1286,10 @@ img {
    display: block;
    position: relative;
    opacity: 1;
+   /* Prevent CLS by reserving space for images */
+   aspect-ratio: 3 / 4;
+   contain: layout style paint;
+   will-change: opacity;
 }
 
 a:hover .images {

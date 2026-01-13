@@ -1,4 +1,4 @@
-jQuery(window).load(function($) {
+jQuery(window).on('load', function ($) {
     "use strict";
 
     function eborLoadIsotope() {
@@ -27,11 +27,11 @@ jQuery(window).load(function($) {
                 transformsEnabled: false,
             });
 
-        jQuery(window).smartresize(function() {
+        jQuery(window).smartresize(function () {
             $container.isotope('layout');
         });
 
-        $options.on('click', function() {
+        $options.on('click', function () {
             var $this = jQuery(this),
                 href = $this.attr('href');
 
@@ -47,7 +47,7 @@ jQuery(window).load(function($) {
             return false;
         });
 
-        jQuery(window).bind('hashchange', function(event) {
+        jQuery(window).bind('hashchange', function (event) {
             var theFilter = window.location.hash.replace(/^#/, '');
 
             if (theFilter == false)
@@ -79,7 +79,7 @@ jQuery(window).load(function($) {
 });
 
 "use strict";
-$('.splink, #options a').not('.sub-nav-toggle').click(function() {
+$('.splink, #options a').not('.sub-nav-toggle').click(function () {
     $("html, body").animate({
         scrollTop: 0
     }, 200);
