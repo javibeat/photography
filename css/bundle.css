@@ -1417,7 +1417,7 @@ a:hover .images {
 }
 
 .background-image9 {
-   background: url(../images/camino\ palmeras.webp) no-repeat center;
+   background: url(../images/camino-palmeras.webp) no-repeat center;
    height: 100%;
    display: block;
    width: 100%;
@@ -1446,68 +1446,8 @@ a:hover .images {
    background-size: cover;
 }
 
-.background-image11 {
-   background: url(../images/photo11b.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-.background-image12 {
-   background: url(../images/photo01.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-.background-image13 {
-   background: url(../images/contact.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
 .background-image14 {
    background: url(../images/maria.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-.background-image15 {
-   background: url(../images/logoB.webp) no-repeat center;
    height: 100%;
    display: block;
    width: 100%;
@@ -1536,35 +1476,6 @@ a:hover .images {
    background-size: cover;
 }
 
-.background-image17 {
-   background: url(../images/logoB.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-.background-image18 {
-   background: url(../images/logoB.webp) no-repeat center;
-   height: 100%;
-   display: block;
-   width: 100%;
-   -webkit-background-size: 100% auto;
-   -moz-background-size: 100% auto;
-   -o-background-size: 100% auto;
-   background-size: 100% auto;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
 
 .images.alignleft {
    width: 40%;
