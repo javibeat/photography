@@ -109,9 +109,44 @@
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
   </noscript>
-  <link href="css/bundle.css?v=4" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/bundle.css?v=5" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
+  <noscript><link href="css/bundle.css?v=5" rel="stylesheet" type="text/css"></noscript>
+  <style>
+    /* Critical CSS - above-the-fold styles */
+    *,*:before,*:after{-webkit-font-smoothing:antialiased;box-sizing:border-box}
+    html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,ul,li,figure{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}
+    body{line-height:1;color:#000;font-family:'Montserrat',sans-serif;font-size:13px}
+    ol,ul{list-style:none}
+    .clear{clear:both}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{display:block}
+    .alignleft{float:left}.alignright{float:right}.hidden{display:none;visibility:hidden}
+    #preloader{position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:9999}
+    #status{z-index:28;position:absolute;color:#fff!important;top:50%;height:220px;width:100%;margin-top:-115px}
+    #header{position:fixed;z-index:155;width:100%;transform:translateZ(0);background:#fff}
+    #content{width:100%;position:relative;height:auto;padding-top:60px;background:#000}
+    .container{padding:0;position:relative;padding-top:10px;padding-bottom:10px;margin:0 auto}
+    header .container,footer .container{padding:0;margin:0 auto}
+    #container{margin-left:10px;padding-top:30px}
+    .content-wrapper{position:relative;padding-top:40px}
+    .rectangle{text-align:center;float:left}
+    .col1-1.rectangle,.col1-2.rectangle{width:290px;aspect-ratio:5/7}
+    .col-half.rectangle{width:290px;aspect-ratio:10/7}
+    .col2-2.rectangle,.col2-1.rectangle{width:580px;aspect-ratio:10/7}
+    .padding-wrapper{position:relative;height:calc(100% - 10px);width:calc(100% - 10px);overflow:hidden}
+    .element{overflow:hidden}
+    .grey-bg{background:#fff;position:absolute;left:0;bottom:0;height:auto;min-height:55%;width:100%;padding:11%}
+    .box-parent{position:relative;height:100%;width:100%;display:table;z-index:11}
+    .box-parent .child{display:table-cell;vertical-align:middle}
+    .images{display:block;position:relative;opacity:1;aspect-ratio:3/4;contain:layout style paint;will-change:opacity}
+    h1#logo{display:block;position:relative;margin:0;margin-top:40px;text-align:center;font-size:0}
+    h1#logo a{display:inline-block;background:url(images/bg-logo@2x.png) center no-repeat;background-size:250px 59px;width:250px;height:59px;text-indent:-9999px}
+    .tagline{text-align:center;margin-bottom:20px;margin-top:-5px;position:relative}
+    p{font-size:13px;line-height:21px;color:#888}
+    p.small{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888}
+    .header{font-family:'Oswald',sans-serif;font-size:22px;color:#000;text-transform:uppercase;letter-spacing:2px}
+    h2,h3,h4,h5{font-family:'Oswald',sans-serif;color:#000;text-transform:uppercase;letter-spacing:2px}
+  </style>
   <link href="css/images.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
-  <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="print" onload="this.media='screen'">
+  <!-- flexslider.css removed - unused -->
   <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="print" onload="this.media='screen'" />
 
   <!-- Google Fonts -->
@@ -484,7 +519,7 @@
               <div class="padding-wrapper"><a href="images/SergioTrumpet.webp"
                   alt="Sergio Trumpet - Professional musician press kit photography Dubai" data-title="Sergio Trumpet"
                   loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image3"></figure>
+                  <figure class="images background-image3" data-bg="images/SergioTrumpet.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -509,7 +544,7 @@
               <div class="padding-wrapper"><a href="images/flower.webp"
                   alt="Nature photography - Flower in Sri Lanka by Javier Estrela" data-title="Beautiful Flower"
                   loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image16"></figure>
+                  <figure class="images background-image16" data-bg="images/flower.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -532,7 +567,7 @@
               <div class="padding-wrapper"><a href="images/katrin.webp"
                   alt="Katrin Sax - Artist branding and press kit photography" data-title="Katrin Sax" loading="lazy"
                   class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image5"></figure>
+                  <figure class="images background-image5" data-bg="images/katrin.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -556,7 +591,7 @@
             <div class="element clearfix rectangle col1-1 contact">
               <div class="padding-wrapper"><a href="images/contact.webp" alt="Javier Estrela Photographer"
                   data-title="It's Me" loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image2"></figure>
+                  <figure class="images background-image2" data-bg="images/contact.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -578,7 +613,7 @@
               <div class="padding-wrapper">
                 <a href="images/LexieBandV.webp" alt="Lexie with the band - Live concert performance photography Dubai"
                   data-title="Lexie with the Band" loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image6"></figure>
+                  <figure class="images background-image6" data-bg="images/LexieBandV.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -659,7 +694,7 @@
               <div class="padding-wrapper"><a href="images/elefantsThailand.webp"
                   alt="Travel and nature photography - Elephants in Thailand by Javier Estrela"
                   data-title="Elephants in Thailand" loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image4"></figure>
+                  <figure class="images background-image4" data-bg="images/elefantsThailand.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -682,7 +717,7 @@
               <div class="padding-wrapper"><a href="images/fire.webp"
                   alt="Fire performer Sri Lanka - Dramatic performance photography by Javier Estrela"
                   data-title="Fire Man" loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image7"></figure>
+                  <figure class="images background-image7" data-bg="images/fire.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -704,7 +739,7 @@
               <div class="padding-wrapper"><a href="images/mila.webp"
                   alt="Mila - Professional artist portrait and branding session Dubai" data-title="Mila" loading="lazy"
                   class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image10"></figure>
+                  <figure class="images background-image10" data-bg="images/mila.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -727,7 +762,7 @@
               <div class="padding-wrapper"><a href="images/camino-palmeras.webp"
                   alt="Landscape photography - Palm Path in Sri Lanka" data-title="Palm path" loading="lazy"
                   class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image9"></figure>
+                  <figure class="images background-image9" data-bg="images/camino-palmeras.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -842,7 +877,7 @@
               <div class="padding-wrapper"><a href="images/ManuSax.webp"
                   alt="Manu Sax - Professional musician portfolio and live performance photography"
                   data-title="Manu Sax" loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image8"></figure>
+                  <figure class="images background-image8" data-bg="images/ManuSax.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -867,7 +902,7 @@
               <div class="padding-wrapper"><a href="images/maria.webp"
                   alt="Maria Drift - Portrait and personal branding photography session" data-title="María Drift"
                   loading="lazy" class="popup" data-fancybox-group="group1">
-                  <figure class="images background-image14"></figure>
+                  <figure class="images background-image14" data-bg="images/maria.webp"></figure>
                   <div class="left-corner"></div>
                   <div class="right-corner"></div>
                   <div class="left-corner bottom"></div>
@@ -1118,6 +1153,32 @@
     <script src="js/preloader.js" type="text/javascript" defer></script>
     <script src="js/jquery.fancybox.pack.js" type="text/javascript" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+
+    <!-- Lazy load background images -->
+    <script>
+      (function() {
+        var lazyBgs = document.querySelectorAll('[data-bg]');
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                var el = entry.target;
+                el.style.backgroundImage = 'url(' + el.getAttribute('data-bg') + ')';
+                el.setAttribute('data-bg-loaded', '');
+                el.removeAttribute('data-bg');
+                observer.unobserve(el);
+              }
+            });
+          }, { rootMargin: '200px' });
+          lazyBgs.forEach(function(el) { observer.observe(el); });
+        } else {
+          lazyBgs.forEach(function(el) {
+            el.style.backgroundImage = 'url(' + el.getAttribute('data-bg') + ')';
+            el.setAttribute('data-bg-loaded', '');
+          });
+        }
+      })();
+    </script>
 
     <!-- Formspree Submission Logic -->
     <script>

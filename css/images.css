@@ -3,58 +3,22 @@
    height: 100%; display: block; width: 100%;
    background-size: cover;
 }
-.background-image2 {
-   background: url(../images/contact.webp) no-repeat center;
+[data-bg-loaded] {
    height: 100%; display: block; width: 100%;
    background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
 }
-.background-image3 {
-   background: url(../images/SergioTrumpet.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image4 {
-   background: url(../images/elefantsThailand.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image5 {
-   background: url(../images/katrin.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image6 {
-   background: url(../images/LexieBandV.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image7 {
-   background: url(../images/fire.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image8 {
-   background: url(../images/ManuSax.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image9 {
-   background: url(../images/camino-palmeras.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image10 {
-   background: url(../images/mila.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
-.background-image14 {
-   background: url(../images/maria.webp) no-repeat center;
-   height: 100%; display: block; width: 100%;
-   background-size: cover;
-}
+.background-image2,
+.background-image3,
+.background-image4,
+.background-image5,
+.background-image6,
+.background-image7,
+.background-image8,
+.background-image9,
+.background-image10,
+.background-image14,
 .background-image16 {
-   background: url(../images/flower.webp) no-repeat center;
    height: 100%; display: block; width: 100%;
-   background-size: cover;
 }
