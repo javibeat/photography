@@ -32,7 +32,7 @@ Confirmed services and pricing (from v1, preserve verbatim unless user changes):
 - **Artist Promo Session** — AED 1300/session: up to 2h shooting, 10 edited photos, USB with full shoot, delivery within 72h
 - **Artist Portfolio** — AED 1500/session: up to 2h shooting, 15 edited photos, USB with full shoot, delivery within 72h
 - **EPK & Live Show** — from AED 6500: up to 3h shooting, photos + video combo, delivery within 2 weeks
-- **Add-ons**: +5 edited photos AED 500 · +1 extra hour AED 500 · video from AED 1500
+- **Add-ons**: +5 edited photos AED 500 · +1 extra hour AED 500 · session video from AED 2500
 - Press Kit inquiries also route to a Google Form (v1 "Ultimate Artist Press Kit" card)
 
 Contact: WhatsApp is the primary CTA — +971 58 532 4519 (wa.me/971585324519, user-confirmed). Secondary: Formspree form (`https://formspree.io/f/mdorjnyb`), email info@estrela.photo. Instagram is the main social channel.
