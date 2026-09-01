@@ -114,6 +114,21 @@
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'Tab') {
+      var focusables = lightbox.querySelectorAll('button');
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      } else if (!lightbox.contains(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   /* Contact form → Formspree */
