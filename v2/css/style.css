@@ -388,7 +388,7 @@ ul { list-style: none; }
   max-width: 24ch;
 }
 
-.quote-sig { height: 24px; width: auto; opacity: 0.85; }
+.quote-sig { height: 24px; width: auto; align-self: flex-start; opacity: 0.85; }
 
 /* ---------- Gallery ---------- */
 

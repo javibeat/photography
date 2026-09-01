@@ -85,7 +85,7 @@
   var close = function () {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
-    setTimeout(function () { lightbox.hidden = true; lbImg.src = ''; }, 350);
+    setTimeout(function () { lightbox.hidden = true; lbImg.removeAttribute('src'); }, 350);
     if (current > -1) {
       var list = visibleShots();
       if (list[current]) list[current].focus();
@@ -133,7 +133,7 @@
       if (response.ok) {
         form.reset();
         status.className = 'form-status ok';
-        status.textContent = 'Message sent — I’ll get back to you within a few hours. 📸';
+        status.textContent = 'Message sent! I’ll get back to you within a few hours.';
       } else {
         throw new Error('Formspree error');
       }
