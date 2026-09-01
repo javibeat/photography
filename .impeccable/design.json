@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-01T17:00:00Z",
+  "title": "Design System: Estrela Photography — The Exposure Record",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#e9e5da" },
+      "sheet": { "role": "neutral", "displayName": "Record Sheet", "canonical": "#f4f2ea" },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#17140f",
+        "tonalRamp": ["#141210", "#29251f", "#3d382f", "#524b3f", "#675f50", "#7d7462", "#948b77", "#aca38e", "#c4bca8", "#dcd5c4", "#f4efe2"]
+      },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2 (running copy)", "canonical": "#454034" },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3 (annotation)", "canonical": "#5d5747" },
+      "mag": {
+        "role": "primary",
+        "displayName": "Dichroic Magenta",
+        "canonical": "#e33d97",
+        "tonalRamp": ["oklch(20% 0.13 349)", "oklch(30% 0.16 349)", "oklch(40% 0.19 349)", "oklch(50% 0.2 349)", "oklch(62% 0.2 349)", "oklch(72% 0.16 349)", "oklch(84% 0.1 349)", "oklch(94% 0.04 349)"]
+      },
+      "mag-deep": { "role": "primary", "displayName": "Deep Filtration", "canonical": "#a8186a" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. Uppercase, near-solid leading." },
+      "headline": { "displayName": "Headline", "purpose": "One per zone. Uppercase." },
+      "title": { "displayName": "Title", "purpose": "Plan names and the header stamp. Uppercase, closed with a 1px ink rule." },
+      "body": { "displayName": "Body", "purpose": "Typewriter record voice; copy capped at 40–66ch, colored ink-2." },
+      "label": { "displayName": "Label", "purpose": "Field labels, zone heads, table headers. Uppercase, 0.12–0.14em tracking, ink-3. Numbers always tabular-nums." }
+    },
+    "shadows": [
+      { "name": "shadow-sheet", "value": "0 12px 28px rgba(28, 22, 10, 0.16), 0 2px 6px rgba(28, 22, 10, 0.1)", "purpose": "Every sheet and print at rest. Warm-toned, never neutral black." },
+      { "name": "shadow-print-lifted", "value": "0 18px 40px rgba(28, 22, 10, 0.24), 0 3px 8px rgba(28, 22, 10, 0.12)", "purpose": "Contact-print hover, paired with the tilt straightening to 0." },
+      { "name": "shadow-loupe", "value": "0 30px 70px rgba(28, 22, 10, 0.35)", "purpose": "The loupe's mounted photo — highest surface in the world." },
+      { "name": "shadow-bar-hover", "value": "0 6px 16px rgba(28, 22, 10, 0.28)", "purpose": "Under the bar-button -2px hover lift; collapses on :active." },
+      { "name": "glow-ramp-backlit", "value": "radial-gradient(ellipse 85% 65% at 50% 50%, rgba(255, 248, 228, 0.16), transparent 75%)", "purpose": "Faint internal light on every zone-ramp step (light-not-paint)." },
+      { "name": "glow-ramp-active", "value": "inset 0 0 16px rgba(255, 248, 228, 0.45)", "purpose": "The active zone step burning brighter, inside a 2px magenta frame." }
+    ],
+    "motion": [
+      { "name": "ease-settle", "value": "cubic-bezier(0.2, 1.3, 0.35, 1)", "purpose": "The one settling ease — overshoot means sheets carry mass. Drives placement, button lift, print straightening, FAQ marker." },
+      { "name": "sheet-placement", "value": "opacity 0.5s ease-out, translate 0.7s ease-settle, rotate 0.7s ease-settle", "purpose": "Scroll reveal: from 22px low and +1.2deg over-rotated to home. .js-scoped; forced visible under reduced motion." },
+      { "name": "duration-state", "value": "0.2s", "purpose": "Flat state swaps: nav/caption inversion, background and color changes." },
+      { "name": "duration-settle", "value": "0.25s–0.35s", "purpose": "Physical moves: bar-button lift (0.25s), print untilt (0.35s), FAQ marker (0.3s)." }
+    ],
+    "breakpoints": [
+      { "name": "meta-collapse", "value": "1100px" },
+      { "name": "rail-flip", "value": "900px" },
+      { "name": "compact", "value": "700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bar Button — Book",
+      "kind": "button",
+      "refersTo": "bar-btn",
+      "description": "Primary booking action: ink label cell + magenta stop-delta cell. Hover lifts -2px on the settle ease.",
+      "html": "<a href=\"#\" class=\"ds-bar-btn\"><span class=\"ds-bar-label\">Book on WhatsApp</span><span class=\"ds-bar-delta\">72H</span></a>",
+      "css": ".ds-bar-btn { display: inline-flex; align-items: stretch; border: 1px solid #17140f; background: #17140f; color: #f4f2ea; text-decoration: none; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; transition: transform 0.25s cubic-bezier(0.2, 1.3, 0.35, 1), box-shadow 0.25s; } .ds-bar-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28, 22, 10, 0.28); } .ds-bar-btn:active { transform: translateY(0); box-shadow: none; } .ds-bar-btn:focus-visible { outline: 2px solid #a8186a; outline-offset: 2px; } .ds-bar-label { padding: 13px 18px; } .ds-bar-delta { display: flex; align-items: center; padding: 0 14px; border-left: 1px solid #f4f2ea; background: #e33d97; color: #17140f; font-weight: 700; }"
+    },
+    {
+      "name": "Bar Button — Hold",
+      "kind": "button",
+      "refersTo": "bar-btn-hold",
+      "description": "Secondary action: sheet fill with a hatch-density delta cell instead of magenta — literally lower density.",
+      "html": "<a href=\"#\" class=\"ds-bar-btn-hold\"><span class=\"ds-bar-label-h\">See the work</span><span class=\"ds-bar-hatch\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-bar-btn-hold { display: inline-flex; align-items: stretch; border: 1px solid #17140f; background: #f4f2ea; color: #17140f; text-decoration: none; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; transition: transform 0.25s cubic-bezier(0.2, 1.3, 0.35, 1), box-shadow 0.25s; } .ds-bar-btn-hold:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28, 22, 10, 0.28); } .ds-bar-btn-hold:active { transform: translateY(0); box-shadow: none; } .ds-bar-label-h { padding: 13px 18px; } .ds-bar-hatch { min-width: 42px; border-left: 1px solid #17140f; background: repeating-linear-gradient(45deg, transparent 0 4px, rgba(23, 20, 15, 0.5) 4px 5px), #f4f2ea; }"
+    },
+    {
+      "name": "Record Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Paper-filled input that comes forward to sheet with a deep-magenta border + inset ring on focus. Zero radius.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-name\">Name</label><input class=\"ds-field-input\" id=\"ds-name\" type=\"text\" placeholder=\"Who you are\"></div>",
+      "css": ".ds-field { font-family: 'Courier Prime', 'Courier New', monospace; max-width: 320px; } .ds-field-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #5d5747; margin-bottom: 6px; } .ds-field-input { width: 100%; font: inherit; color: #17140f; background: #e9e5da; border: 1px solid #17140f; border-radius: 0; padding: 11px 12px; caret-color: #a8186a; transition: background 0.2s, border-color 0.2s; } .ds-field-input::placeholder { color: #5d5747; } .ds-field-input:focus { outline: none; border-color: #a8186a; background: #f4f2ea; box-shadow: inset 0 0 0 1px #a8186a; }"
+    },
+    {
+      "name": "Contact Print",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "A tilted print on the sheet material: hover straightens it, deepens the shadow, and inverts the caption strip.",
+      "html": "<button class=\"ds-print\" style=\"--tilt:-0.5deg\"><span class=\"ds-print-img\" aria-hidden=\"true\"></span><span class=\"ds-print-cap\"><span class=\"ds-print-no\">02</span>Katrin — Saxophone</span></button>",
+      "css": ".ds-print { display: block; width: 240px; padding: 0; background: #f4f2ea; border: 1px solid #17140f; box-shadow: 0 12px 28px rgba(28, 22, 10, 0.16), 0 2px 6px rgba(28, 22, 10, 0.1); rotate: var(--tilt, 0deg); transition: rotate 0.35s cubic-bezier(0.2, 1.3, 0.35, 1), box-shadow 0.35s; text-align: left; cursor: pointer; font-family: 'Courier Prime', 'Courier New', monospace; } .ds-print:hover { rotate: 0deg; box-shadow: 0 18px 40px rgba(28, 22, 10, 0.24), 0 3px 8px rgba(28, 22, 10, 0.12); } .ds-print-img { display: block; height: 150px; background: linear-gradient(160deg, #29251f, #675f50 55%, #948b77); } .ds-print-cap { display: flex; align-items: baseline; gap: 10px; padding: 9px 12px; border-top: 1px solid #17140f; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #17140f; transition: background 0.2s, color 0.2s; } .ds-print-no { font-weight: 400; color: #5d5747; } .ds-print:hover .ds-print-cap { background: #17140f; color: #f4f2ea; } .ds-print:hover .ds-print-no { color: #c4bca8; }"
+    },
+    {
+      "name": "Key Row",
+      "kind": "custom",
+      "refersTo": "bar-delta",
+      "description": "The magenta-hatched table row with KEY mark — the only place magenta touches data. Density encodes importance.",
+      "html": "<table class=\"ds-plan-table\"><tbody><tr><th scope=\"row\">Shoot</th><td>Up to 2 H</td></tr><tr class=\"ds-key-row\"><th scope=\"row\">Delivery</th><td>072 H <span class=\"ds-key-mark\">Key</span></td></tr><tr><th scope=\"row\">Edited</th><td>15 photos</td></tr></tbody></table>",
+      "css": ".ds-plan-table { width: 280px; border-collapse: collapse; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 0.85rem; color: #17140f; } .ds-plan-table th { text-align: left; font-weight: 400; color: #5d5747; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; padding: 7px 8px 7px 0; border-bottom: 1px solid rgba(23, 20, 15, 0.3); width: 42%; } .ds-plan-table td { font-weight: 700; text-align: right; padding: 7px 0; border-bottom: 1px solid rgba(23, 20, 15, 0.3); font-variant-numeric: tabular-nums; } .ds-key-row th, .ds-key-row td { background: repeating-linear-gradient(45deg, transparent 0 5px, rgba(227, 61, 151, 0.28) 5px 6px); } .ds-key-mark { display: inline-block; background: #e33d97; color: #17140f; font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; margin-left: 8px; vertical-align: 2px; }"
+    },
+    {
+      "name": "Zone Ramp Rail",
+      "kind": "nav",
+      "refersTo": "sheet",
+      "description": "The signature chrome: backlit 11-step zone ramp as navigation. Active step gets a 2px magenta frame with warm inset glow — light, not paint.",
+      "html": "<nav class=\"ds-ramp\" aria-label=\"Zone index\"><a href=\"#\" style=\"background:#141210;color:#dcd5c4\">0</a><a href=\"#\" style=\"background:#29251f;color:#dcd5c4\">I</a><a href=\"#\" class=\"ds-ramp-active\" style=\"background:#3d382f;color:#dcd5c4\">II</a><a href=\"#\" style=\"background:#524b3f;color:#f4efe2\">III</a><a href=\"#\" style=\"background:#675f50;color:#f4efe2\">IV</a><a href=\"#\" style=\"background:#7d7462;color:#141210\">V</a><a href=\"#\" style=\"background:#948b77;color:#141210\">VI</a><span style=\"background:#aca38e;color:#141210;opacity:0.5\">VII</span><span style=\"background:#c4bca8;color:#141210;opacity:0.5\">VIII</span><span style=\"background:#dcd5c4;color:#141210;opacity:0.5\">IX</span><a href=\"#\" style=\"background:#f4efe2;color:#141210\">X</a></nav>",
+      "css": ".ds-ramp { display: flex; flex-direction: column; width: 66px; height: 330px; border: 1px solid #17140f; font-family: 'Courier Prime', 'Courier New', monospace; } .ds-ramp a, .ds-ramp span { flex: 1; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; border-bottom: 1px solid rgba(23, 20, 15, 0.25); position: relative; transition: filter 0.2s; } .ds-ramp a::before, .ds-ramp span::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 85% 65% at 50% 50%, rgba(255, 248, 228, 0.16), transparent 75%); pointer-events: none; } .ds-ramp a:hover { filter: brightness(1.15); } .ds-ramp-active::after { content: ''; position: absolute; inset: 3px; border: 2px solid #e33d97; box-shadow: inset 0 0 16px rgba(255, 248, 228, 0.45); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Exposure Record",
+    "overview": "The booking page is the photographer's own darkroom exposure record — craft is the proof. Instead of the dark full-bleed hero portfolio this category always ships (and the v2 it replaces), the artist lands on a warm paper working document already filled out about them: real AED numbers, real artist names, real delivery times, annotated with stop-deltas and hatch density marks. The page reads as a printer's paperwork; trust comes from precision, and booking is one tap.\n\nThe material system is physical: a grained paper field, translucent record sheets overlapping at slight angles, a backlit 11-step zone ramp serving as both chrome and navigation, and exactly one dichroic magenta — the darkroom filtration color — reserved for key rows and booking actions. The colophon states the doctrine on the page itself: \"filtration only.\"",
+    "keyCharacteristics": [
+      "Warm paper ground with SVG fractal-noise grain baked into the body background",
+      "Two voices only: ultra-condensed stamped caps (Big Shoulders) and typewriter tabular mono (Courier Prime)",
+      "Squared corners everywhere; every rule is 1px ink",
+      "One accent (dichroic magenta) with a hard scarcity doctrine",
+      "Sheets carry mass: entrances drop, over-tilt, and settle with an overshoot ease",
+      "Data lives in tables — th/td pairs with font-variant-numeric: tabular-nums"
+    ],
+    "rules": [
+      { "name": "The Filtration Rule", "body": "Magenta exists for the key row and the booking action — plus the browser surfaces that echo them (selection, caret, focus ring). It never colors headings, body text, backgrounds, borders of non-key elements, or decoration. The footer prints the contract: \"filtration only.\" Adding a second accent, or spending magenta on anything that isn't a key value or a path to booking, breaks the world.", "section": "colors" },
+      { "name": "The One-Ink Rule", "body": "There is no grey palette. Every line, border, and hairline is --ink, at full strength (1px rules) or diluted through color-mix(in srgb, var(--rule) 25–35%, transparent) for secondary table rules and zone-head fills.", "section": "colors" },
+      { "name": "The Two-Voices Rule", "body": "Big Shoulders speaks (headlines, plan names, quotes, the stamp); Courier Prime records (everything else). No third face, no italics, and no mixed-case display — both voices are uppercase in headings and labels.", "section": "typography" },
+      { "name": "The Light-Not-Paint Rule", "body": "The zone ramp is backlit, never repainted. Every step carries a faint internal radial glow; hover brightens the whole step with filter: brightness(1.15); the active step burns brighter with an inset warm glow inside a 2px magenta frame. State is expressed as light passing through the step — the zone value pigments themselves never change.", "section": "elevation" },
+      { "name": "The Sheets-Carry-Mass Rule", "body": "Placement is scroll-revealed under .js only: .placed starts transparent, 22px low, and +1.2deg over-rotated; .is-placed settles it home over 0.5–0.7s on --ease-settle: cubic-bezier(0.2, 1.3, 0.35, 1) — the overshoot is the point: sheets land like paper with weight, not fades. Under prefers-reduced-motion all durations collapse and .placed is forced fully visible.", "section": "elevation" },
+      { "name": "The Hidden-First Loupe Guard", "body": ".loupe[hidden] { display: none; } is declared before the .loupe { display: flex; } rule, and the markup ships with hidden. Any overlay that sets its own display must pair it with this guard — a v2 regression where display: flex overrode [hidden] once blocked every click on the page.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep magenta on booking paths and key values only — delta cells, KEY rows, the active zone frame, focus/caret/selection. The Filtration Rule is the identity.",
+      "Do build every panel from the one sheet material: --sheet fill, 1px ink border, --shadow-sheet, a small inline --tilt (±0.4–0.8deg typical, never past ±1.4deg).",
+      "Do put data in th/td tables with font-variant-numeric: tabular-nums and Label-voice headers — the page is a record, not a card deck.",
+      "Do use --ease-settle for anything that moves into place, and collapse all motion under prefers-reduced-motion.",
+      "Do scope reveal/entrance styles under .js so a no-JS load renders the full page visible (the no-js → js class swap is the only inline script).",
+      "Do pair any self-displayed overlay with a preceding [hidden] { display: none; } guard and ship it hidden in markup.",
+      "Do express quantity or intensity as hatch density (45° repeating gradients), and state as light (glow/brightness), not as new pigments."
+    ],
+    "donts": [
+      "Don't add border-radius anywhere — squared corners are absolute, including inputs and images.",
+      "Don't introduce a second accent, a grey scale, or colored rules: lines are 1px ink, full-strength or color-mix-diluted to 25–35%.",
+      "Don't put white text on magenta or use magenta for headings, backgrounds, or decoration — ink on magenta, and only where the Filtration Rule allows.",
+      "Don't repaint zone-ramp steps for hover/active state; the ramp is backlit — brighten or glow, never change the step's value.",
+      "Don't add a third typeface, italics, or mixed-case display type; Big Shoulders stamps, Courier Prime records.",
+      "Don't use icon fonts or emoji — the only icons are inline SVGs (WhatsApp, Instagram, loupe arrows/close) sized 16–20px and drawn in currentColor."
+    ]
+  }
+}

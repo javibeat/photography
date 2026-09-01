@@ -1,272 +1,237 @@
 ---
-name: Estrela Photography
-description: Dark-stage portfolio where the photography glows and booking is one tap away.
+name: Estrela Photography — The Exposure Record
+description: Booking page as the photographer's own darkroom exposure record — craft is the proof.
 colors:
-  bg: "#050506"
-  bg-raised: "#0d0d0f"
-  surface: "rgba(255, 255, 255, 0.045)"
-  surface-hover: "rgba(255, 255, 255, 0.08)"
-  hairline: "rgba(255, 255, 255, 0.09)"
-  text: "#f5f5f7"
-  muted: "#b0b0b6"
-  faint: "#8e8e94"
-  dusk-gold: "#ffb35c"
-  dusk-rose: "#ff5e8a"
-  dusk-violet: "#8b5cf6"
-  whatsapp: "#25d366"
+  paper: "#e9e5da"
+  sheet: "#f4f2ea"
+  ink: "#17140f"
+  ink-2: "#454034"
+  ink-3: "#5d5747"
+  mag: "#e33d97"
+  mag-deep: "#a8186a"
+  z0: "#141210"
+  z1: "#29251f"
+  z2: "#3d382f"
+  z3: "#524b3f"
+  z4: "#675f50"
+  z5: "#7d7462"
+  z6: "#948b77"
+  z7: "#aca38e"
+  z8: "#c4bca8"
+  z9: "#dcd5c4"
+  z10: "#f4efe2"
 typography:
   display:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "clamp(2.7rem, 7.2vw, 5.6rem)"
-    fontWeight: 640
-    lineHeight: 1.02
-    letterSpacing: "-0.035em"
+    fontFamily: "Big Shoulders, 'Arial Narrow', sans-serif"
+    fontSize: "clamp(3.4rem, 10.5vw, 6rem)"
+    fontWeight: 560
+    lineHeight: 0.92
+    letterSpacing: "0.005em"
   headline:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "clamp(2rem, 4.6vw, 3.4rem)"
-    fontWeight: 620
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
-  title:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "1.25rem"
-    fontWeight: 580
-    letterSpacing: "-0.01em"
-  numeral:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "clamp(2.4rem, 3.4vw, 3.1rem)"
-    fontWeight: 660
-    lineHeight: 1
-    letterSpacing: "-0.03em"
-  body:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "1.0625rem"
-    fontWeight: 420
-    lineHeight: 1.6
-  label:
-    fontFamily: "Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-    fontSize: "0.85rem"
+    fontFamily: "Big Shoulders, 'Arial Narrow', sans-serif"
+    fontSize: "clamp(2rem, 4.6vw, 3.2rem)"
     fontWeight: 540
-    letterSpacing: "0.06em"
+    lineHeight: 0.96
+    letterSpacing: "0.01em"
+  title:
+    fontFamily: "Big Shoulders, 'Arial Narrow', sans-serif"
+    fontSize: "1.55rem"
+    fontWeight: 560
+    lineHeight: 1
+    letterSpacing: "0.02em"
+  body:
+    fontFamily: "Courier Prime, 'Courier New', monospace"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.55
+  label:
+    fontFamily: "Courier Prime, 'Courier New', monospace"
+    fontSize: "0.72rem"
+    fontWeight: 700
+    letterSpacing: "0.12em"
 rounded:
-  sm: "14px"
-  lg: "24px"
-  pill: "999px"
-  focus: "4px"
+  none: "0"
 spacing:
-  gap-grid: "14px"
-  gap-card: "18px"
-  wrap-pad: "clamp(20px, 4vw, 40px)"
-  section: "clamp(72px, 10vw, 130px)"
+  pad: "clamp(18px, 4vw, 44px)"
+  rail-w: "66px"
+  zone-top: "clamp(40px, 6vw, 72px)"
+  zone-bottom: "clamp(56px, 8vw, 104px)"
 components:
-  button-primary:
-    backgroundColor: "{colors.text}"
-    textColor: "#0a0a0b"
-    rounded: "{rounded.pill}"
-    padding: "14px 26px"
-  button-whatsapp:
-    backgroundColor: "{colors.whatsapp}"
-    textColor: "#04310f"
-    rounded: "{rounded.pill}"
-    padding: "14px 26px"
-  button-ghost:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.pill}"
-    padding: "14px 26px"
-  button-sm:
-    rounded: "{rounded.pill}"
-    padding: "10px 18px"
-  chip:
-    backgroundColor: "transparent"
-    textColor: "{colors.muted}"
-    rounded: "{rounded.pill}"
-    padding: "9px 18px"
-  chip-active:
-    backgroundColor: "{colors.text}"
-    textColor: "{colors.bg}"
-    rounded: "{rounded.pill}"
-    padding: "9px 18px"
-  nav-pill:
-    backgroundColor: "rgba(13, 13, 15, 0.55)"
-    rounded: "{rounded.pill}"
-    padding: "10px 12px 10px 22px"
-  tile:
-    backgroundColor: "{colors.surface}"
-    rounded: "{rounded.lg}"
-  plan-card:
-    backgroundColor: "{colors.surface}"
-    rounded: "{rounded.lg}"
-    padding: "34px 30px"
-  field-input:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.sm}"
-    padding: "14px 16px"
+  bar-btn:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.sheet}"
+    rounded: "{rounded.none}"
+    padding: "13px 18px"
+  bar-btn-hold:
+    backgroundColor: "{colors.sheet}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "13px 18px"
+  bar-delta:
+    backgroundColor: "{colors.mag}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "0 14px"
+  input-field:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "11px 12px"
+  sheet:
+    backgroundColor: "{colors.sheet}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
 ---
 
-# Design System: Estrela Photography
+# Design System: Estrela Photography — The Exposure Record
 
-> Scope: this file documents the **v2 site** (`/v2/`). The v1 site at the repo root is a legacy surface being replaced and is not governed by this system.
+> **Scope.** This file documents the **v3 surface** (`/v3/` — `index.html`, `css/style.css`, `js/main.js`, `fonts/`), currently in review; the root site still runs the previous v2 world until the swap. World source `operate-b-exposure-record-zone-sheets`, seed `a4cf319a`. Every value below is recorded from the built code.
 
 ## Overview
 
-**Creative North Star: "The Dark Stage"**
+**Creative North Star: "The Exposure Record"**
 
-The site is a stage, not a page. A near-black room (`#050506`) where the photography is the only bright thing — work glows like product shots in an Apple keynote. UI is glass: translucent white panels (4.5% white) with 1px white hairlines and backdrop blur, floating over the stage. The world is brief-pinned to the Apple / bento / MacPaw / CleanMyMac family: bento grids, pill chrome, one variable typeface, restraint everywhere except the photographs.
+The booking page is the photographer's own darkroom exposure record — craft is the proof. Instead of the dark full-bleed hero portfolio this category always ships (and the v2 it replaces), the artist lands on a warm paper working document already filled out about *them*: real AED numbers, real artist names, real delivery times, annotated with stop-deltas and hatch density marks. The page reads as a printer's paperwork; trust comes from precision, and booking is one tap.
 
-One light source colors the room: the **Dubai dusk** (gold → rose → violet). It is used as *light* — soft radial glows bleeding into tile and section backgrounds — never as paint. No gradient text, no gradient buttons, no gradient borders. The only saturated solid is WhatsApp green, and it means exactly one thing: booking. The brand mark is a white script signature (`img/signature.webp`), used in nav, quote tile, and footer.
+The material system is physical: a grained paper field, translucent record sheets overlapping at slight angles, a backlit 11-step zone ramp serving as both chrome and navigation, and exactly one dichroic magenta — the darkroom filtration color — reserved for key rows and booking actions. The colophon states the doctrine on the page itself: "filtration only."
 
 **Key Characteristics:**
-- Near-black stage; photography supplies all richness; UI stays monochrome glass
-- Dusk gradient appears only as soft radial light inside backgrounds
-- Pill-shaped chrome (nav, buttons, chips, badges); 24px panels; 14px dense elements
-- Single typeface (Geist variable); hierarchy by weight and tracking, not by family
-- WhatsApp green = booking, everywhere and only there
-- Motion is one authored moment (hero stagger) plus quiet scroll reveals
+- Warm paper ground with SVG fractal-noise grain baked into the body background
+- Two voices only: ultra-condensed stamped caps (Big Shoulders) and typewriter tabular mono (Courier Prime)
+- Squared corners everywhere; every rule is 1px ink
+- One accent (dichroic magenta) with a hard scarcity doctrine
+- Sheets carry mass: entrances drop, over-tilt, and settle with an overshoot ease
+- Data lives in tables — `th`/`td` pairs with `font-variant-numeric: tabular-nums`
 
 ## Colors
 
-A monochrome glass system over near-black, lit by three dusk hues and punctuated by one functional green.
+An almost-monochrome warm paper/ink world where the 11-step zone ramp is the only tonal range and one magenta is the only chroma.
 
 ### Primary
-- **Dusk Gold** (`#ffb35c`): the interactive accent of the dusk trio — focus rings, checkmarks in plan lists, FAQ hover/open state, input caret and focused borders, in-copy links. The only dusk hue that touches UI states directly.
-- **Dusk Rose** (`#ff5e8a`): quotation marks in testimonials, text selection background, form error text; radial glow behind the featured plan and quote tile.
-- **Dusk Violet** (`#8b5cf6`): ambient light only — radial glows in the hero scrim, quote tile, and footer. Never on text or controls.
-
-### Secondary
-- **WhatsApp Green** (`#25d366`): booking CTAs (`.btn-whatsapp`, mobile nav circle) and form success text. Paired with dark-green ink `#04310f` for contrast.
+- **Dichroic Magenta** (`--mag` #e33d97): the darkroom filtration color. Appears only on: the header BOOK cell, bar-button delta cells, the KEY mark chip and key-row hatch, the active zone-ramp frame, the colophon swatch, and `::selection`. Ink text sits on it, never white.
+- **Deep Filtration** (`--mag-deep` #a8186a): the pressed/interactive shade of the same filter — `.rec-book:hover`, focused field borders and inset ring, `:focus-visible` outline, `caret-color`, FAQ inline links, and form error text.
 
 ### Neutral
-- **Stage** (`#050506`): page background, scrims, active-chip text. `bg-raised` (`#0d0d0f`) backs native popups (select options) and the nav glass tint.
-- **Glass** (`rgba(255,255,255,0.045)`): resting surface for every panel — tiles, cards, inputs, ghost buttons, lightbox controls. **Glass Hover** (`rgba(255,255,255,0.08)`) is its interaction/open state.
-- **Hairline** (`rgba(255,255,255,0.09)`): the universal 1px border. Hover borders brighten to `rgba(255,255,255,0.16–0.18)`.
-- **Ink** (`#f5f5f7`): headings, primary buttons' fill, active chip fill. **Muted** (`#b0b0b6`): body copy, nav links, list items. **Faint** (`#8e8e94`): captions, placeholders, fine print, "or" separators.
+- **Paper** (`--paper` #e9e5da): the working field. Body background under the noise grain; also the resting fill of form inputs, so fields read as part of the paper until focused.
+- **Sheet** (`--sheet` #f4f2ea): the record-sheet material — every `.sheet`, `.print`, the index sheet, and text-on-ink (bar buttons, inverted hovers).
+- **Ink** (`--ink` #17140f): text, every 1px rule (`--rule` is an alias of ink), and the fill of primary bar buttons. Hairlines are this same ink diluted via `color-mix` to 25–35% — never a separate grey.
+- **Ink 2** (`--ink-2` #454034): running copy (decks, intros, about paragraphs, colophon).
+- **Ink 3** (`--ink-3` #5d5747): annotations — labels, table headers, zone-head tags, print numbers, placeholders.
+
+### The Zone Ramp
+Eleven fixed warm-grey steps, `--z0` #141210 (Zone 0) through `--z10` #f4efe2 (Zone X), same hue family as the ink/paper world. Used in exactly two places: the ramp-rail navigation (one step per zone, steps VII–IX inert at 50% opacity because the page has no zones there) and the 30px colophon ramp strip. Step text flips from `--z9`/`--z10` to `--z0` at step 5 for contrast.
 
 ### Named Rules
-**The Light-Not-Paint Rule.** The dusk gradient (gold→rose→violet) exists only as soft `radial-gradient` light bleeding into tile, plan, and footer backgrounds at 10–32% alpha. It never fills text, never paints buttons, borders, or icons. Individual dusk hues may appear solid only in the small functional roles listed above.
+**The Filtration Rule.** Magenta exists for the key row and the booking action — plus the browser surfaces that echo them (selection, caret, focus ring). It never colors headings, body text, backgrounds, borders of non-key elements, or decoration. The footer prints the contract: "filtration only." Adding a second accent, or spending magenta on anything that isn't a key value or a path to booking, breaks the world.
 
-**The Green-Means-Booking Rule.** WhatsApp green appears exclusively on booking actions and the form's success message. It is the conversion color; scarcity is the point.
-
-**The Glass-Not-Gray Rule.** Surfaces are translucent white over the stage, never opaque grays. A panel's resting state is `rgba(255,255,255,0.045)` + 1px hairline; its active state raises alpha, not hue.
+**The One-Ink Rule.** There is no grey palette. Every line, border, and hairline is `--ink`, at full strength (1px rules) or diluted through `color-mix(in srgb, var(--rule) 25–35%, transparent)` for secondary table rules and zone-head fills.
 
 ## Typography
 
-**Display/Body Font:** Geist variable, weights 100–900, self-hosted (`fonts/geist-latin.woff2`), fallback `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`.
+**Display Font:** Big Shoulders (variable 100–900, self-hosted woff2; fallback 'Arial Narrow', sans-serif)
+**Body/Data Font:** Courier Prime 400 + 700 (self-hosted woff2; fallback 'Courier New', monospace)
 
-**Character:** One quiet grotesk doing everything. Big sizes go tight (-0.03em to -0.035em tracking) and heavy-ish (620–660); body sits at a slightly-light 420. The white script signature image is the only non-Geist letterform and it is a brand mark, not type.
+**Character:** Stamped ultra-condensed caps over typewriter record-keeping. Everything Big Shoulders is uppercase, tight-tracked, and near-solid leading (0.92–1.15); everything that is data or annotation is Courier Prime, and every number sits in `font-variant-numeric: tabular-nums`.
 
 ### Hierarchy
-- **Display** (640, `clamp(2.7rem, 7.2vw, 5.6rem)`, lh 1.02, -0.035em): hero headline only. `text-wrap: balance`, max-width 14ch.
-- **Headline** (620, `clamp(2rem, 4.6vw, 3.4rem)`, lh 1.08, -0.03em): section `h2`s. About's `h2` runs one notch smaller (`clamp(1.9rem, 3.6vw, 2.8rem)`).
-- **Title** (580, 1.25rem): plan card names. Pull-quote variant: 540, `clamp(1.35rem, 2.4vw, 1.9rem)`, used in the signature quote tile and testimonials.
-- **Numeral** (660, `clamp(2.4rem, 3.4vw, 3.1rem)`, lh 1, `font-variant-numeric: tabular-nums`): AED prices. The bento fact numerals (`72h`, `DXB`) run the same voice up to 3.6rem. Currency prefix is a small uppercase label in Faint.
-- **Body** (420, 1.0625rem, lh 1.6): copy. Muted color; measures capped at 46–68ch depending on context.
-- **Label** (540, 0.85rem, +0.06em, UPPERCASE): photo-tile tags and the AED currency marker. The only uppercase in the system.
+- **Display** (560, `clamp(3.4rem, 10.5vw, 6rem)`, lh 0.92, ls 0.005em, uppercase): the hero headline only.
+- **Headline** (540, `clamp(2rem, 4.6vw, 3.2rem)`, lh 0.96, ls 0.01em, uppercase): one per zone.
+- **Title** (560, 1.55rem, lh 1, uppercase): plan names, closed with a 1px ink rule beneath. The logo stamp is the same voice at 600/1.05rem; pull quotes at 500/`clamp(1.3rem, 2.2vw, 1.7rem)`.
+- **Body** (Courier 400, 1rem, lh 1.55): copy capped at 40–66ch (`.deck` 40ch, `.zone-intro` 62ch, FAQ answers 66ch), colored `--ink-2`.
+- **Label** (Courier 700, 0.72rem, ls 0.12–0.14em, uppercase, `--ink-3`): field labels, zone heads, table headers, plan captions. Interactive labels (nav, bar buttons) run larger at 0.82–0.9rem/700 with 0.09–0.1em tracking.
+- **Price numerals** (Courier 700, 2.1rem, tabular-nums): plan prices, with the AED unit as a Label.
 
 ### Named Rules
-**The One-Face Rule.** Geist is the only typeface. Hierarchy comes from the variable axis (420→660) and tracking, never from a second family or a system display face.
-
-**The Bare-Headline Rule.** Headings stand alone. No kicker, eyebrow, or overline above any heading — the section `h2` is the first line of every section.
+**The Two-Voices Rule.** Big Shoulders speaks (headlines, plan names, quotes, the stamp); Courier Prime records (everything else). No third face, no italics, and no mixed-case display — both voices are uppercase in headings and labels.
 
 ## Layout
 
-- **Container:** `.wrap` at max 1200px, inline padding `clamp(20px, 4vw, 40px)`. Narrow variant `.wrap-narrow` at 780px for FAQ and contact.
-- **Section rhythm:** `padding-block: clamp(72px, 10vw, 130px)`; section head margin-bottom `clamp(36px, 5vw, 56px)`.
-- **Bento** (why-book strip): 6-column grid, 150px auto-rows, dense flow, 14px gap. Photo tiles span 2×3 and 2×2; fact tiles 2×1; quote tile 4×1. Collapses to 2 columns ≤1000px, single column ≤560px (photo tiles switch to aspect-ratios 4/5 and 1/1).
-- **Gallery:** 4-column grid, 190px auto-rows, dense flow, 14px gap. Verticals span 1×3, horizontals 2×2. 2 columns ≤820px.
-- **Plans / quotes / form:** 18px gaps. Plans are 3-up, stacking to a 560px single column ≤1000px with the featured plan reordered first. Quotes 2-up → 1. Form rows 2-up → 1 ≤560px.
-- **Breakpoints:** 1000px (grids collapse), 820px (nav switches to toggle + dropdown, gallery 2-col), 560px (single column, full-width hero buttons).
-- **Hero:** full viewport (`100svh`, 92svh ≤560px), content bottom-anchored with `clamp(64px, 10vh, 120px)` bottom padding; the photograph fades into the stage via a vertical scrim ending in solid `bg` at 98%.
+A fixed **zone-ramp rail** (66px, `--rail-w`) runs the full left edge; header, `main`, and colophon all offset by `margin-left: var(--rail-w)`. Content zones are `<section class="zone">` blocks capped at 1240px (`--wrap`; 880px for `.zone-narrow` prose zones like FAQ and contact), padded `clamp(40px, 6vw, 72px)` top / `clamp(56px, 8vw, 104px)` bottom and `--pad` (`clamp(18px, 4vw, 44px)`) inline. Adjacent zones separate with a single 1px ink rule — no background changes between zones; the paper runs continuously.
+
+Each zone opens with a **zone-head**: `Zone N · [tag]` in Label voice with a 35%-ink hairline (`.zone-fill`) stretched between number and tag.
+
+Grids: hero is `minmax(280px, 5fr) 7fr`; contact prints are 4 columns with horizontal prints spanning 2; plans are 3 equal columns; quotes and about are 2-column. Overlap is a layout device, not an accident: the add-ons sheet tucks *under* the plan cards (`margin-top: -36px`, `z-index: 0` vs the plans' `1`), the hero print-plan sheet hangs off the photo's corner (`right: -18px; bottom: -34px`), and the second quote pulls left and down over the first's column (`left: -58px; margin-top: 34px`).
+
+**Breakpoints:** ≤1100px drops the header meta cells. ≤900px is the structural break: `--rail-w` goes to 0, the rail becomes an 18px-tall horizontal strip glued under the 53px sticky header (`--head-h`), step numerals visually hidden; desktop nav swaps for the Index toggle + index sheet; hero, plans, quotes, and about stack to one column (key plan reordered first via `order: -1`); overlaps shrink but survive. ≤700px: prints go 2-column, field rows stack, hero bar buttons go full-width.
 
 ## Elevation & Depth
 
-No decorative resting shadows. Depth comes from three materials: **glass** (translucent white fill + 1px hairline + `backdrop-filter: blur(14–24px) saturate(1.4)` on nav, mobile menu, lightbox), **scrims** (photos darken toward the stage via gradients so tiles and the hero dissolve into the background), and **ambient dusk light** (radial glows inside backgrounds).
+Depth is physical, not tonal: sheets float on real shadows over the paper, and translucency comes from `color-mix` + `backdrop-filter` so lower layers show through like tracing paper. The sticky record header is 92% paper with 6px blur; the hero print-plan sheet is 88% sheet with 2px blur; the loupe backdrop is 90% paper with `blur(8px) brightness(0.96)`.
 
 ### Shadow Vocabulary
-Shadows exist only as a response to state or altitude:
-- **Nav scrolled** (`0 12px 40px rgba(0,0,0,0.45)`): the pill gains a shadow (and a more opaque tint, 0.55→0.78) once `scrollY > 24`.
-- **Primary hover glow** (`0 10px 34px rgba(255,255,255,0.18)`): white button lifts with a white glow.
-- **WhatsApp hover glow** (`0 10px 34px rgba(37,211,102,0.35)`): green glow, same geometry.
-- **Lightbox image** (`0 30px 80px rgba(0,0,0,0.6)`): the one deep shadow, on the enlarged photo.
+- **Sheet at rest** (`--shadow-sheet: 0 12px 28px rgba(28, 22, 10, 0.16), 0 2px 6px rgba(28, 22, 10, 0.1)`): every sheet and print. Warm-toned, never neutral black.
+- **Print lifted** (`0 18px 40px rgba(28, 22, 10, 0.24), 0 3px 8px rgba(28, 22, 10, 0.12)`): contact-print hover, paired with the tilt straightening to 0.
+- **Loupe plate** (`0 30px 70px rgba(28, 22, 10, 0.35)`): the enlarged photo, highest surface in the world.
+- **Bar-button hover** (`0 6px 16px rgba(28, 22, 10, 0.28)`): under the -2px lift; collapses to none on `:active`.
 
 ### Named Rules
-**The Shadow-As-State Rule.** Nothing casts a shadow at rest on the stage. Shadows appear on hover (button glows), on scroll (nav), or at the lightbox's altitude — then disappear.
+**The Light-Not-Paint Rule.** The zone ramp is backlit, never repainted. Every step carries a faint internal radial glow (`rgba(255, 248, 228, 0.16)` warm light via `::before`); hover brightens the whole step with `filter: brightness(1.15)`; the active step burns brighter with an inset warm glow (`inset 0 0 16px rgba(255, 248, 228, 0.45)`) inside a 2px magenta frame. State is expressed as light passing through the step — the zone value pigments themselves never change.
 
 ## Shapes
 
-Pill-and-panel language. **Pills** (999px) for all chrome: nav bar, every button, chips, badges, skip link. **Panels** (24px, `--radius`): bento tiles, plan cards, testimonial cards, about photo, mobile menu. **Dense elements** (14px, `--radius-sm`): gallery shots, FAQ rows, form fields, lightbox image, mobile menu links. **Circles**: lightbox controls, mobile WhatsApp nav button, plan-list check bullets. Focus outlines round to 4px. Every panel carries the 1px hairline border; borders never thicken, they brighten. No sharp corners anywhere in the UI.
+**Squared corners everywhere.** Not a single `border-radius` exists in the system except the explicit `border-radius: 0` reset on form fields. Sheets, buttons, chips, inputs, the loupe — all hard-cornered.
+
+**Rules are 1px ink.** Borders and dividers are `1px solid var(--rule)` at full strength for structure, or 25–35% ink hairlines for secondary table rows. The only thicker line in the world is the key plan's 2px border (`.plan-key`) and the 2px active-zone / focus frames.
+
+**Tilt** is the sheet signature: each sheet sets `--tilt` inline (observed range -1.4deg to 0.8deg; most ±0.4–0.8deg, the hero print itself at exactly 0) applied via the `rotate` property. Prints straighten to 0 on hover.
+
+**Hatch density** is the annotation language — 45° `repeating-linear-gradient` stripes, denser = more: the hold-button delta hatch (1px ink stripes at 50% on 5px pitch, min-width 42px), add-on chips (22x14px, 55% ink on 4px pitch; cross-hatched variant layers ±45° for the biggest delta), and the key row (magenta stripes at 28% on 6px pitch across `th`+`td`).
 
 ## Components
 
-### Navigation (glass pill)
-- Fixed, centered, floating 14px from the top; pill of `rgba(13,13,15,0.55)` + hairline + `blur(20px) saturate(1.4)`.
-- Contents: signature brand mark (22px tall), text links (0.92rem, weight 480, Muted → Ink on hover), and a small WhatsApp pill CTA.
-- Scrolled state (`.is-scrolled`, past 24px): tint deepens to 0.78 alpha + shadow.
-- ≤820px: links move into a dropdown glass panel (24px radius, 0.92 tint, fade/slide in); the bar keeps brand + a 40px circular WhatsApp green button + a two-line hamburger that crosses into an X via `aria-expanded`.
+### Bar Buttons (`.bar-btn`)
+The booking action as a two-cell record strip. **Anatomy:** an `inline-flex` bar with a 1px ink border containing a **label cell** (`.bar-label`, 13px 18px padding, Courier 700 0.9rem uppercase 0.09em) and a **delta cell** (`.bar-delta`, magenta fill, ink text, 0 14px, separated by a 1px sheet-colored rule) carrying the stop-delta: "72H", the plan price, or "→".
+- **Primary** (`.bar-btn-book`): ink fill, sheet text, magenta delta. Optional leading inline-SVG icon (17px).
+- **Hold** (`.bar-btn-hold`): sheet fill, ink text, and a hatch delta cell instead of magenta — a secondary action literally rendered as lower density.
+- **Submit** (`.bar-btn-submit`): full-width, `justify-content: space-between`.
+- **Hover:** lifts -2px with warm shadow on the settle ease; **active** drops back flat with no shadow.
 
-### Buttons
-- **Shape:** pill (999px), padding 14px 26px (small: 10px 18px), weight 560, inline-flex with 10px gap for an 18px icon.
-- **Primary:** Ink fill (`#f5f5f7`) with near-black text (`#0a0a0b`). Hover: lifts -2px + white glow. Active: presses to scale(0.98).
-- **WhatsApp:** `#25d366` fill, `#04310f` text, always with the WhatsApp glyph. Reserved for booking (Green-Means-Booking Rule).
-- **Ghost:** Glass fill + hairline; hover raises fill to Glass Hover and brightens border to 0.18.
-- **Full** (`.btn-full`) stretches to 100% inside plan cards and the form.
+### Sheets (`.sheet`)
+The material: sheet fill, 1px ink border, `--shadow-sheet`, inline `--tilt`. Plans, quotes, the form, the about print, the print-plan overlay, and the add-ons sheet are all this one material.
 
-### Chips (gallery filters)
-- Transparent pill + hairline, Muted text (0.92rem/500). Hover: Ink text + Glass fill. Active: inverts to Ink fill + Stage text, `aria-pressed` tracks state. Filtering hides shots with `display: none` (`.is-hidden`).
+**The Sheets-Carry-Mass Rule.** Placement is scroll-revealed under `.js` only: `.placed` starts transparent, 22px low, and +1.2deg over-rotated; `.is-placed` (added by IntersectionObserver at 10% visibility) settles it home over 0.5–0.7s on `--ease-settle: cubic-bezier(0.2, 1.3, 0.35, 1)` — the overshoot is the point: sheets land like paper with weight, not fades. The same ease drives every settling motion (button lift, print straightening, FAQ marker rotation). Under `prefers-reduced-motion` all durations collapse to 0.01ms and `.placed` is forced fully visible.
 
-### Bento Tiles
-- 24px-radius glass panels, hairline border, overflow hidden. Three species:
-- **Photo tile:** full-bleed image + bottom scrim (`rgba(5,5,6,0.55)` → transparent at 45%) + uppercase Label tag pinned bottom-left. Hover zooms image to 1.045 over 1.2s.
-- **Fact tile:** big Numeral (`72h`, `DXB`) + Muted support line; backgrounds carry gold (0.18) and rose (0.16) radial light respectively.
-- **Quote tile:** pull-quote (24ch max) + 24px signature image; strongest dusk light in the system (violet 0.32 + rose 0.10 radials).
+### Record Header (`.rec-header`)
+Sticky, full-width, 92%-paper with blur, bottom 1px rule; a strip of bordered cells: the two-line stamp, aria-hidden meta cells (System / Location), text nav (hover inverts to ink/sheet), and the magenta BOOK cell with WhatsApp icon. On mobile the nav collapses to an Index toggle (`aria-expanded`, inverts when open) and BOOK becomes icon-only.
 
-### Gallery Shots
-- 14px-radius `<button>` elements (they open the lightbox) with cover images; hover zoom 1.04 over 1.1s. Vertical (1×3) and horizontal (2×2) spans on a dense grid.
+### Zone Ramp Rail (`.ramp-rail`)
+The signature component: fixed 11-step vertical ramp, one flex-equal step per zone, each an anchor to its zone (steps VII–IX inert spans at 50% opacity, X → colophon). Steps are numbered in the zone's own contrast color; JS (IntersectionObserver, `rootMargin: '-40% 0px -55% 0px'`) moves `.is-active` — a 2px magenta inset frame with warm inset glow — to the zone in view. Mobile: horizontal 18px strip under the header, numerals clipped visually but kept for AT.
 
-### Plan Cards
-- 24px glass panel, 34px 30px padding, column layout with 20px gap: Title, AED Numeral price (uppercase Faint currency above), check-list, full-width button.
-- Check bullets: 16px glass circle + hairline with a Dusk Gold checkmark drawn in borders.
-- Hover: lifts -4px, border brightens to 0.16, fill raises.
-- **Featured:** rose radial light (0.13), warm border `rgba(255,140,160,0.28)`, Ink pill badge ("Most popular") overhanging the top, and the Primary (not Ghost) button. Ordered first when stacked.
-- Add-ons run as a centered Faint/Muted one-liner below the grid.
+### Contact Prints (`.print`) + Loupe
+Prints are `<button>` sheets with the image and a caption strip (`.print-cap`: number in ink-3 + name, top 1px rule). Hover straightens the tilt, deepens the shadow, bumps image contrast 1.04, and inverts the caption to ink/sheet. Clicking opens the **loupe**: a fixed dialog (`role="dialog"`, `aria-modal`) over the blurred paper, photo mounted on a 12px-padded sheet with the deepest shadow, 46px square bordered close/prev/next buttons (hover inverts), arrow-key navigation, Escape to close, body scroll locked, focus moved in and restored on close, Tab trapped across the dialog's buttons.
 
-### Quote Figures (testimonials)
-- 24px glass panel, 38px 36px padding. Blockquote at pull-quote size with Dusk Rose curly quotes supplied by `::before/::after`; Faint attribution line 18px below.
+**The Hidden-First Loupe Guard.** `.loupe[hidden] { display: none; }` is declared *before* the `.loupe { display: flex; }` rule, and the markup ships with `hidden`. Any overlay that sets its own `display` must pair it with this guard — a v2 regression where `display: flex` overrode `[hidden]` once blocked every click on the page.
 
-### FAQ (details/summary)
-- 14px glass rows, 10px apart. Summary: weight 540, flexed with an 18px plus icon (Faint). Hover and open turn summary/icon Dusk Gold; open rotates the plus 45° into an ×, and the row's fill raises to Glass Hover. Answers are Muted, 68ch max; in-copy links are Dusk Gold.
+### Plans + Add-ons
+Three plan sheets (title, rule, AED price in tabular numerals, spec table, bar button pinned to the bottom with `margin-top: auto`). The key plan gets the 2px border, an ink "Most booked" flag overlapping its top edge, and the magenta-hatched key row with KEY mark chip. The add-ons sheet slides under the cards' lower edge (negative margin, lower z-index) listing deltas with hatch chips — density encodes magnitude.
 
-### Form Fields
-- Label (0.88rem/540, Muted) over a 14px-radius glass input, 14px 16px padding, hairline border. Caret Dusk Gold; placeholder Faint.
-- Hover brightens border; focus swaps to `border-color: dusk-gold` + Glass Hover fill (outline suppressed — the border is the focus style here).
-- Select uses an inlined chevron SVG data-URI; options backed by `bg-raised`.
-- Status line (`role="status" aria-live="polite"`): Muted while sending, WhatsApp green on success, Dusk Rose on error (error copy redirects to WhatsApp). Submit button disables during the request.
+### Record Form (`.record-form`)
+A sheet holding labeled fields: paper-filled inputs with 1px ink borders, zero radius. **Focus:** border and inset 1px ring go `--mag-deep`, fill brightens to sheet — the field literally comes forward off the paper. Select uses an inline data-URI chevron. Status line is `role="status"` `aria-live="polite"`; errors are bold `--mag-deep`. Submit posts to Formspree via fetch with explicit ok/error copy and a WhatsApp fallback in the error message.
 
-### Lightbox
-- Full-screen `role="dialog" aria-modal="true"`: 0.92 stage tint + `blur(14px)`, image capped at `min(92vw, 1300px)` × 86svh with the system's deepest shadow.
-- Controls are 48px glass circles (close top-right, prev/next mid-edges); hover scales 1.06.
-- Behavior: opens from any gallery shot, navigation wraps within *currently filtered* shots, Esc closes, arrows step, Tab is trapped among the three buttons, focus moves to close on open and returns to the originating shot on close. Body scroll locks while open.
-- **The Hidden-First Rule.** `.lightbox[hidden] { display: none; }` is declared *before* the `.lightbox { display: flex; }` block and must stay. Without it the flex display overrides `hidden`, leaving an invisible full-screen overlay that swallows every click on the page.
+### FAQ (`.faq`)
+Native `details`/`summary` rows between 1px rules; a mono "+" marker rotates 45° on the settle ease when open; summary hover/open fills with sheet.
 
-### Motion
-- **Curve:** everything moves on `--ease-out: cubic-bezier(0.16, 1, 0.3, 1)`. Hovers 0.25–0.4s; transforms 0.3–0.5s; image zooms 1.1–1.2s.
-- **The Authored-Moment Rule.** The hero load stagger (title → sub → actions rising 28px over 1s at 0s/0.1s/0.2s delays) is the site's one authored entrance. Scroll reveals (`.reveal`: 26px rise, 0.9s, IntersectionObserver, fire once) are applied sparingly — bento tiles and section heads only — and only the bento gets internal stagger (0.08s steps). Content never hides behind animation: reveal styles apply only under the `.js` class, and no-JS pages render fully visible.
+### Colophon
+Zone X: the full 11-step ramp as a 30px horizontal strip, then a single row with copyright, footer nav, and the doctrine line "filtration only" beside a bordered 16x11px magenta swatch.
+
+### Browser Surface
+The world extends into the chrome: `::selection` is magenta with ink text, `caret-color` and `:focus-visible` (2px outline, 2px offset) are deep magenta, scrollbar is thin `ink-3`-on-paper, and the skip link is an ink/sheet bar that drops in at top-left on focus.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep a WhatsApp booking action reachable within one tap from every region of the page (nav, hero, each plan card, contact) — it is the product's primary conversion path.
-- **Do** give every panel the same skin: `rgba(255,255,255,0.045)` fill + 1px `rgba(255,255,255,0.09)` hairline; interaction raises fill/border alpha, nothing else.
-- **Do** fade photography into the stage with scrims ending in `#050506` — images belong to the room, they don't sit in frames.
-- **Do** keep the accessibility invariants: global `:focus-visible` = 2px Dusk Gold outline, 3px offset, 4px radius; skip link revealed on focus; lightbox focus trap + focus return; `prefers-reduced-motion` collapses all animation/transition durations to 0.01ms and forces `.reveal` visible; scroll-behavior falls back to auto.
-- **Do** use `--ease-out` (`cubic-bezier(0.16, 1, 0.3, 1)`) for any new movement, and keep new reveals off unless the element is a bento tile or section head.
-- **Do** ship images as responsive `.webp` (`srcset` + `sizes`, explicit width/height, `loading="lazy"` below the hero) — performance is part of the brand promise.
+- **Do** keep magenta on booking paths and key values only — delta cells, KEY rows, the active zone frame, focus/caret/selection. The Filtration Rule is the identity.
+- **Do** build every panel from the one sheet material: `--sheet` fill, 1px ink border, `--shadow-sheet`, a small inline `--tilt` (±0.4–0.8deg typical, never past ±1.4deg).
+- **Do** put data in `th`/`td` tables with `font-variant-numeric: tabular-nums` and Label-voice headers — the page is a record, not a card deck.
+- **Do** use `--ease-settle` for anything that moves into place, and collapse all motion under `prefers-reduced-motion`.
+- **Do** scope reveal/entrance styles under `.js` so a no-JS load renders the full page visible (the `no-js` → `js` class swap is the only inline script).
+- **Do** pair any self-displayed overlay with a preceding `[hidden] { display: none; }` guard and ship it `hidden` in markup.
+- **Do** express quantity or intensity as hatch density (45° repeating gradients), and state as light (glow/brightness), not as new pigments.
 
 ### Don't:
-- **Don't** fill text with the dusk gradient, or use it on buttons, borders, icons, or any UI chrome — it is background light only (Light-Not-Paint Rule).
-- **Don't** add kickers, eyebrows, or overlines above headings (Bare-Headline Rule).
-- **Don't** use WhatsApp green for anything except booking CTAs and the form success state.
-- **Don't** introduce opaque gray surfaces, a second typeface, sharp corners, or decorative resting shadows.
-- **Don't** reorder the lightbox CSS: `[hidden] { display: none }` must precede the `display: flex` rule (Hidden-First Rule).
-- **Don't** let motion gate content — any element animated on scroll must be fully visible without JavaScript and under reduced motion.
+- **Don't** add border-radius anywhere — squared corners are absolute, including inputs and images.
+- **Don't** introduce a second accent, a grey scale, or colored rules: lines are 1px ink, full-strength or `color-mix`-diluted to 25–35%.
+- **Don't** put white text on magenta or use magenta for headings, backgrounds, or decoration — ink on magenta, and only where the Filtration Rule allows.
+- **Don't** repaint zone-ramp steps for hover/active state; the ramp is backlit — brighten or glow, never change the step's value.
+- **Don't** add a third typeface, italics, or mixed-case display type; Big Shoulders stamps, Courier Prime records.
+- **Don't** use icon fonts or emoji — the only icons are inline SVGs (WhatsApp, Instagram, loupe arrows/close) sized 16–20px and drawn in `currentColor`.
