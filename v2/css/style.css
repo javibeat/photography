@@ -357,7 +357,7 @@ ul { list-style: none; }
     radial-gradient(120% 150% at 15% -30%, rgba(255, 179, 92, 0.18), transparent 60%),
     var(--surface);
 }
-.tile-fact:last-of-type {
+.tile-fact:nth-of-type(2) {
   background:
     radial-gradient(120% 150% at 85% -30%, rgba(255, 94, 138, 0.16), transparent 60%),
     var(--surface);
