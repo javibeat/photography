@@ -43,10 +43,10 @@ describe('static integrity', () => {
     const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
     const biz = data['@graph'].find((n) => n['@type'] === 'Photographer');
     const prices = biz.hasOfferCatalog.itemListElement.map((o) => o.price);
-    expect(prices).toEqual(['1300', '1500', '6500']);
+    expect(prices).toEqual(['1300', '1500', '5500']);
     expect(html).toContain('1,300');
     expect(html).toContain('1,500');
-    expect(html).toContain('6,500');
+    expect(html).toContain('5,500');
   });
 
   it('has no noindex now that the site is live at the root', () => {
