@@ -558,6 +558,7 @@ ul { list-style: none; }
   gap: 8px 22px;
 }
 .addons span { color: var(--muted); white-space: nowrap; }
+.addons a { color: var(--dusk-gold); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Quotes ---------- */
 

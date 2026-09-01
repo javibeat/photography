@@ -514,6 +514,15 @@ main { margin-left: var(--rail-w); }
   border: 1px solid var(--rule);
   background: repeating-linear-gradient(45deg, transparent 0 3px, rgba(23, 20, 15, 0.55) 3px 4px);
 }
+.addons-note {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 35%, transparent);
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+.addons-note a { color: var(--mag-deep); font-weight: 700; text-underline-offset: 3px; }
+
 .hatch-chip-x {
   background:
     repeating-linear-gradient(45deg, transparent 0 3px, rgba(23, 20, 15, 0.55) 3px 4px),
