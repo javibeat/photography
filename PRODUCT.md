@@ -31,7 +31,7 @@ Dubai music/nightlife scene: DJs, live bands, performers pitching venues and pro
 Confirmed services and pricing (from v1, preserve verbatim unless user changes):
 - **Artist Promo Session** — AED 1300/session: up to 2h shooting, 10 edited photos, USB with full shoot, delivery within 72h
 - **Artist Portfolio** — AED 1500/session: up to 2h shooting, 15 edited photos, USB with full shoot, delivery within 72h
-- **EPK & Live Show** — from AED 4500: up to 3h shooting, photos + video combo, delivery within 1 week
+- **EPK & Live Show** — from AED 6500: up to 3h shooting, photos + video combo, delivery within 1 week
 - **Add-ons**: +5 edited photos AED 500 · +1 extra hour AED 500 · video from AED 1500
 - Press Kit inquiries also route to a Google Form (v1 "Ultimate Artist Press Kit" card)
 
