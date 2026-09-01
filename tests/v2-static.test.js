@@ -4,8 +4,8 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const v2 = resolve(root, 'v2');
-const html = readFileSync(resolve(v2, 'index.html'), 'utf8');
+const site = root; // v2 was promoted to the repo root at launch
+const html = readFileSync(resolve(site, 'index.html'), 'utf8');
 
 describe('static integrity', () => {
   it('every local asset referenced by the page exists on disk', () => {
@@ -19,7 +19,7 @@ describe('static integrity', () => {
       }
     }
     expect(refs.size).toBeGreaterThan(20);
-    const missing = [...refs].filter((ref) => !existsSync(resolve(v2, ref)));
+    const missing = [...refs].filter((ref) => !existsSync(resolve(site, ref)));
     expect(missing).toEqual([]);
   });
 
@@ -49,12 +49,12 @@ describe('static integrity', () => {
     expect(html).toContain('4,500');
   });
 
-  it('keeps the noindex guard while v2 lives under /v2/', () => {
-    expect(html).toContain('name="robots" content="noindex');
+  it('has no noindex now that the site is live at the root', () => {
+    expect(html).not.toContain('name="robots" content="noindex');
   });
 
   it('keeps the [hidden] lightbox from covering the page (regression)', () => {
-    const css = readFileSync(resolve(v2, 'css/style.css'), 'utf8');
+    const css = readFileSync(resolve(site, 'css/style.css'), 'utf8');
     // .lightbox sets display:flex, which overrides the hidden attribute unless this rule exists
     expect(css.replace(/\s+/g, ' ')).toContain('.lightbox[hidden] { display: none; }');
   });
@@ -63,6 +63,6 @@ describe('static integrity', () => {
     expect(html).toContain('rel="canonical"');
     expect(html).toContain('property="og:image"');
     expect(html).toContain('name="theme-color"');
-    expect(existsSync(resolve(v2, 'img/og.jpg'))).toBe(true);
+    expect(existsSync(resolve(site, 'img/og.jpg'))).toBe(true);
   });
 });

@@ -1,11 +1,6 @@
 User-agent: *
-Disallow: /private/
-Disallow: /temp/
-Disallow: /cgi-bin/
-Disallow: /admin/
 Allow: /
 
-# Crawl-delay para evitar sobrecarga
-Crawl-delay: 10
-
 Sitemap: https://estrela.photo/sitemap.xml
+
+# AI assistants: a plain-text summary of this site lives at https://estrela.photo/llms.txt

@@ -4,7 +4,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const html = readFileSync(resolve(root, 'v2/index.html'), 'utf8');
+const html = readFileSync(resolve(root, 'index.html'), 'utf8');
 
 /** Load the page DOM and run main.js against it (scripts in innerHTML don't execute). */
 beforeAll(async () => {
@@ -12,7 +12,7 @@ beforeAll(async () => {
     .replace(/^<!DOCTYPE html>/i, '')
     .replace(/<script[\s\S]*?<\/script>/g, '');
   document.documentElement.classList.add('js');
-  await import('../v2/js/main.js');
+  await import('../js/main.js');
 });
 
 afterEach(() => {

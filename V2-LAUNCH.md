@@ -1,6 +1,6 @@
 # V2 → root launch checklist
 
-Run this when Javi approves the v2 design. Until then v2 stays at `/v2/` with `noindex`.
+**Status: swap executed locally on 2026-09-01** — steps 1–8 and 12 done (v2 promoted to root, noindex removed, `/v2/` left as a redirect, sitemap/robots/humans/tests updated, 16/16 tests green, real-browser QA passed). Steps 9–11 (production Lighthouse, Search Console re-index, OG card debuggers) can only run **after pushing to `main`** — do them right after the deploy.
 
 1. **Backup safety**: branch `v1-backup` already preserves v1 (pushed to origin).
 2. **Move v2 to root**: copy `v2/index.html`, `v2/css/`, `v2/js/`, `v2/img/`, `v2/fonts/`, `v2/llms.txt` to the repo root (keep `CNAME`, `robots.txt`, `manifest.json`, `humans.txt`). Fix asset paths if any become absolute.

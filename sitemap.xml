@@ -3,36 +3,20 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://estrela.photo/</loc>
-    <lastmod>2024-09-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://estrela.photo/images/LexieBand.webp</image:loc>
-      <image:title>Lexie with The Band - Professional Photography Dubai</image:title>
-      <image:caption>Live music photography in Dubai</image:caption>
+      <image:loc>https://estrela.photo/img/LexieBand-1600.webp</image:loc>
+      <image:title>Lexie with her band — live music photography in Dubai</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://estrela.photo/images/SergioTrumpet.webp</image:loc>
-      <image:title>Sergio Trumpet - Professional Music Photography</image:title>
+      <image:loc>https://estrela.photo/img/SergioTrumpet-1400.webp</image:loc>
+      <image:title>Sergio on trumpet — musician photography Dubai</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://estrela.photo/images/katrin.webp</image:loc>
-      <image:title>Katrin Sax - Artist Photography Dubai</image:title>
+      <image:loc>https://estrela.photo/img/katrin-1400.webp</image:loc>
+      <image:title>Katrin on saxophone — artist photography Dubai</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://estrela.photo/portfolio</loc>
-    <lastmod>2024-09-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://estrela.photo/services</loc>
-    <lastmod>2024-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://estrela.photo/contact</loc>
-    <lastmod>2024-09-21</lastmod>
-    <priority>0.7</priority>
   </url>
 </urlset>

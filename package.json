@@ -7,7 +7,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "serve": "python3 -m http.server 5503 --bind 127.0.0.1",
-    "lighthouse": "lighthouse http://localhost:5503/v2/ --view"
+    "lighthouse": "lighthouse http://localhost:5503/ --view"
   },
   "devDependencies": {
     "jsdom": "^25.0.1",
