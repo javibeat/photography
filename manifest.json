@@ -3,8 +3,8 @@
   "short_name": "Estrela Photo",
   "start_url": "https://estrela.photo/",
   "display": "standalone",
-  "background_color": "#050506",
-  "theme_color": "#050506",
+  "background_color": "#e9e5da",
+  "theme_color": "#e9e5da",
   "description": "Professional photography services in Dubai specializing in artist, musician and event photography",
   "icons": [
     {

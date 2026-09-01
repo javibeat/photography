@@ -85,7 +85,7 @@ components:
 
 # Design System: Estrela Photography — The Exposure Record
 
-> **Scope.** This file documents the **v3 surface** (`/v3/` — `index.html`, `css/style.css`, `js/main.js`, `fonts/`), currently in review; the root site still runs the previous v2 world until the swap. World source `operate-b-exposure-record-zone-sheets`, seed `a4cf319a`. Every value below is recorded from the built code.
+> **Scope.** This file documents the live root site (`index.html`, `css/style.css`, `js/main.js`, `fonts/`) — the v3 "Exposure Record" world, promoted to the root on 2026-09-01. Previous worlds: v1 on branch `v1-backup`, v2 on branch `v2-design`. World source `operate-b-exposure-record-zone-sheets`, seed `a4cf319a`. Every value below is recorded from the built code.
 
 ## Overview
 

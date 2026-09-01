@@ -1,165 +1,179 @@
-(function () {
+/* ESTRELA v3 — The Exposure Record: rail tracking, sheet placement,
+   loupe (lightbox), index sheet, Formspree submit. No dependencies. */
+(() => {
   'use strict';
 
-  var nav = document.getElementById('nav');
-  var toggle = document.querySelector('.nav-toggle');
-  var menu = document.getElementById('nav-menu');
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-  /* Nav: solid backdrop after leaving the hero top */
-  var onScroll = function () {
-    nav.classList.toggle('is-scrolled', window.scrollY > 24);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* ---------- Zone rail: highlight the zone in view ---------- */
+  const railLinks = new Map(
+    $$('.ramp-rail a[data-zone]').map((a) => [a.getAttribute('href').slice(1), a])
+  );
+  const zones = $$('main .zone, .colophon');
 
-  /* Mobile menu */
-  toggle.addEventListener('click', function () {
-    var open = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!open));
-    menu.classList.toggle('is-open', !open);
-  });
-  menu.addEventListener('click', function (e) {
-    if (e.target.closest('a')) {
-      toggle.setAttribute('aria-expanded', 'false');
-      menu.classList.remove('is-open');
-    }
-  });
-
-  /* Scroll reveals */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('is-in'); });
+  if ('IntersectionObserver' in window && railLinks.size) {
+    const zoneIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          railLinks.forEach((a) => a.classList.remove('is-active'));
+          const link = railLinks.get(entry.target.id);
+          if (link) link.classList.add('is-active');
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    );
+    zones.forEach((z) => zoneIO.observe(z));
   }
 
-  /* Gallery filter */
-  var chips = document.querySelectorAll('.chip');
-  var shots = Array.prototype.slice.call(document.querySelectorAll('.shot'));
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) {
-        var active = c === chip;
-        c.classList.toggle('is-active', active);
-        c.setAttribute('aria-pressed', String(active));
-      });
-      var filter = chip.dataset.filter;
-      shots.forEach(function (shot) {
-        shot.classList.toggle('is-hidden', filter !== 'all' && shot.dataset.cat !== filter);
-      });
+  /* ---------- Sheet placement (scroll reveal with mass) ---------- */
+  const sheets = $$('.sheet, .print');
+  sheets.forEach((el) => el.classList.add('placed'));
+  if ('IntersectionObserver' in window) {
+    const placeIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-placed');
+          placeIO.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.1 }
+    );
+    sheets.forEach((el) => placeIO.observe(el));
+  } else {
+    sheets.forEach((el) => el.classList.add('is-placed'));
+  }
+
+  /* ---------- Mobile index sheet ---------- */
+  const indexToggle = $('.rec-index-toggle');
+  const indexSheet = $('#index-sheet');
+  if (indexToggle && indexSheet) {
+    const setOpen = (open) => {
+      indexToggle.setAttribute('aria-expanded', String(open));
+      indexSheet.hidden = !open;
+    };
+    indexToggle.addEventListener('click', () => {
+      setOpen(indexSheet.hidden);
     });
+    indexSheet.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !indexSheet.hidden) {
+        setOpen(false);
+        indexToggle.focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (indexSheet.hidden) return;
+      if (!e.target.closest('#index-sheet') && !e.target.closest('.rec-index-toggle')) setOpen(false);
+    });
+  }
+
+  /* ---------- Loupe (lightbox) ---------- */
+  const loupe = $('#loupe');
+  const loupeImg = $('#loupe-img');
+  const loupeCap = $('#loupe-cap');
+  const prints = $$('.print[data-loupe]');
+  let current = -1;
+  let lastFocus = null;
+
+  const printData = prints.map((btn) => {
+    const img = $('img', btn);
+    const num = $('.print-cap span', btn);
+    const cap = $('.print-cap', btn);
+    const name = cap ? cap.textContent.replace(num ? num.textContent : '', '').trim() : '';
+    return {
+      full: img.srcset ? img.srcset.split(',').pop().trim().split(' ')[0] : img.src,
+      alt: img.alt,
+      cap: num ? `${num.textContent.trim()} · ${name}` : name
+    };
   });
 
-  /* Lightbox */
-  var lightbox = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lb-img');
-  var current = -1;
-
-  var visibleShots = function () {
-    return shots.filter(function (s) { return !s.classList.contains('is-hidden'); });
+  const showLoupe = (i) => {
+    current = (i + printData.length) % printData.length;
+    const d = printData[current];
+    loupeImg.src = d.full;
+    loupeImg.alt = d.alt;
+    loupeCap.textContent = d.cap;
   };
 
-  var show = function (shot) {
-    var list = visibleShots();
-    current = list.indexOf(shot);
-    lbImg.src = shot.dataset.full;
-    lbImg.alt = shot.querySelector('img').alt;
-  };
-
-  var open = function (shot) {
-    show(shot);
-    lightbox.hidden = false;
-    requestAnimationFrame(function () { lightbox.classList.add('is-open'); });
+  const openLoupe = (i) => {
+    lastFocus = document.activeElement;
+    showLoupe(i);
+    loupe.hidden = false;
     document.body.style.overflow = 'hidden';
-    lightbox.querySelector('.lb-close').focus();
+    $('.loupe-close', loupe).focus();
   };
 
-  var close = function () {
-    lightbox.classList.remove('is-open');
+  const closeLoupe = () => {
+    loupe.hidden = true;
     document.body.style.overflow = '';
-    setTimeout(function () { lightbox.hidden = true; lbImg.removeAttribute('src'); }, 350);
-    if (current > -1) {
-      var list = visibleShots();
-      if (list[current]) list[current].focus();
-    }
+    if (lastFocus) lastFocus.focus();
   };
 
-  var step = function (dir) {
-    var list = visibleShots();
-    if (!list.length) return;
-    current = (current + dir + list.length) % list.length;
-    lbImg.src = list[current].dataset.full;
-    lbImg.alt = list[current].querySelector('img').alt;
-  };
+  prints.forEach((btn, i) => btn.addEventListener('click', () => openLoupe(i)));
 
-  shots.forEach(function (shot) {
-    shot.addEventListener('click', function () { open(shot); });
-  });
-  lightbox.querySelector('.lb-close').addEventListener('click', close);
-  lightbox.querySelector('.lb-prev').addEventListener('click', function () { step(-1); });
-  lightbox.querySelector('.lb-next').addEventListener('click', function () { step(1); });
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) close();
-  });
-  document.addEventListener('keydown', function (e) {
-    if (lightbox.hidden) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') step(-1);
-    if (e.key === 'ArrowRight') step(1);
-    if (e.key === 'Tab') {
-      var focusables = lightbox.querySelectorAll('button');
-      var first = focusables[0];
-      var last = focusables[focusables.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      } else if (!lightbox.contains(document.activeElement)) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  });
-
-  /* Contact form → Formspree */
-  var form = document.getElementById('contact-form');
-  var status = form.querySelector('.form-status');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var button = form.querySelector('button[type="submit"]');
-    button.disabled = true;
-    status.className = 'form-status';
-    status.textContent = 'Sending…';
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    }).then(function (response) {
-      if (response.ok) {
-        form.reset();
-        status.className = 'form-status ok';
-        status.textContent = 'Message sent! I’ll get back to you within a few hours.';
-      } else {
-        throw new Error('Formspree error');
-      }
-    }).catch(function () {
-      status.className = 'form-status error';
-      status.textContent = 'Something went wrong. Message me on WhatsApp instead: +971 58 532 4519.';
-    }).finally(function () {
-      button.disabled = false;
+  if (loupe) {
+    $('[data-loupe-close]', loupe).addEventListener('click', closeLoupe);
+    $('[data-loupe-prev]', loupe).addEventListener('click', () => showLoupe(current - 1));
+    $('[data-loupe-next]', loupe).addEventListener('click', () => showLoupe(current + 1));
+    loupe.addEventListener('click', (e) => {
+      if (!e.target.closest('figure') && !e.target.closest('button')) closeLoupe();
     });
-  });
+    document.addEventListener('keydown', (e) => {
+      if (loupe.hidden) return;
+      if (e.key === 'Escape') closeLoupe();
+      else if (e.key === 'ArrowLeft') showLoupe(current - 1);
+      else if (e.key === 'ArrowRight') showLoupe(current + 1);
+      else if (e.key === 'Tab') {
+        const focusables = $$('button', loupe);
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    });
+  }
 
-  /* Footer year */
-  document.getElementById('year').textContent = String(new Date().getFullYear());
+  /* ---------- Contact form (Formspree) ---------- */
+  const form = $('#contact-form');
+  if (form) {
+    const status = $('.form-status', form);
+    const submitBtn = $('button[type="submit"]', form);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'form-status';
+      status.textContent = 'Sending the record…';
+      submitBtn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          status.classList.add('is-ok');
+          status.textContent = 'Record received. I’ll reply within a few hours.';
+        } else {
+          throw new Error('formspree');
+        }
+      } catch {
+        status.classList.add('is-error');
+        status.textContent = 'The record didn’t send. Try again, or write on WhatsApp: +971 58 532 4519.';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* ---------- Year stamp ---------- */
+  const year = $('#year');
+  if (year) year.textContent = String(new Date().getFullYear());
 })();

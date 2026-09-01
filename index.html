@@ -9,7 +9,7 @@
     content="Professional photographer in Dubai for musicians, DJs and performers. Artist press kits (EPK), portfolios and live-show coverage. Delivered in 72 hours. Book on WhatsApp.">
   <meta name="author" content="Javier Estrela">
   <link rel="canonical" href="https://estrela.photo/">
-  <meta name="theme-color" content="#050506">
+  <meta name="theme-color" content="#e9e5da">
   <meta name="geo.region" content="AE-DU">
   <meta name="geo.placename" content="Dubai">
 
@@ -32,8 +32,8 @@
     content="Artist press kits, portfolios and live-show coverage in Dubai. Transparent AED pricing, delivered in 72 hours.">
   <meta name="twitter:image" content="https://estrela.photo/img/og.jpg">
 
-  <link rel="icon" href="img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
   <script type="application/ld+json">
   {
@@ -161,7 +161,7 @@
             "name": "Where do you shoot?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Anywhere in Dubai and across the UAE: studios, clubs and live venues, rooftops, urban locations or the desert."
+              "text": "Anywhere in Dubai and the UAE: clubs and venues, studios, urban locations or the desert. The setting is chosen to fit the artist's sound and brand."
             }
           },
           {
@@ -169,7 +169,7 @@
             "name": "Do you photograph live shows and gigs?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Live performance is Javier's specialty: stage light, movement and crowd energy are exactly what a press kit needs to feel real."
+              "text": "Yes. Live performance coverage is a specialty: stage light, crowd energy and the moments that make a promoter book an artist."
             }
           },
           {
@@ -185,398 +185,432 @@
     ]
   }
   </script>
-  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" fetchpriority="high"
-    imagesrcset="img/LexieBand-800.webp 800w, img/LexieBand-1400.webp 1400w, img/LexieBand-1600.webp 1600w"
-    imagesizes="100vw">
-  <link rel="stylesheet" href="css/style.css?v=7">
+
+  <link rel="preload" href="fonts/big-shoulders-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/courier-prime-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" fetchpriority="high" href="/img/LexieBand-1400.webp">
+  <link rel="stylesheet" href="css/style.css?v=8">
+  <script src="js/main.js?v=3" defer></script>
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
-  <script src="js/main.js?v=1" defer></script>
 </head>
 
 <body>
   <!--
-  THESIS: The photography is the argument — a dark stage where the work glows like
-  product shots in an Apple keynote; refuses the generic photographer top-bar + masonry template.
-  OWN-WORLD: Near-black stage (#050506), glass panels (blur, 1px white/9% hairlines, 24px radii),
-  one light-accent: Dubai-dusk gradient (gold→rose→violet) used as light, never as paint.
-  Geist variable, tight tracking, huge display numerals in AED. White script signature as brand mark.
-  STORY: An artist sees work they want for themselves, learns Javier builds artist brands in Dubai,
-  reads transparent AED pricing, taps WhatsApp — booking is one tap from every section.
-  FIRST VIEWPORT: Floating glass nav; full-bleed live-show photograph fading into black below;
-  over it a two-line display headline, one sub-line, WhatsApp primary pill (white) + "See the work" ghost.
-  FORM: brief-pinned by the user (Apple / bento / MacPaw / CleanMyMac world) — no roll run.
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review,
-  the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+  THESIS: The booking page as the photographer's own darkroom exposure record — craft is the
+  proof. Refuses the dark full-bleed hero portfolio this category always ships (and the v2 it replaces).
+  OWN-WORLD: warm paper working field; backlit 11-step zone ramp as chrome and navigation;
+  translucent record sheets overlapping at slight angles; hatch-density annotations with stop-deltas;
+  ultra-condensed stamped caps (Big Shoulders) + typewriter tabular mono (Courier Prime);
+  one dichroic magenta reserved for the key row and booking action. Squared corners everywhere.
+  STORY: an artist lands on a working document already filled out about THEM — reads real AED
+  numbers, real artists, real delivery times — trusts the printer's precision, books in one tap.
+  FIRST VIEWPORT: record-header strip; giant condensed headline; the hero photograph pinned as a
+  print with a tilted PRINT PLAN tracing sheet over its corner, magenta KEY row on DELIVERY 72H;
+  primary action black bar BOOK ON WHATSAPP; zone-ramp rail on the left edge tracks scroll.
+  FORM: darkroom exposure record — user-chosen challenger (operate-b-exposure-record-zone-sheets),
+  seed a4cf319a; my grounded list ranked concert-stage rig #7 (assigned), lineup poster #1.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the
+  verdict, DESIGN.md, and every shipping raster carrying its provenance.
   -->
 
-  <a class="skip-link" href="#top">Skip to content</a>
+  <a class="skip-link" href="#zone-0">Skip to content</a>
 
-  <header class="nav" id="nav">
-    <nav class="nav-inner" aria-label="Main">
-      <a class="nav-wa" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
-        target="_blank" rel="noopener" aria-label="Book on WhatsApp">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
-        <span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li class="nav-cta-item">
-          <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
-            target="_blank" rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
-            WhatsApp
-          </a>
-        </li>
-      </ul>
+  <header class="rec-header" id="top">
+    <a class="stamp" href="#zone-0">Estrela<br>Photography</a>
+    <div class="rec-meta" aria-hidden="true">
+      <div class="rec-cell"><span>System</span><strong>Artist Sessions</strong></div>
+      <div class="rec-cell"><span>Location</span><strong>Dubai · UAE</strong></div>
+    </div>
+    <nav class="rec-nav" aria-label="Main">
+      <a href="#zone-1">Work</a>
+      <a href="#zone-2">Plans</a>
+      <a href="#zone-5">Notes</a>
+      <a href="#zone-6">Start</a>
     </nav>
+    <a class="rec-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
+      target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
+      <span>Book</span>
+    </a>
+    <button class="rec-index-toggle" aria-expanded="false" aria-controls="index-sheet">Index</button>
   </header>
 
-  <main id="top">
+  <nav class="index-sheet" id="index-sheet" aria-label="Page index" hidden>
+    <ol>
+      <li><a href="#zone-0"><span>0</span>The offer</a></li>
+      <li><a href="#zone-1"><span>I</span>The work</a></li>
+      <li><a href="#zone-2"><span>II</span>Print plans</a></li>
+      <li><a href="#zone-3"><span>III</span>Artist notes</a></li>
+      <li><a href="#zone-4"><span>IV</span>The printer</a></li>
+      <li><a href="#zone-5"><span>V</span>Field notes</a></li>
+      <li><a href="#zone-6"><span>VI</span>Start a session</a></li>
+    </ol>
+    <a class="bar-btn bar-btn-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
+      target="_blank" rel="noopener"><span class="bar-label">Book on WhatsApp</span><span class="bar-delta">72H</span></a>
+  </nav>
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true">
-        <img src="img/LexieBand-1600.webp"
-          srcset="img/LexieBand-800.webp 800w, img/LexieBand-1400.webp 1400w, img/LexieBand-1600.webp 1600w"
-          sizes="100vw" alt="" width="1600" height="1066" fetchpriority="high" decoding="async">
-      </div>
-      <div class="hero-content">
-        <img class="hero-sig" src="img/signature.webp" alt="Estrela Photography" width="1280" height="248">
-        <h1 class="hero-title">Photography that<br>gets artists booked.</h1>
-        <p class="hero-sub">Press kits, portfolios and live-show coverage for musicians, DJs and
-          performers in Dubai. Delivered in 72 hours.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
-            target="_blank" rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
-            Book on WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="#work">See the work</a>
-        </div>
-      </div>
-    </section>
+  <!-- Zone ramp rail: navigation + scroll position -->
+  <nav class="ramp-rail" aria-label="Zone index">
+    <a href="#zone-0" data-zone="0" style="--step:0"><span>0</span></a>
+    <a href="#zone-1" data-zone="1" style="--step:1"><span>I</span></a>
+    <a href="#zone-2" data-zone="2" style="--step:2"><span>II</span></a>
+    <a href="#zone-3" data-zone="3" style="--step:3"><span>III</span></a>
+    <a href="#zone-4" data-zone="4" style="--step:4"><span>IV</span></a>
+    <a href="#zone-5" data-zone="5" style="--step:5"><span>V</span></a>
+    <a href="#zone-6" data-zone="6" style="--step:6"><span>VI</span></a>
+    <span class="ramp-inert" style="--step:7" aria-hidden="true"><span>VII</span></span>
+    <span class="ramp-inert" style="--step:8" aria-hidden="true"><span>VIII</span></span>
+    <span class="ramp-inert" style="--step:9" aria-hidden="true"><span>IX</span></span>
+    <a href="#zone-x" data-zone="10" style="--step:10"><span>X</span></a>
+  </nav>
 
-    <!-- ============ BENTO ============ -->
-    <section class="section bento-section" aria-label="Why artists book Estrela">
-      <div class="wrap">
-        <div class="bento">
-          <a class="tile tile-photo b-fire reveal" href="#work">
-            <img src="img/fire-800.webp" srcset="img/fire-480.webp 480w, img/fire-800.webp 800w"
-              sizes="(max-width: 560px) 92vw, (max-width: 1000px) 46vw, 380px" alt="Fire performance captured mid-show at night"
-              width="800" height="1225" loading="lazy" decoding="async">
-            <span class="tile-tag">Stage &amp; live</span>
-          </a>
-          <div class="tile tile-fact reveal">
-            <p class="fact-big">72h</p>
-            <p class="fact-line">from shoot to delivered gallery. Shot on Tuesday, pitching promoters
-              by Friday.</p>
-          </div>
-          <a class="tile tile-photo b-manu reveal" href="#work">
-            <img src="img/ManuSax-800.webp" srcset="img/ManuSax-480.webp 480w, img/ManuSax-800.webp 800w"
-              sizes="(max-width: 560px) 92vw, (max-width: 1000px) 46vw, 380px" alt="Saxophonist Manu performing under stage light"
-              width="800" height="800" loading="lazy" decoding="async">
-            <span class="tile-tag">Artists</span>
-          </a>
-          <div class="tile tile-fact reveal">
-            <p class="fact-big">DXB</p>
-            <p class="fact-line">based in Dubai, shooting across the UAE: studios, venues, rooftops,
-              desert.</p>
-          </div>
-          <div class="tile tile-quote reveal">
-            <p class="quote-line">“I don’t just take photos; I build your brand.”</p>
-            <img class="quote-sig" src="img/signature.webp" alt="Javier Estrela signature" width="128"
-              height="26" loading="lazy">
+  <main>
+
+    <!-- ================= ZONE 0 · HERO ================= -->
+    <section class="zone hero" id="zone-0">
+      <div class="zone-head" aria-hidden="true">
+        <span class="zone-no">Zone 0</span><span class="zone-fill"></span><span class="zone-tag">The offer</span>
+      </div>
+      <h1 class="display">Photography<br>that gets<br>artists booked.</h1>
+      <div class="hero-lower">
+        <div class="hero-copy">
+          <p class="deck">Press kits, portfolios and live-show coverage for musicians, DJs
+            and performers in Dubai. Shot with a printer's precision, delivered in 72 hours.</p>
+          <div class="hero-actions">
+            <a class="bar-btn bar-btn-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
+              target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
+              <span class="bar-label">Book on WhatsApp</span><span class="bar-delta">72H</span>
+            </a>
+            <a class="bar-btn bar-btn-hold" href="#zone-1"><span class="bar-label">See the work</span><span class="bar-delta bar-delta-hatch" aria-hidden="true"></span></a>
           </div>
         </div>
+        <figure class="hero-print sheet" style="--tilt:0deg">
+          <img src="/img/LexieBand-1400.webp"
+            srcset="/img/LexieBand-800.webp 800w, /img/LexieBand-1400.webp 1400w, /img/LexieBand-1600.webp 1600w"
+            sizes="(max-width: 900px) 92vw, 54vw" width="1400" height="933" fetchpriority="high"
+            alt="Lexie fronting her five-piece band in a wood-panelled corridor, green silk blouse and gold skirt">
+          <figcaption class="print-plan sheet" style="--tilt:-1.4deg">
+            <p class="plan-title">Session · Print plan</p>
+            <table>
+              <tbody>
+                <tr><th scope="row">Artist</th><td>Lexie &amp; Band</td></tr>
+                <tr><th scope="row">Setting</th><td>Live show · Dubai</td></tr>
+                <tr class="key-row"><th scope="row">Delivery</th><td>072 H <span class="key-mark">Key</span></td></tr>
+                <tr><th scope="row">Edited</th><td>10–15 photos</td></tr>
+              </tbody>
+            </table>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <header class="section-head reveal">
-          <h2>The work</h2>
-          <div class="filters" role="group" aria-label="Filter portfolio">
-            <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
-            <button class="chip" data-filter="artists" aria-pressed="false">Artists</button>
-            <button class="chip" data-filter="portraits" aria-pressed="false">Portraits</button>
-            <button class="chip" data-filter="world" aria-pressed="false">World</button>
-          </div>
-        </header>
-        <div class="gallery" id="gallery">
-          <button class="shot v" data-cat="artists" data-full="img/LexieBandV-1400.webp">
-            <img src="img/LexieBandV-800.webp" srcset="img/LexieBandV-480.webp 480w, img/LexieBandV-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Lexie singing live on stage, vertical portrait"
-              width="800" height="1200" loading="lazy" decoding="async">
-          </button>
-          <button class="shot h" data-cat="artists" data-full="img/SergioTrumpet-1400.webp">
-            <img src="img/SergioTrumpet-800.webp" srcset="img/SergioTrumpet-480.webp 480w, img/SergioTrumpet-800.webp 800w"
-              sizes="(max-width: 820px) 92vw, (max-width: 1280px) 46vw, 560px" alt="Sergio playing trumpet, artist press photo"
-              width="800" height="533" loading="lazy" decoding="async">
-          </button>
-          <button class="shot v" data-cat="portraits" data-full="img/katrin-1400.webp">
-            <img src="img/katrin-800.webp" srcset="img/katrin-480.webp 480w, img/katrin-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Katrin, studio portrait"
-              width="800" height="1200" loading="lazy" decoding="async">
-          </button>
-          <button class="shot v" data-cat="portraits" data-full="img/maria-1400.webp">
-            <img src="img/maria-800.webp" srcset="img/maria-480.webp 480w, img/maria-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Maria, editorial portrait"
-              width="800" height="1266" loading="lazy" decoding="async">
-          </button>
-          <button class="shot h" data-cat="artists" data-full="img/LexieBand-1600.webp">
-            <img src="img/LexieBand-800.webp" srcset="img/LexieBand-480.webp 480w, img/LexieBand-800.webp 800w"
-              sizes="(max-width: 820px) 92vw, (max-width: 1280px) 46vw, 560px" alt="Lexie and band performing live"
-              width="800" height="533" loading="lazy" decoding="async">
-          </button>
-          <button class="shot v" data-cat="portraits" data-full="img/mila-1400.webp">
-            <img src="img/mila-800.webp" srcset="img/mila-480.webp 480w, img/mila-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Mila, natural light portrait"
-              width="800" height="1200" loading="lazy" decoding="async">
-          </button>
-          <button class="shot v" data-cat="artists" data-full="img/fire-1400.webp">
-            <img src="img/fire-800.webp" srcset="img/fire-480.webp 480w, img/fire-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Fire performer spinning flames at night"
-              width="800" height="1225" loading="lazy" decoding="async">
-          </button>
-          <button class="shot h" data-cat="world" data-full="img/elefantsThailand-1400.webp">
-            <img src="img/elefantsThailand-800.webp" srcset="img/elefantsThailand-480.webp 480w, img/elefantsThailand-800.webp 800w"
-              sizes="(max-width: 820px) 92vw, (max-width: 1280px) 46vw, 560px" alt="Elephants in Thailand, travel photography"
-              width="800" height="450" loading="lazy" decoding="async">
-          </button>
-          <button class="shot v" data-cat="world" data-full="img/camino-palmeras-1400.webp">
-            <img src="img/camino-palmeras-800.webp" srcset="img/camino-palmeras-480.webp 480w, img/camino-palmeras-800.webp 800w"
-              sizes="(max-width: 820px) 46vw, (max-width: 1280px) 23vw, 280px" alt="Palm-lined path, travel photography"
-              width="800" height="1084" loading="lazy" decoding="async">
-          </button>
-          <button class="shot h" data-cat="world" data-full="img/flower-1400.webp">
-            <img src="img/flower-800.webp" srcset="img/flower-480.webp 480w, img/flower-800.webp 800w"
-              sizes="(max-width: 820px) 92vw, (max-width: 1280px) 46vw, 560px" alt="Flower macro photograph"
-              width="800" height="533" loading="lazy" decoding="async">
-          </button>
-        </div>
+    <!-- ================= ZONE I · THE WORK ================= -->
+    <section class="zone" id="zone-1">
+      <div class="zone-head">
+        <span class="zone-no">Zone I</span><span class="zone-fill"></span><span class="zone-tag">The work</span>
+      </div>
+      <h2 class="headline">Contact prints</h2>
+      <p class="zone-intro">Delivered work, straight off the record: artist sessions and field frames.
+        Names on the print, nothing cropped.</p>
+      <div class="prints">
+        <button class="print h" data-loupe="0" style="--tilt:-0.4deg">
+          <img src="/img/LexieBand-800.webp" srcset="/img/LexieBand-480.webp 480w, /img/LexieBand-800.webp 800w, /img/LexieBand-1400.webp 1400w"
+            sizes="(max-width: 700px) 92vw, 44vw" width="800" height="533" loading="lazy"
+            alt="Lexie and her band lined up in a corridor, styled in green and gold">
+          <span class="print-cap"><span>01</span>Lexie &amp; Band — Live</span>
+        </button>
+        <button class="print v" data-loupe="1" style="--tilt:0.5deg">
+          <img src="/img/katrin-800.webp" srcset="/img/katrin-480.webp 480w, /img/katrin-800.webp 800w, /img/katrin-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="1201" loading="lazy"
+            alt="Katrin playing saxophone in a black dress against deep foliage">
+          <span class="print-cap"><span>02</span>Katrin — Saxophone</span>
+        </button>
+        <button class="print v" data-loupe="2" style="--tilt:-0.5deg">
+          <img src="/img/LexieBandV-800.webp" srcset="/img/LexieBandV-480.webp 480w, /img/LexieBandV-800.webp 800w, /img/LexieBandV-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="1201" loading="lazy"
+            alt="Lexie centre-frame with her band closing in around her">
+          <span class="print-cap"><span>03</span>Lexie — Portrait</span>
+        </button>
+        <button class="print sq" data-loupe="3" style="--tilt:0.4deg">
+          <img src="/img/ManuSax-800.webp" srcset="/img/ManuSax-480.webp 480w, /img/ManuSax-800.webp 800w, /img/ManuSax-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="800" loading="lazy"
+            alt="Manu playing alto saxophone outdoors in sunglasses and white shirt">
+          <span class="print-cap"><span>04</span>Manu — Saxophone</span>
+        </button>
+        <button class="print h" data-loupe="4" style="--tilt:0.4deg">
+          <img src="/img/SergioTrumpet-800.webp" srcset="/img/SergioTrumpet-480.webp 480w, /img/SergioTrumpet-800.webp 800w, /img/SergioTrumpet-1400.webp 1400w"
+            sizes="(max-width: 700px) 92vw, 44vw" width="800" height="534" loading="lazy"
+            alt="Sergio raising his trumpet, caught in warm side light">
+          <span class="print-cap"><span>05</span>Sergio — Trumpet</span>
+        </button>
+        <button class="print v" data-loupe="5" style="--tilt:-0.4deg">
+          <img src="/img/fire-800.webp" srcset="/img/fire-480.webp 480w, /img/fire-800.webp 800w, /img/fire-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="1226" loading="lazy"
+            alt="Fire performer mid-act, flames tracing arcs in the dark">
+          <span class="print-cap"><span>06</span>Fire act — Live</span>
+        </button>
+        <button class="print v" data-loupe="6" style="--tilt:0.5deg">
+          <img src="/img/maria-800.webp" srcset="/img/maria-480.webp 480w, /img/maria-800.webp 800w, /img/maria-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="1266" loading="lazy"
+            alt="Maria in a flowing emerald dress by the water">
+          <span class="print-cap"><span>07</span>Maria — Portrait</span>
+        </button>
+        <button class="print v" data-loupe="7" style="--tilt:-0.5deg">
+          <img src="/img/mila-800.webp" srcset="/img/mila-480.webp 480w, /img/mila-800.webp 800w, /img/mila-1400.webp 1400w"
+            sizes="(max-width: 700px) 45vw, 22vw" width="800" height="1200" loading="lazy"
+            alt="Mila in white against a sunlit palm-lined path">
+          <span class="print-cap"><span>08</span>Mila — Portrait</span>
+        </button>
+        <button class="print h" data-loupe="8" style="--tilt:-0.4deg">
+          <img src="/img/elefantsThailand-800.webp" srcset="/img/elefantsThailand-480.webp 480w, /img/elefantsThailand-800.webp 800w, /img/elefantsThailand-1400.webp 1400w"
+            sizes="(max-width: 700px) 92vw, 44vw" width="800" height="450" loading="lazy"
+            alt="Elephants crossing a river in Thailand, handlers wading alongside">
+          <span class="print-cap"><span>09</span>Thailand — World</span>
+        </button>
       </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="section" id="services">
-      <div class="wrap">
-        <header class="section-head reveal">
-          <h2>Sessions &amp; pricing</h2>
-          <p class="section-sub">Transparent prices in AED. Every session includes the full shoot on
-            USB.</p>
-        </header>
-        <div class="plans">
-          <article class="plan">
-            <h3>Artist Promo Session</h3>
-            <p class="plan-price"><span class="cur">AED</span> 1,300</p>
-            <ul class="plan-list">
-              <li>Up to 2-hour shooting session</li>
-              <li>10 edited photos</li>
-              <li>Full shoot delivered on USB</li>
-              <li>Delivery within 72 hours</li>
-            </ul>
-            <a class="btn btn-ghost btn-full" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20an%20Artist%20Promo%20Session%20(AED%201%2C300)."
-              target="_blank" rel="noopener">Book this session</a>
-          </article>
-          <article class="plan plan-featured">
-            <p class="plan-badge">Most popular</p>
-            <h3>Artist Portfolio</h3>
-            <p class="plan-price"><span class="cur">AED</span> 1,500</p>
-            <ul class="plan-list">
-              <li>Up to 2-hour shooting session</li>
-              <li>15 edited photos</li>
-              <li>Full shoot delivered on USB</li>
-              <li>Delivery within 72 hours</li>
-            </ul>
-            <a class="btn btn-primary btn-full" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20an%20Artist%20Portfolio%20session%20(AED%201%2C500)."
-              target="_blank" rel="noopener">Book this session</a>
-          </article>
-          <article class="plan">
-            <h3>EPK &amp; Live Show</h3>
-            <p class="plan-price"><span class="cur">from AED</span> 5,500</p>
-            <ul class="plan-list">
-              <li>Up to 3-hour shooting session</li>
-              <li>Combo of photos &amp; video</li>
-              <li>Full press-kit visual assets</li>
-              <li>Delivery within 2 weeks</li>
-            </ul>
-            <a class="btn btn-ghost btn-full" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27m%20interested%20in%20the%20EPK%20%26%20Live%20Show%20package."
-              target="_blank" rel="noopener">Ask about your EPK</a>
-          </article>
-        </div>
-        <p class="addons">Add-ons: <span>5 extra edited photos · AED 500</span>
-          <span>1 extra hour · AED 500</span> <span>session video · from AED 2,500</span></p>
-        <p class="addons">Got a special request? <a
-            href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%20have%20a%20special%20request%20for%20a%20session%20%E2%80%94%20can%20I%20ask%20you%20about%20it%3F"
-            target="_blank" rel="noopener">Ask first on WhatsApp</a>.</p>
+    <!-- ================= ZONE II · PRINT PLANS ================= -->
+    <section class="zone" id="zone-2">
+      <div class="zone-head">
+        <span class="zone-no">Zone II</span><span class="zone-fill"></span><span class="zone-tag">Print plans</span>
+      </div>
+      <h2 class="headline">Three plans, public numbers</h2>
+      <p class="zone-intro">Every price on the record. No hidden fees, no quote-by-email.</p>
+      <div class="plans">
+        <article class="plan sheet" style="--tilt:-0.6deg">
+          <h3>Artist Promo Session</h3>
+          <p class="plan-price"><span class="plan-cur">AED</span>1,300</p>
+          <table>
+            <tbody>
+              <tr><th scope="row">Shoot</th><td>Up to 2 H</td></tr>
+              <tr><th scope="row">Edited</th><td>10 photos</td></tr>
+              <tr><th scope="row">Full shoot</th><td>On USB</td></tr>
+              <tr><th scope="row">Delivery</th><td>72 H</td></tr>
+            </tbody>
+          </table>
+          <a class="bar-btn bar-btn-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20an%20Artist%20Promo%20Session%20(AED%201%2C300)."
+            target="_blank" rel="noopener"><span class="bar-label">Book this session</span><span class="bar-delta">1,300</span></a>
+        </article>
+        <article class="plan plan-key sheet" style="--tilt:0.4deg">
+          <p class="plan-flag">Most booked</p>
+          <h3>Artist Portfolio</h3>
+          <p class="plan-price"><span class="plan-cur">AED</span>1,500</p>
+          <table>
+            <tbody>
+              <tr><th scope="row">Shoot</th><td>Up to 2 H</td></tr>
+              <tr class="key-row"><th scope="row">Edited</th><td>15 photos <span class="key-mark">Key</span></td></tr>
+              <tr><th scope="row">Full shoot</th><td>On USB</td></tr>
+              <tr><th scope="row">Delivery</th><td>72 H</td></tr>
+            </tbody>
+          </table>
+          <a class="bar-btn bar-btn-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20an%20Artist%20Portfolio%20session%20(AED%201%2C500)."
+            target="_blank" rel="noopener"><span class="bar-label">Book this session</span><span class="bar-delta">1,500</span></a>
+        </article>
+        <article class="plan sheet" style="--tilt:0.6deg">
+          <h3>EPK &amp; Live Show</h3>
+          <p class="plan-price"><span class="plan-cur">From AED</span>5,500</p>
+          <table>
+            <tbody>
+              <tr><th scope="row">Shoot</th><td>Up to 3 H</td></tr>
+              <tr><th scope="row">Combo</th><td>Photos + video</td></tr>
+              <tr><th scope="row">Assets</th><td>Full press kit</td></tr>
+              <tr><th scope="row">Delivery</th><td>2 weeks</td></tr>
+            </tbody>
+          </table>
+          <a class="bar-btn bar-btn-book" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27m%20interested%20in%20the%20EPK%20%26%20Live%20Show%20package."
+            target="_blank" rel="noopener"><span class="bar-label">Ask about your EPK</span><span class="bar-delta">5,500</span></a>
+        </article>
+      </div>
+      <div class="addons-sheet sheet" style="--tilt:-0.5deg">
+      <table class="addons">
+        <caption>Δ Add-ons</caption>
+        <tbody>
+          <tr><th scope="row"><span class="hatch-chip" aria-hidden="true"></span>+5 edited photos</th><td>+ AED 500</td></tr>
+          <tr><th scope="row"><span class="hatch-chip" aria-hidden="true"></span>+1 extra hour</th><td>+ AED 500</td></tr>
+          <tr><th scope="row"><span class="hatch-chip hatch-chip-x" aria-hidden="true"></span>Session video</th><td>from AED 2,500</td></tr>
+        </tbody>
+      </table>
+      <p class="addons-note">Got a special request? <a
+          href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%20have%20a%20special%20request%20for%20a%20session%20%E2%80%94%20can%20I%20ask%20you%20about%20it%3F"
+          target="_blank" rel="noopener">Ask first on WhatsApp</a> — quick answer, no strings.</p>
       </div>
     </section>
 
-    <!-- ============ TESTIMONIALS ============ -->
-    <section class="section" id="testimonials" aria-label="What artists say">
-      <div class="wrap">
-        <div class="quotes">
-          <figure class="quote">
-            <blockquote>The way Javi captures the energy of a live show is incredible. My portfolio
-              has never looked more professional.</blockquote>
-            <figcaption>— Lexie, singer</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>A great press kit starts with great photos. Working with Estrela Photography
-              was a game changer for me.</blockquote>
-            <figcaption>— Sergio, trumpet player</figcaption>
-          </figure>
-        </div>
+    <!-- ================= ZONE III · ARTIST NOTES ================= -->
+    <section class="zone" id="zone-3">
+      <div class="zone-head">
+        <span class="zone-no">Zone III</span><span class="zone-fill"></span><span class="zone-tag">Artist notes</span>
+      </div>
+      <h2 class="headline">Notes from the artists</h2>
+      <div class="quotes">
+        <figure class="quote sheet" style="--tilt:-0.8deg">
+          <blockquote>
+            <p>The way Javi captures the energy of a live show is incredible. My portfolio has
+              never looked more professional.</p>
+          </blockquote>
+          <figcaption>— Lexie · singer</figcaption>
+        </figure>
+        <figure class="quote sheet" style="--tilt:0.7deg">
+          <blockquote>
+            <p>A great press kit starts with great photos. Working with Estrela Photography was
+              a game changer for me.</p>
+          </blockquote>
+          <figcaption>— Sergio · trumpet player</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="wrap about">
-        <div class="about-media">
-          <img src="img/contact-800.webp" srcset="img/contact-480.webp 480w, img/contact-800.webp 800w"
-            sizes="(max-width: 900px) 100vw, 45vw" alt="Javier Estrela, photographer"
-            width="800" height="533" loading="lazy" decoding="async">
-        </div>
+    <!-- ================= ZONE IV · THE PRINTER ================= -->
+    <section class="zone" id="zone-4">
+      <div class="zone-head">
+        <span class="zone-no">Zone IV</span><span class="zone-fill"></span><span class="zone-tag">The printer</span>
+      </div>
+      <div class="about">
+        <figure class="about-print sheet" style="--tilt:-0.8deg">
+          <img src="/img/contact-800.webp" srcset="/img/contact-480.webp 480w, /img/contact-800.webp 800w, /img/contact-1400.webp 1400w"
+            sizes="(max-width: 900px) 92vw, 38vw" width="800" height="534" loading="lazy"
+            alt="Javier Estrela on location with his camera">
+        </figure>
         <div class="about-copy">
-          <h2>Hello, I’m Javier Estrela</h2>
-          <p>I’m a Dubai-based professional photographer specializing in high-impact visual content
-            for artists, DJs and musicians. From high-end portraits to live performance shots, I
-            build the visual assets performers need to stand out to promoters, labels and venues.</p>
-          <a class="link-arrow" href="https://www.instagram.com/estrelaphotography" target="_blank"
-            rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0m0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881"/></svg>
+          <h2 class="headline">Hello, I’m Javier Estrela</h2>
+          <p>I’m a Dubai-based professional photographer specializing in high-impact visual
+            content for artists, DJs and musicians. From high-end portraits to live performance
+            shots, I build the visual assets performers need to stand out to promoters, labels
+            and venues.</p>
+          <p class="about-line">I don’t just take photos; I build your brand.</p>
+          <img class="about-sig" src="/img/signature.webp" alt="" width="1280" height="248" loading="lazy">
+          <a class="about-ig" href="https://www.instagram.com/estrelaphotography" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.26.07 1.64.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.26.06-1.64.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.74 0 8.33 0 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05 0 8.33 0 8.74 0 12s0 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 24 8.74 24 12 24s3.67 0 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67 0 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></svg>
             @estrelaphotography
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
-    <section class="section" id="faq">
-      <div class="wrap wrap-narrow">
-        <header class="section-head reveal">
-          <h2>Questions, answered</h2>
-        </header>
-        <div class="faq-list">
-          <details class="faq">
-            <summary>How much does an artist photoshoot cost in Dubai?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>My sessions start at AED 1,300 for an Artist Promo Session (2 hours, 10 edited
-              photos). An Artist Portfolio is AED 1,500, and a full EPK &amp; Live Show package
-              starts from AED 5,500. All prices are listed above, with no hidden fees.</p>
-          </details>
-          <details class="faq">
-            <summary>What is an EPK and do I need one?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>An EPK (electronic press kit) is the package promoters, venues and labels ask for
-              before booking you: professional portraits, live shots and short video. If you’re
-              performing in Dubai and want more (and better-paid) gigs, it’s the single best
-              investment in your brand.</p>
-          </details>
-          <details class="faq">
-            <summary>How fast will I get my photos?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>Edited photos are delivered within 72 hours for promo and portfolio sessions, and
-              within two weeks for EPK &amp; Live Show packages. You also get the full shoot on USB.</p>
-          </details>
-          <details class="faq">
-            <summary>Where do you shoot?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>Anywhere in Dubai and across the UAE — studios, clubs and live venues, rooftops,
-              urban locations or the desert. We pick the setting that fits your sound and brand.</p>
-          </details>
-          <details class="faq">
-            <summary>Do you photograph live shows and gigs?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>Live performance is my specialty. Stage light, movement and crowd energy are
-              exactly what a press kit needs to feel real.</p>
-          </details>
-          <details class="faq">
-            <summary>How do I book a session?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></summary>
-            <p>The fastest way is WhatsApp: <a href="https://wa.me/971585324519" target="_blank"
-                rel="noopener">+971 58 532 4519</a>. Tell me what you do and when you need the
-              photos, and I’ll take it from there. You can also use the contact form below.</p>
-          </details>
-        </div>
+    <!-- ================= ZONE V · FIELD NOTES (FAQ) ================= -->
+    <section class="zone zone-narrow" id="zone-5">
+      <div class="zone-head">
+        <span class="zone-no">Zone V</span><span class="zone-fill"></span><span class="zone-tag">Field notes</span>
+      </div>
+      <h2 class="headline">Field notes</h2>
+      <div class="faq">
+        <details>
+          <summary>How much does an artist photoshoot cost in Dubai?</summary>
+          <p>Sessions start at AED 1,300 for an Artist Promo Session (2 hours, 10 edited photos).
+            An Artist Portfolio is AED 1,500, and a full EPK &amp; Live Show package starts from
+            AED 5,500. All prices are public, with no hidden fees.</p>
+        </details>
+        <details>
+          <summary>What is an EPK and do I need one?</summary>
+          <p>An EPK (electronic press kit) is the package promoters, venues and labels ask for
+            before booking an artist: professional portraits, live shots and short video. For
+            performers in Dubai it is the single best investment in their brand.</p>
+        </details>
+        <details>
+          <summary>How fast will I get my photos?</summary>
+          <p>Edited photos are delivered within 72 hours for promo and portfolio sessions, and
+            within two weeks for EPK &amp; Live Show packages. You also get the full shoot on USB.</p>
+        </details>
+        <details>
+          <summary>Where do you shoot?</summary>
+          <p>Anywhere in Dubai and the UAE: clubs and venues, studios, urban locations or the
+            desert. We pick the setting that fits your sound and brand.</p>
+        </details>
+        <details>
+          <summary>Do you photograph live shows and gigs?</summary>
+          <p>Yes. Live performance coverage is a specialty: stage light, crowd energy and the
+            moments that make a promoter book you.</p>
+        </details>
+        <details>
+          <summary>How do I book a session?</summary>
+          <p>The fastest way is WhatsApp:
+            <a href="https://wa.me/971585324519" target="_blank" rel="noopener">+971 58 532 4519</a>.
+            Tell me what you do and when you need the photos, or use the form below.</p>
+        </details>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact">
-      <div class="wrap wrap-narrow">
-        <header class="section-head reveal">
-          <h2>Let’s shoot</h2>
-          <p class="section-sub">Tell me about your project — I usually reply within a few hours.</p>
-        </header>
-        <div class="contact-cta">
-          <a class="btn btn-whatsapp" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
-            target="_blank" rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
-            Chat on WhatsApp
-          </a>
-          <p class="contact-or">or send the details by email</p>
-        </div>
-        <form class="form" id="contact-form" action="https://formspree.io/f/mdorjnyb"
-          method="POST">
-          <div class="form-row">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required>
-            </div>
-          </div>
-          <div class="field">
-            <label for="f-type">Session type</label>
-            <select id="f-type" name="session_type">
-              <option>Artist Promo Session</option>
-              <option>Artist Portfolio</option>
-              <option>EPK &amp; Live Show</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="f-message">Your project</label>
-            <textarea id="f-message" name="message" rows="5" required
-              placeholder="Who you are, what you need the photos for, and when."></textarea>
-          </div>
-          <button class="btn btn-primary btn-full" type="submit">Send message</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+    <!-- ================= ZONE VI · START A SESSION ================= -->
+    <section class="zone zone-narrow" id="zone-6">
+      <div class="zone-head">
+        <span class="zone-no">Zone VI</span><span class="zone-fill"></span><span class="zone-tag">Start a session</span>
       </div>
+      <h2 class="headline">Start a session</h2>
+      <p class="zone-intro">Tell me about your project. I usually reply within a few hours.</p>
+      <a class="bar-btn bar-btn-book contact-wa" href="https://wa.me/971585324519?text=Hi%20Javier%2C%20I%27d%20like%20to%20book%20a%20session."
+        target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M11.99 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26C2.107 6.443 6.542 2.009 11.994 2.009c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 11.994 0C5.439 0 .104 5.335.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893 0-3.18-1.237-6.165-3.48-8.413"/></svg>
+        <span class="bar-label">Chat on WhatsApp</span><span class="bar-delta">72H</span>
+      </a>
+      <p class="contact-or">or send the details by record:</p>
+      <form class="record-form sheet" id="contact-form" style="--tilt:0.4deg"
+        action="https://formspree.io/f/mdorjnyb" method="POST">
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-type">Session type</label>
+          <select id="f-type" name="session_type">
+            <option>Artist Promo Session</option>
+            <option>Artist Portfolio</option>
+            <option>EPK &amp; Live Show</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Your project</label>
+          <textarea id="f-msg" name="message" rows="5" required
+            placeholder="Who you are, what you need the photos for, and when."></textarea>
+        </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <button class="bar-btn bar-btn-submit" type="submit"><span class="bar-label">Send the record</span><span class="bar-delta" aria-hidden="true">→</span></button>
+      </form>
+      <p class="contact-mail">Email: <a href="mailto:info@estrela.photo">info@estrela.photo</a></p>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <img src="img/signature.webp" alt="Estrela Photography" width="134" height="26" loading="lazy">
-      <p>Photographer for artists · Dubai, UAE</p>
-      <div class="footer-links">
+  <!-- ================= ZONE X · COLOPHON ================= -->
+  <footer class="colophon" id="zone-x">
+    <div class="colophon-ramp" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="colophon-row">
+      <p>© <span id="year">2026</span> Estrela Photography · Dubai, UAE</p>
+      <nav aria-label="Footer">
         <a href="https://www.instagram.com/estrelaphotography" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wa.me/971585324519" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:info@estrela.photo">info@estrela.photo</a>
-      </div>
-      <p class="footer-fine">© <span id="year">2026</span> Estrela Photography · estrela.photo</p>
+      </nav>
+      <p class="colophon-web">Need a website?
+        <a href="https://truelovecreative.es/brief" target="_blank" rel="noopener">Request a quote</a></p>
+      <p class="colophon-fine">estrela.photo · filtration only <span class="mag-swatch" aria-hidden="true"></span></p>
     </div>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
-    <button class="lb-close" aria-label="Close viewer">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+  <!-- ================= LOUPE (lightbox) ================= -->
+  <div class="loupe" id="loupe" role="dialog" aria-modal="true" aria-label="Enlarged photo" hidden>
+    <button class="loupe-close" data-loupe-close aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
     </button>
-    <button class="lb-prev" aria-label="Previous photo">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    <button class="loupe-prev" data-loupe-prev aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
     </button>
-    <img id="lb-img" alt="">
-    <button class="lb-next" aria-label="Next photo">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    <figure>
+      <img id="loupe-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+      <figcaption id="loupe-cap"></figcaption>
+    </figure>
+    <button class="loupe-next" data-loupe-next aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
     </button>
   </div>
 

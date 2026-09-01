@@ -3,15 +3,15 @@ import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const site = root; // v2 was promoted to the repo root at launch
+const site = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(resolve(site, 'index.html'), 'utf8');
 
 describe('static integrity', () => {
   it('every local asset referenced by the page exists on disk', () => {
     const refs = new Set();
-    const attrRe = /(?:src|href|imagesrcset|srcset|data-full)="([^"]+)"/g;
+    const attrRe = /(?:src|href|imagesrcset|srcset)="([^"]+)"/g;
     for (const [, value] of html.matchAll(attrRe)) {
+      if (value.startsWith('data:')) continue; // inline data URIs contain commas
       for (const part of value.split(',')) {
         const url = part.trim().split(/\s+/)[0];
         if (!url || /^(https?:|mailto:|#|data:)/.test(url)) continue;
@@ -19,7 +19,7 @@ describe('static integrity', () => {
       }
     }
     expect(refs.size).toBeGreaterThan(20);
-    const missing = [...refs].filter((ref) => !existsSync(resolve(site, ref)));
+    const missing = [...refs].filter((ref) => !existsSync(resolve(site, ref.replace(/^\//, ''))));
     expect(missing).toEqual([]);
   });
 
@@ -53,10 +53,13 @@ describe('static integrity', () => {
     expect(html).not.toContain('name="robots" content="noindex');
   });
 
-  it('keeps the [hidden] lightbox from covering the page (regression)', () => {
+  it('keeps the [hidden] loupe from covering the page (regression)', () => {
     const css = readFileSync(resolve(site, 'css/style.css'), 'utf8');
-    // .lightbox sets display:flex, which overrides the hidden attribute unless this rule exists
-    expect(css.replace(/\s+/g, ' ')).toContain('.lightbox[hidden] { display: none; }');
+    // .loupe sets display:flex, which overrides the hidden attribute unless this rule exists
+    const flat = css.replace(/\s+/g, ' ');
+    expect(flat).toContain('.loupe[hidden] { display: none; }');
+    // the guard must come before the display:flex block
+    expect(flat.indexOf('.loupe[hidden]')).toBeLessThan(flat.indexOf('.loupe {'));
   });
 
   it('declares canonical, OG image and theme color', () => {
@@ -64,5 +67,9 @@ describe('static integrity', () => {
     expect(html).toContain('property="og:image"');
     expect(html).toContain('name="theme-color"');
     expect(existsSync(resolve(site, 'img/og.jpg'))).toBe(true);
+  });
+
+  it('links the web-studio quote page in the colophon', () => {
+    expect(html).toContain('https://truelovecreative.es/brief');
   });
 });

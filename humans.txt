@@ -8,7 +8,7 @@
 /* SITE */
   Last update: 2026/09/01
   Standards: HTML5, CSS3
-  Components: Vanilla JS, Geist (self-hosted)
+  Components: Vanilla JS, Big Shoulders + Courier Prime (self-hosted)
   Software: VS Code, Claude Code, Lightroom, Photoshop
   Language: English
   Doctype: HTML5
