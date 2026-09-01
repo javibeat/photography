@@ -224,6 +224,13 @@ ul { list-style: none; }
   padding: 0 clamp(20px, 4vw, 40px) clamp(64px, 10vh, 120px);
 }
 
+.hero-sig {
+  display: block;
+  width: clamp(190px, 24vw, 300px);
+  height: auto;
+  margin-bottom: clamp(18px, 3vh, 30px);
+}
+
 .hero-title {
   font-size: clamp(2.7rem, 7.2vw, 5.6rem);
   line-height: 1.02;
@@ -247,11 +254,12 @@ ul { list-style: none; }
   margin-top: 34px;
 }
 
-.js .hero-title, .js .hero-sub, .js .hero-actions {
+.js .hero-sig, .js .hero-title, .js .hero-sub, .js .hero-actions {
   animation: rise 1s var(--ease-out) both;
 }
-.js .hero-sub { animation-delay: 0.1s; }
-.js .hero-actions { animation-delay: 0.2s; }
+.js .hero-title { animation-delay: 0.08s; }
+.js .hero-sub { animation-delay: 0.16s; }
+.js .hero-actions { animation-delay: 0.24s; }
 
 @keyframes rise {
   from { opacity: 0; transform: translateY(28px); }
