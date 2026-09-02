@@ -41,12 +41,21 @@ describe('static integrity', () => {
 
   it('JSON-LD prices match the visible pricing cards', () => {
     const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-    const biz = data['@graph'].find((n) => n['@type'] === 'Photographer');
+    const biz = data['@graph'].find((n) => n['@id'] === 'https://estrela.photo/#business');
     const prices = biz.hasOfferCatalog.itemListElement.map((o) => o.price);
     expect(prices).toEqual(['1300', '1500', '5500']);
     expect(html).toContain('1,300');
     expect(html).toContain('1,500');
     expect(html).toContain('5,500');
+  });
+
+  it('business node uses a real schema.org type and carries no self-serving reviews', () => {
+    // Search Console flagged "Photographer" (not a schema.org type) as an invalid Review parent,
+    // and Google ignores reviews a LocalBusiness publishes about itself — keep them out of the graph.
+    const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    const biz = data['@graph'].find((n) => n['@id'] === 'https://estrela.photo/#business');
+    expect(biz['@type']).toBe('ProfessionalService');
+    expect(JSON.stringify(data)).not.toMatch(/"(review|aggregateRating|Review)"/);
   });
 
   it('has no noindex now that the site is live at the root', () => {

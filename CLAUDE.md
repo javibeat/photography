@@ -35,7 +35,7 @@ One page: `index.html` + `css/style.css` + `js/main.js`. No dependencies. Fonts 
 - **Images**: responsive `.webp` sets in `img/` (480/800/1400/1600) with `.webp.json` provenance sidecars, referenced by absolute `/img/...` paths. `images/` holds the source masters — keep them; `images/_backup/` is gitignored.
 
 ### SEO / AI SEO
-- JSON-LD `@graph`: Photographer, Person, WebSite, FAQPage, OfferCatalog, Reviews. Tests assert FAQ questions and prices stay in sync with the visible page.
+- JSON-LD `@graph`: ProfessionalService (LocalBusiness subtype — `Photographer` is NOT a schema.org type), Person, WebSite, FAQPage, OfferCatalog. No `review`/`aggregateRating`: Google ignores self-serving reviews on a LocalBusiness and Search Console flagged them as critical errors (Sept 2026). Tests assert FAQ questions, prices and this stay in sync with the visible page.
 - Open Graph + Twitter Card (`img/og.jpg`, a 1200×630 capture of the hero), canonical `https://estrela.photo/`.
 - `sitemap.xml` (single URL), `robots.txt` (sitemap + `/llms.txt` pointer), `llms.txt`, `manifest.json`, `humans.txt`.
 
