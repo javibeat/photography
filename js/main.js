@@ -141,11 +141,12 @@
     });
   }
 
-  /* ---------- Contact form (Formspree) ---------- */
-  const form = $('#contact-form');
-  if (form) {
+  /* ---------- Record forms (Formspree): contact on /, session brief on /brief/ ---------- */
+  $$('form[action*="formspree.io"]').forEach((form) => {
     const status = $('.form-status', form);
     const submitBtn = $('button[type="submit"]', form);
+    if (!status || !submitBtn) return;
+    const okCopy = form.dataset.ok || 'Record received. I’ll reply within a few hours.';
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       status.className = 'form-status';
@@ -160,7 +161,7 @@
         if (res.ok) {
           form.reset();
           status.classList.add('is-ok');
-          status.textContent = 'Record received. I’ll reply within a few hours.';
+          status.textContent = okCopy;
         } else {
           throw new Error('formspree');
         }
@@ -171,6 +172,13 @@
         submitBtn.disabled = false;
       }
     });
+  });
+
+  /* ---------- Session brief: preselect the plan from ?plan=promo|portfolio|epk ---------- */
+  const planSelect = $('#brief-form select[name="plan"]');
+  if (planSelect) {
+    const wanted = new URLSearchParams(location.search).get('plan');
+    if (wanted && [...planSelect.options].some((o) => o.value === wanted)) planSelect.value = wanted;
   }
 
   /* ---------- Year stamp ---------- */
