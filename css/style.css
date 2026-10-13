@@ -903,3 +903,32 @@ main { margin-left: var(--rail-w); }
   }
   .js .placed { opacity: 1; translate: none; rotate: var(--tilt, 0deg); }
 }
+
+/* ---------- Proposal (/propuesta/) ---------- */
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+
+.page-proposal .event-card { position: relative; right: auto; bottom: auto; width: 100%; }
+
+.proposal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  gap: clamp(22px, 4vw, 48px);
+  align-items: start;
+}
+
+.price-was {
+  font-size: 1.2rem; font-weight: 400; color: var(--ink-3);
+  text-decoration-thickness: 2px;
+}
+.price-now { font-size: 2.6rem; line-height: 1; }
+
+
+@media (max-width: 900px) {
+  .page-proposal .event-card { margin: 0; }
+  .page-proposal .plan-key { order: 0; }
+  .proposal-grid { grid-template-columns: 1fr; max-width: 460px; gap: 30px; }
+}
