@@ -1,0 +1,10 @@
+exclude:
+  - CLAUDE.md
+  - DESIGN.md
+  - PRODUCT.md
+  - V2-LAUNCH.md
+  - package.json
+  - package-lock.json
+  - vitest.config.js
+  - tests
+  - node_modules
