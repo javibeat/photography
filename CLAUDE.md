@@ -46,3 +46,7 @@ One page: `index.html` + `css/style.css` + `js/main.js`. No dependencies. Fonts 
 - **Prices are load-bearing**: AED 1,300 / 1,500 / from 5,500 (+ add-ons 500/500/from 2,500) appear in the page AND the JSON-LD; a test enforces both. `PRODUCT.md` and `llms.txt` carry the same numbers — change all together.
 - **`404.html`** is standalone: it loads `css/reset.css` (kept only for this) plus CDN Bootstrap/fonts and icons from `images/`.
 - Images are large photography files — avoid committing unnecessary image changes.
+
+## Client proposals (`_propuestas/`)
+
+`_propuestas/` holds proposal pages kept as templates (e.g. `bruno.html`). The folder is excluded from the published site (`_config.yml`), but the repo is public on GitHub. To send a proposal: copy a template into a new folder with a hard-to-guess name (e.g. `p-7f3k9q/index.html`), keep `noindex`, leave it out of the sitemap, and delete it from the live site after the event.

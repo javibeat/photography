@@ -8,3 +8,4 @@ exclude:
   - vitest.config.js
   - tests
   - node_modules
+  - _propuestas
